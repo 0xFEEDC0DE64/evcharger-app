@@ -1,0 +1,6 @@
+[submodule "3rdparty/qmsgpack"]
+	path = 3rdparty/qmsgpack
+	url = ../../0xFEEDC0DE64/qmsgpack.git
+[submodule "3rdparty/QtZeroConf"]
+	path = 3rdparty/QtZeroConf
+	url = ../../0xFEEDC0DE64/QtZeroConf.git
