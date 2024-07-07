@@ -16,10 +16,6 @@ StackView {
     }
 
     initialItem: ColumnLayout {
-        function backPressed() {
-            return false
-        }
-
         ToolBar {
             id: toolBar
 
@@ -159,8 +155,37 @@ StackView {
                     text: qsTr("Start")
                 }
 
+                ApiKeyValueHelper {
+                    id: logicMode
+                    deviceConnection: mainScreen.deviceConnection
+                    apiKey: "lmo"
+                }
+
                 SelectLogicModeItem {
                     Layout.fillWidth: true
+                }
+
+                NavigationItem {
+                    visible: logicMode.value == 4
+                    iconSource: "material-icons/grid_guides.svg"
+                    title: qsTr("Price limit")
+                    description: qsTr("%0 ct/kWh").arg(0)
+                    component: "SetPriceLimitPage.qml"
+                }
+
+                NavigationItem {
+                    visible: logicMode.value == 5
+                    iconSource: "material-icons/grid_guides.svg"
+                    title: qsTr("Daily trip")
+                    description: qsTr("By %0 with %1").arg("08:00").arg(qsTr("%0 km").arg(100))
+                    component: "DailyTripPage.qml"
+                }
+
+                NavigationItem {
+                    iconSource: "material-icons/grid_guides.svg"
+                    title: qsTr("Charging speed")
+                    description: qsTr("%0 Ampere & %1-phase").arg(0).arg(0)
+                    component: "ChargingSpeedPage.qml"
                 }
             }
         }

@@ -9,12 +9,6 @@ WhiteBox {
     RowLayout {
         anchors.fill: parent
 
-        ApiKeyValueHelper {
-            id: logicMode
-            deviceConnection: mainScreen.deviceConnection
-            apiKey: "lmo"
-        }
-
         SendMessageHelper {
             id: valueChanger
             deviceConnection: mainScreen.deviceConnection

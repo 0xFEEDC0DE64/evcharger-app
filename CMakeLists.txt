@@ -106,6 +106,7 @@ qt_add_qml_module(evcharger-app
         SecurityPage.qml
         SelectLogicModeItem.qml
         SensorsConfigurationPage.qml
+        SetPriceLimitPage.qml
         SettingsTabPage.qml
         SwitchLanguagePage.qml
         VerticalTabButton.qml
