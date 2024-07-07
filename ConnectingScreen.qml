@@ -14,7 +14,9 @@ ColumnLayout {
 
     Connections {
         target: deviceConnection
-        onFullStatusReceived: connected()
+        function onFullStatusReceived() {
+            connected()
+        }
     }
 
     Text {

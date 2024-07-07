@@ -20,8 +20,6 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick WebSockets LinguistTools)
 qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
 
 qt_add_executable(evcharger-app WIN32 MACOSX_BUNDLE
-apikeyexistancehelper.cpp
-apikeyexistancehelper.h
 apikeyvaluehelper.cpp
 apikeyvaluehelper.h
 appsettings.cpp
@@ -65,8 +63,8 @@ qt_add_qml_module(evcharger-app
         ChargerTabPage.qml
         ChargingConfigurationPage.qml
         ChargingSpeedPage.qml
-        CloudUrlsModel.qml
         CloudPage.qml
+        CloudUrlsModel.qml
         ConnectingScreen.qml
         ConnectionPage.qml
         ControllerPage.qml
@@ -93,6 +91,7 @@ qt_add_qml_module(evcharger-app
         LedPage.qml
         LicensesPage.qml
         LoadBalancingPage.qml
+        LogicModeButton.qml
         MainScreen.qml
         NamePage.qml
         NavigationItem.qml
@@ -105,10 +104,12 @@ qt_add_qml_module(evcharger-app
         RequestStatusText.qml
         SchedulerPage.qml
         SecurityPage.qml
+        SelectLogicModeItem.qml
         SensorsConfigurationPage.qml
         SettingsTabPage.qml
         SwitchLanguagePage.qml
         VerticalTabButton.qml
+        WhiteBox.qml
         WiFiErrorsPage.qml
         WiFiOnOffSwitch.qml
         WiFiPage.qml

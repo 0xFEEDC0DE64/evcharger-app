@@ -6,13 +6,11 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("API Settings")
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: localApiLayout.implicitHeight
         visible: localApi.exists
 
         ColumnLayout {
-            id: localApiLayout
             anchors.fill: parent
 
             GeneralOnOffSwitch {
@@ -92,13 +90,11 @@ NavigationPage {
         }
     }
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: cloudApiLayout.implicitHeight
         visible: cloudApi.exists
 
         ColumnLayout {
-            id: cloudApiLayout
             anchors.fill: parent
 
             GeneralOnOffSwitch {
@@ -124,13 +120,11 @@ NavigationPage {
         }
     }
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: gridApiLayout.implicitHeight
         visible: gridApi.exists
 
         ColumnLayout {
-            id: gridApiLayout
             anchors.fill: parent
 
             GeneralOnOffSwitch {
@@ -158,13 +152,11 @@ NavigationPage {
         }
     }
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: legacyApiLayout.implicitHeight
         visible: legacyApi.exists
 
         ColumnLayout {
-            id: legacyApiLayout
             anchors.fill: parent
 
             GeneralOnOffSwitch {

@@ -6,14 +6,10 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("Hardware information")
 
-    Rectangle {
-        color: "white"
-        radius: 5
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: layout.implicitHeight
 
         GridLayout {
-            id: layout
             columns: 2
             anchors.fill: parent
 

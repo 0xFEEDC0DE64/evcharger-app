@@ -3,13 +3,15 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-Page {
+ColumnLayout {
     function backPressed() {
         return false
     }
 
-    header: ToolBar {
+    ToolBar {
         id: toolBar
+
+        Layout.fillWidth: true
 
         background: Rectangle {
             color: "lightblue"
@@ -29,7 +31,6 @@ Page {
                 }
 
                 text: friendlyName.value
-                color: "white"
                 verticalAlignment: Text.AlignVCenter
             }
 
@@ -44,13 +45,15 @@ Page {
 
     Flickable {
         id: flickable
-        anchors.fill: parent
+        Layout.fillWidth: true
+        Layout.fillHeight: true
         contentHeight: columnLayout.implicitHeight
         clip: true
 
         ColumnLayout {
             id: columnLayout
-            width: flickable.width
+            width: flickable.width - 30
+            x: 15
             spacing: 5
 
             RowLayout {
@@ -62,7 +65,17 @@ Page {
                     Text {
                         Layout.fillWidth: true
 
-                        text: qsTr("No car connected")
+                        text: {
+                            switch (carApiKeyHelper.value)
+                            {
+                            case 0: return qsTr("Internal error")
+                            case 1: return qsTr("No car connected")
+                            case 2: return qsTr("Car is charging")
+                            case 3: return qsTr("Connecting to your car...")
+                            case 4: return qsTr("Charging completed")
+                            case 5: return qsTr("Unknown error %0").arg(0)
+                            }
+                        }
                         font.pixelSize: 20
                         font.bold: true
                         wrapMode: Text.Wrap
@@ -71,7 +84,17 @@ Page {
                     Text {
                         Layout.fillWidth: true
 
-                        text: qsTr("Connect the cable to charge your car")
+                        text: {
+                            switch (carApiKeyHelper.value)
+                            {
+                            case 0: return null
+                            case 1: return qsTr("Plug in the cable to start charging your car")
+                            case 2: return "TODO duration"
+                            case 3: return qsTr("Charger is connecting to your car, it usually takes a few seconds")
+                            case 4: return qsTr("Let's go-e :)")
+                            case 5: return null
+                            }
+                        }
                         wrapMode: Text.Wrap
                     }
                 }
@@ -119,38 +142,13 @@ Page {
             Button {
                 Layout.fillWidth: true
 
+                Material.accent: Material.White
+
                 text: qsTr("Start")
             }
 
-            ButtonGroup {
-                buttons: column.children
-            }
-
-            RowLayout {
-                id: column
+            SelectLogicModeItem {
                 Layout.fillWidth: true
-
-                Button {
-                    Layout.fillWidth: true
-                    checked: true
-                    checkable: true
-                    text: qsTr("Eco")
-                    display: AbstractButton.TextUnderIcon
-                }
-
-                Button {
-                    Layout.fillWidth: true
-                    checkable: true
-                    text: qsTr("Basic")
-                    display: AbstractButton.TextUnderIcon
-                }
-
-                Button {
-                    Layout.fillWidth: true
-                    checkable: true
-                    text: qsTr("Daily trip")
-                    display: AbstractButton.TextUnderIcon
-                }
             }
         }
     }

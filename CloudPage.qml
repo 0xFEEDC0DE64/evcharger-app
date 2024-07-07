@@ -18,14 +18,10 @@ NavigationPage {
         text: qsTr("Features like flexible energy tariffs, time sync and app connection are unavilable when \"Enable cloud connection\" is disabled")
     }
 
-    Rectangle {
-        color: "white"
-        radius: 5
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: gridLayout.implicitHeight
 
         GridLayout {
-            id: gridLayout
             anchors.fill: parent
             columns: 2
 

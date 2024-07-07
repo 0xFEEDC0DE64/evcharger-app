@@ -39,20 +39,15 @@ BaseNavigationPage {
         //     positionViewAtEnd()
         // }
 
-        delegate: Rectangle {
+        delegate: WhiteBox {
             required property var modelData
             property var theModelData: modelData
 
-            color: "white"
-            radius: 5
-
             width: listView.width
-            height: gridLayout.implicitHeight
 
             property var properties: [ qsTr("Timestamp:"), qsTr("SSID:"), qsTr("BSSID:"), qsTr("Reason:") ]
 
             GridLayout {
-                id: gridLayout
                 anchors.fill: parent
 
                 Repeater {

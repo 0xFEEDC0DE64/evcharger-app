@@ -7,19 +7,17 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("App Settings")
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: gridLayout.implicitHeight
-        color: "white"
-        radius: 5
 
         GridLayout {
-            id: gridLayout
+            anchors.fill: parent
             columns: 2
 
             Label {
                 text: qsTr("Number of app instances:")
                 font.bold: true
+                wrapMode: Text.Wrap
             }
 
             SpinBox {
@@ -30,26 +28,21 @@ NavigationPage {
         }
     }
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: gridLayout2.implicitHeight
-        color: "white"
-        radius: 5
 
         GridLayout {
-            id: gridLayout2
+            anchors.fill: parent
             columns: 2
 
             Label {
                 text: qsTr("solalaweb key:")
                 font.bold: true
+                wrapMode: Text.Wrap
             }
 
             Button {
-                text: {
-                    console.log('solalawebKey', theSettings.solalawebKey);
-                    return theSettings.solalawebKey == "" ? qsTr("Select...") : qsTr("Replace...")
-                }
+                text: theSettings.solalawebKey == "" ? qsTr("Select...") : qsTr("Replace...")
                 onClicked: keyFileDialog.open()
 
                 FileDialog {
@@ -62,13 +55,11 @@ NavigationPage {
             Label {
                 text: qsTr("solalaweb cert:")
                 font.bold: true
+                wrapMode: Text.Wrap
             }
 
             Button {
-                text: {
-                    console.log('solalawebCert', theSettings.solalawebCert);
-                    return theSettings.solalawebCert == "" ? qsTr("Select...") : qsTr("Replace...")
-                }
+                text: theSettings.solalawebCert == "" ? qsTr("Select...") : qsTr("Replace...")
                 onClicked: certFileDialog.open()
 
                 FileDialog {

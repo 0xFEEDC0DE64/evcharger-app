@@ -11,24 +11,9 @@ ItemDelegate {
     property string component
 
     Layout.fillWidth: true
-    //width: parent.width
 
     implicitWidth: row.implicitWidth
     implicitHeight: Math.max(row.implicitHeight, 50)
-
-    // color: "white"
-    // radius: 5
-
-    // MouseArea {
-    //     anchors.fill: parent
-
-    //     onClicked: stackView.push(navigationItem.component)
-    // }
-
-    // background: Rectangle {
-    //     color: "white"
-    //     radius: 5
-    // }
 
     Component.onCompleted: {
         background.radius = 5

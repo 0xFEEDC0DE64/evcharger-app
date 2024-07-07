@@ -14,6 +14,7 @@ CheckDelegate {
     Component.onCompleted: {
         background.color = "white"
         background.radius = 5
+        contentItem.children[0].wrapMode = Text.Wrap
     }
 
     ApiKeyValueHelper {
@@ -30,7 +31,6 @@ CheckDelegate {
 
     checked: valueHelper.value
     text: valueHelper.value ? qsTr("On") : qsTr("Off")
-    wrapMode: Text.Wrap
 
     onClicked: {
         valueChanger.sendMessage({

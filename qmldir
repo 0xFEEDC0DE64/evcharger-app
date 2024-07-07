@@ -41,6 +41,7 @@ EVChargerApp 1.0 KwhLimitPage.qml
 EVChargerApp 1.0 LedPage.qml
 EVChargerApp 1.0 LicensesPage.qml
 EVChargerApp 1.0 LoadBalancingPage.qml
+EVChargerApp 1.0 LogicModeButton.qml
 EVChargerApp 1.0 MainScreen.qml
 EVChargerApp 1.0 NamePage.qml
 EVChargerApp 1.0 NavigationItem.qml
@@ -53,10 +54,12 @@ EVChargerApp 1.0 RebootPage.qml
 EVChargerApp 1.0 RequestStatusText.qml
 EVChargerApp 1.0 SchedulerPage.qml
 EVChargerApp 1.0 SecurityPage.qml
+EVChargerApp 1.0 SelectLogicModeItem.qml
 EVChargerApp 1.0 SensorsConfigurationPage.qml
 EVChargerApp 1.0 SettingsTabPage.qml
 EVChargerApp 1.0 SwitchLanguagePage.qml
 EVChargerApp 1.0 VerticalTabButton.qml
+EVChargerApp 1.0 WhiteBox.qml
 EVChargerApp 1.0 WiFiErrorsPage.qml
 EVChargerApp 1.0 WiFiOnOffSwitch.qml
 EVChargerApp 1.0 WiFiPage.qml

@@ -6,12 +6,8 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("Setup or add device")
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: localLayout.implicitHeight
-
-        color: "white"
-        radius: 5
 
         ColumnLayout {
             id: localLayout
@@ -49,12 +45,8 @@ NavigationPage {
         Layout.preferredHeight: 50
     }
 
-    Rectangle {
+    WhiteBox {
         Layout.fillWidth: true
-        Layout.preferredHeight: cloudLayout.implicitHeight
-
-        color: "white"
-        radius: 5
 
         ColumnLayout {
             id: cloudLayout

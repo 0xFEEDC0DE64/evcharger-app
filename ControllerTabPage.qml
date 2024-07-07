@@ -29,7 +29,6 @@ Page {
                 }
 
                 text: friendlyName.value
-                color: "white"
                 verticalAlignment: Text.AlignVCenter
             }
 

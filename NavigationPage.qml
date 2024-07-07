@@ -13,8 +13,8 @@ BaseNavigationPage {
 
         ColumnLayout {
             id: columnLayout
-            width: parent.width - 10
-            x: 5
+            width: parent.width - 30
+            x: 15
             spacing: 5
         }
     }

@@ -11,6 +11,7 @@ CheckDelegate {
     Component.onCompleted: {
         background.color = "white"
         background.radius = 5
+        contentItem.children[0].wrapMode = Text.Wrap
     }
 
     ApiKeyValueHelper {
