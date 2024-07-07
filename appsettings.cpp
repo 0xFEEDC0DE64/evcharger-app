@@ -1,5 +1,8 @@
 #include "appsettings.h"
 
+#include <QFile>
+#include <QQmlFile>
+
 #include <algorithm>
 
 std::vector<SavedDevice> AppSettings::getSavedDevices()
@@ -71,22 +74,84 @@ void AppSettings::removeSavedDevice(const QString &serial)
 
 int AppSettings::numberOfAppInstances() const
 {
-    if (!m_numberOfAppInstances)
-    {
-        bool ok{};
-        int numberOfAppInstances = value("numberOfAppInstances", 1).toInt(&ok);
-        if (!ok)
-            numberOfAppInstances = 1;
-        m_numberOfAppInstances = numberOfAppInstances;
-        return numberOfAppInstances;
-    }
+    if (m_numberOfAppInstances)
+        return *m_numberOfAppInstances;
 
-    return *m_numberOfAppInstances;
+    bool ok{};
+    int numberOfAppInstances = value("numberOfAppInstances", 1).toInt(&ok);
+    if (!ok || numberOfAppInstances < 1)
+        numberOfAppInstances = 1;
+    m_numberOfAppInstances = numberOfAppInstances;
+    return numberOfAppInstances;
 }
 
 void AppSettings::setNumberOfAppInstances(int numberOfAppInstances)
 {
+    if (numberOfAppInstances < 1)
+        return;
     setValue("numberOfAppInstances", numberOfAppInstances);
     m_numberOfAppInstances = numberOfAppInstances;
     emit numberOfAppInstancesChanged(numberOfAppInstances);
+}
+
+QString AppSettings::solalawebKey() const
+{
+    if (m_solalawebKey)
+        return *m_solalawebKey;
+
+    auto solalawebKey = value("solalawebKey").toString();
+    m_solalawebKey = solalawebKey;
+    return solalawebKey;
+}
+
+void AppSettings::setSolalawebKey(const QString &solalawebKey)
+{
+    setValue("solalawebKey", solalawebKey);
+    m_solalawebKey = solalawebKey;
+    emit solalawebKeyChanged(solalawebKey);
+}
+
+bool AppSettings::loadSolalawebKey(const QString &url)
+{
+    QFile file{QQmlFile::urlToLocalFileOrQrc(url)};
+    if (!file.open(QFile::ReadOnly))
+    {
+        qWarning() << "Could not open file:" << file.errorString();
+        return false;
+    }
+
+    setSolalawebKey(file.readAll());
+
+    return true;
+}
+
+QString AppSettings::solalawebCert() const
+{
+    if (m_solalawebCert)
+        return *m_solalawebCert;
+
+    auto solalawebCert = value("solalawebCert").toString();
+    m_solalawebCert = solalawebCert;
+    return solalawebCert;
+}
+
+void AppSettings::setSolalawebCert(const QString &solalawebCert)
+{
+    setValue("solalawebCert", solalawebCert);
+    m_solalawebCert = solalawebCert;
+    emit solalawebCertChanged(solalawebCert);
+}
+
+bool AppSettings::loadSolalawebCert(const QString &url)
+{
+    QFile file{QQmlFile::urlToLocalFileOrQrc(url)};
+    if (!file.open(QFile::ReadOnly))
+    {
+        qWarning() << "Could not open file:" << file.errorString();
+        return false;
+    }
+
+    setSolalawebCert(file.readAll());
+
+    return true;
 }

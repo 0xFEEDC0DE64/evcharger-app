@@ -6,6 +6,9 @@
 #include <QJsonParseError>
 #include <QPasswordDigestor>
 #include <QMessageAuthenticationCode>
+#include <QSslConfiguration>
+#include <QSslCertificate>
+#include <QSslKey>
 
 #include <utility>
 
@@ -57,6 +60,38 @@ void DeviceConnection::setUrl(const QString &url)
     emit urlChanged(m_url = url);
 
     emit logMessage(tr("Connecting to %0").arg(m_url));
+
+    if (m_settings && !m_settings->solalawebKey().isEmpty() && !m_settings->solalawebCert().isEmpty())
+    {
+        auto sslConfig = m_websocket.sslConfiguration();
+
+        {
+            QSslCertificate cert{m_settings->solalawebCert().toUtf8()};
+            if (cert.isNull())
+            {
+                emit logMessage(tr("Could not parse solalaweb certificate!"));
+                goto after;
+            }
+            qDebug() << "cert" << cert.issuerDisplayName();
+            sslConfig.setLocalCertificate(cert);
+        }
+
+        {
+            QSslKey key{m_settings->solalawebKey().toUtf8(), QSsl::KeyAlgorithm::Rsa, QSsl::Pem};
+            if (key.isNull())
+            {
+                emit logMessage(tr("Could not parse solalaweb key!"));
+                goto after;
+            }
+            qDebug() << "key" << key.algorithm();
+            sslConfig.setPrivateKey(key);
+        }
+
+        m_websocket.setSslConfiguration(sslConfig);
+    }
+
+after:
+
     m_websocket.open(QUrl{m_url});
 }
 

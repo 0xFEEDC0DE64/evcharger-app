@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Dialogs
 import QtQuick.Layouts
 import EVChargerApp
 
@@ -24,6 +25,7 @@ NavigationPage {
             SpinBox {
                 value: theSettings.numberOfAppInstances
                 onValueModified: theSettings.numberOfAppInstances = value
+                from: 1
             }
         }
     }
@@ -44,7 +46,17 @@ NavigationPage {
             }
 
             Button {
-                text: qsTr("Select...")
+                text: {
+                    console.log('solalawebKey', theSettings.solalawebKey);
+                    return theSettings.solalawebKey == "" ? qsTr("Select...") : qsTr("Replace...")
+                }
+                onClicked: keyFileDialog.open()
+
+                FileDialog {
+                    id: keyFileDialog
+                    fileMode: FileDialog.OpenFile
+                    onAccepted: theSettings.loadSolalawebKey(selectedFile)
+                }
             }
 
             Label {
@@ -53,7 +65,17 @@ NavigationPage {
             }
 
             Button {
-                text: qsTr("Select...")
+                text: {
+                    console.log('solalawebCert', theSettings.solalawebCert);
+                    return theSettings.solalawebCert == "" ? qsTr("Select...") : qsTr("Replace...")
+                }
+                onClicked: certFileDialog.open()
+
+                FileDialog {
+                    id: certFileDialog
+                    fileMode: FileDialog.OpenFile
+                    onAccepted: theSettings.loadSolalawebCert(selectedFile)
+                }
             }
         }
     }

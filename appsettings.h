@@ -19,6 +19,8 @@ class AppSettings : public QSettings
     Q_OBJECT
     QML_ELEMENT
     Q_PROPERTY(int numberOfAppInstances READ numberOfAppInstances WRITE setNumberOfAppInstances NOTIFY numberOfAppInstancesChanged FINAL)
+    Q_PROPERTY(QString solalawebKey READ solalawebKey WRITE setSolalawebKey NOTIFY solalawebKeyChanged FINAL)
+    Q_PROPERTY(QString solalawebCert READ solalawebCert WRITE setSolalawebCert NOTIFY solalawebCertChanged FINAL)
 
 public:
     std::vector<SavedDevice> getSavedDevices();
@@ -29,9 +31,21 @@ public:
     int numberOfAppInstances() const;
     void setNumberOfAppInstances(int numberOfAppInstances);
 
+    QString solalawebKey() const;
+    void setSolalawebKey(const QString &solalawebKey);
+    Q_INVOKABLE bool loadSolalawebKey(const QString &url);
+
+    QString solalawebCert() const;
+    void setSolalawebCert(const QString &solalawebCert);
+    Q_INVOKABLE bool loadSolalawebCert(const QString &url);
+
 signals:
     void numberOfAppInstancesChanged(int numberOfAppInstances);
+    void solalawebKeyChanged(const QString &solalawebKey);
+    void solalawebCertChanged(const QString &solalawebCert);
 
 private:
     mutable std::optional<int> m_numberOfAppInstances;
+    mutable std::optional<QString> m_solalawebKey;
+    mutable std::optional<QString> m_solalawebCert;
 };
