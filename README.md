@@ -12,7 +12,7 @@ In contrast to the official go-e app this app has:
 * It shows the problems that the device is reporting like wifi error log, ocpp error log, cloud error log
 * It shows any network communication problems like invalid websocket response received
 * API Key Browser
-* Support for all future go-e compatible products as it does not hardcode any device types (Sadly it also works with Wattpilots)
+* Support for all future go-e compatible products as it does not hardcode any device types (Therefore it also works with dereived products)
 * If you enter the incorrect password it will tell you and lock up
 * You can also select 06:00 in the scheduler
 * You can also select any color you like in all color pickers
