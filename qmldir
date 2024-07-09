@@ -43,6 +43,7 @@ EVChargerApp 1.0 LicensesPage.qml
 EVChargerApp 1.0 LoadBalancingPage.qml
 EVChargerApp 1.0 LogicModeButton.qml
 EVChargerApp 1.0 MainScreen.qml
+EVChargerApp 1.0 MqttPage.qml
 EVChargerApp 1.0 NamePage.qml
 EVChargerApp 1.0 NavigationItem.qml
 EVChargerApp 1.0 NavigationPage.qml

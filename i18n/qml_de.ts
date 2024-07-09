@@ -505,14 +505,14 @@
 <context>
     <name>ConnectingScreen</name>
     <message>
-        <location filename="../ConnectingScreen.qml" line="23"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectingScreen.qml" line="23"/>
+        <location filename="../ConnectingScreen.qml" line="24"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectingScreen.qml" line="24"/>
         <source>Trying to reach device...</source>
         <translation>Versuche Gerät zu erreichen...</translation>
     </message>
     <message>
-        <location filename="../ConnectingScreen.qml" line="47"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectingScreen.qml" line="47"/>
+        <location filename="../ConnectingScreen.qml" line="48"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectingScreen.qml" line="48"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>

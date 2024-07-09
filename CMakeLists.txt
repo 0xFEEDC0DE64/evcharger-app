@@ -93,6 +93,7 @@ qt_add_qml_module(evcharger-app
         LoadBalancingPage.qml
         LogicModeButton.qml
         MainScreen.qml
+        MqttPage.qml
         NamePage.qml
         NavigationItem.qml
         NavigationPage.qml

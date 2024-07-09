@@ -40,6 +40,8 @@ ApplicationWindow {
     PageIndicator {
         id: indicator
 
+        visible: view.count > 1
+
         count: view.count
         currentIndex: view.currentIndex
 

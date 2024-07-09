@@ -71,14 +71,19 @@ StackView {
                 apiKey: "ee"
             }
             ApiKeyValueHelper {
+                id: cloudApiKeyValueHelper
+                deviceConnection: mainScreen.deviceConnection
+                apiKey: "cwe"
+            }
+            ApiKeyValueHelper {
                 id: ocppApiKeyValueHelper
                 deviceConnection: mainScreen.deviceConnection
                 apiKey: "ocppe"
             }
             ApiKeyValueHelper {
-                id: cloudApiKeyValueHelper
+                id: mqttApiKeyValueHelper
                 deviceConnection: mainScreen.deviceConnection
-                apiKey: "cwe"
+                apiKey: "mce"
             }
 
             iconSource: "material-icons/grid_guides.svg"
@@ -87,8 +92,9 @@ StackView {
                 wifiStaApiKeyValueHelper.exists ? qsTr("Wi-Fi") : null,
                 wifiApApiKeyValueHelper.exists ? qsTr("Hotspot") : null,
                 ethernetApiKeyValueHelper.exists ? qsTr("Ethernet") : null,
-                ocppApiKeyValueHelper.exists ? qsTr("OCPP") : null,
                 cloudApiKeyValueHelper.exists ? qsTr("Cloud") : null,
+                ocppApiKeyValueHelper.exists ? qsTr("OCPP") : null,
+                mqttApiKeyValueHelper.exists ? qsTr("MQTT") : null,
                 qsTr("API Settings")
             ].filter(Boolean).join(" • ")
             component: "ConnectionPage.qml"

@@ -29,6 +29,13 @@ NavigationPage {
 
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
+        title: qsTr("Cloud")
+        component: "CloudPage.qml"
+        visible: cloudApiKeyValueHelper.exists
+    }
+
+    NavigationItem {
+        iconSource: "material-icons/grid_guides.svg"
         title: qsTr("OCPP")
         component: "OcppPage.qml"
         visible: ocppApiKeyValueHelper.exists
@@ -36,9 +43,9 @@ NavigationPage {
 
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
-        title: qsTr("Cloud")
-        component: "CloudPage.qml"
-        visible: cloudApiKeyValueHelper.exists
+        title: qsTr("MQTT")
+        component: "MqttPage.qml"
+        visible: mqttApiKeyValueHelper.exists
     }
 
     NavigationItem {
