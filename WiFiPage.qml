@@ -13,7 +13,7 @@ NavigationPage {
     GridLayout {
         columns: 2
 
-        Label {
+        Text {
             text: qsTr("Status:")
         }
 

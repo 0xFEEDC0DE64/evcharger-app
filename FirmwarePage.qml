@@ -13,7 +13,7 @@ NavigationPage {
             anchors.fill: parent
             columns: 2
 
-            Label {
+            Text {
                 text: qsTr("Running version:")
                 font.bold: true
             }
@@ -23,7 +23,7 @@ NavigationPage {
                 id: runningVersion
             }
 
-            Label {
+            Text {
                 text: qsTr("Details:")
                 font.bold: true
             }
@@ -40,7 +40,7 @@ NavigationPage {
                 text: JSON.stringify(runningVersionDetails.value, null, 4)
             }
 
-            Label {
+            Text {
                 text: qsTr("Recommended version:")
                 font.bold: true
             }
@@ -61,7 +61,7 @@ NavigationPage {
             RowLayout {
                 Layout.fillWidth: true
 
-                Label {
+                Text {
                     text: qsTr("Update:")
                 }
 
@@ -163,7 +163,7 @@ NavigationPage {
                 Layout.fillWidth: true
                 columns: 2
 
-                Label {
+                Text {
                     text: qsTr("Update status:")
                     font.bold: true
                 }
@@ -191,7 +191,7 @@ NavigationPage {
                     }
                 }
 
-                Label {
+                Text {
                     text: qsTr("Update progress:")
                     font.bold: true
                 }
@@ -222,7 +222,7 @@ NavigationPage {
                     }
                 }
 
-                Label {
+                Text {
                     text: qsTr("Update message:")
                     font.bold: true
                 }

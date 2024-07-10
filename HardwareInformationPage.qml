@@ -13,7 +13,7 @@ NavigationPage {
             columns: 2
             anchors.fill: parent
 
-            Label {
+            Text {
                 text: qsTr("Serial Number:")
             }
 
@@ -22,7 +22,7 @@ NavigationPage {
                 apiKey: "sse"
             }
 
-            Label {
+            Text {
                 visible: variant.exists
                 text: qsTr("Variant:")
             }
@@ -34,7 +34,7 @@ NavigationPage {
                 apiKey: "var"
             }
 
-            Label {
+            Text {
                 visible: rssi.exists
                 text: qsTr("RSSI:")
             }

@@ -544,20 +544,26 @@
         <translation>Ethernet</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="32"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="32"/>
+        <location filename="../ConnectionPage.qml" line="39"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="39"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="39"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="39"/>
+        <location filename="../ConnectionPage.qml" line="32"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="32"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
         <location filename="../ConnectionPage.qml" line="46"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="46"/>
+        <source>MQTT</source>
+        <translation>MQTT</translation>
+    </message>
+    <message>
+        <location filename="../ConnectionPage.qml" line="53"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="53"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
@@ -1380,6 +1386,51 @@
     </message>
 </context>
 <context>
+    <name>MqttPage</name>
+    <message>
+        <location filename="../MqttPage.qml" line="7"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="7"/>
+        <source>MQTT</source>
+        <translation>MQTT</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="21"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="21"/>
+        <source>Trying to connect:</source>
+        <translation>Versuche zu verbinden:</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="30"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="30"/>
+        <source>Is connected:</source>
+        <translation>Ist verbunden:</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="39"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="39"/>
+        <source>Connected since:</source>
+        <translation>Verbunden seit:</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="54"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="54"/>
+        <source>Command Counter:</source>
+        <translation>Befehlszähler:</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="63"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="63"/>
+        <source>Last error:</source>
+        <translation>Letzer Fehler:</translation>
+    </message>
+    <message>
+        <location filename="../MqttPage.qml" line="73"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/MqttPage.qml" line="73"/>
+        <source>Last error age:</source>
+        <translation>Alter des letzten Fehlers:</translation>
+    </message>
+</context>
+<context>
     <name>NamePage</name>
     <message>
         <location filename="../NamePage.qml" line="6"/>
@@ -1407,10 +1458,112 @@
 <context>
     <name>OcppPage</name>
     <message>
-        <location filename="../OcppPage.qml" line="6"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="6"/>
+        <location filename="../OcppPage.qml" line="7"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="7"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="21"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="21"/>
+        <source>Trying to connect:</source>
+        <translation>Versuche zu verbinden:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="30"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="30"/>
+        <source>Is connected:</source>
+        <translation>Ist verbunden:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="39"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="39"/>
+        <source>Connected since:</source>
+        <translation>Verbunden seit:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="54"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="54"/>
+        <source>Is accepted:</source>
+        <translation>Ist akzeptiert:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="63"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="63"/>
+        <source>Accepted since:</source>
+        <translation>Akzeptiert seit:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="78"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="78"/>
+        <source>Last error:</source>
+        <translation>Letzer Fehler:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="88"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="88"/>
+        <source>Last error age:</source>
+        <translation>Alter des letzten Fehlers:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="103"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="103"/>
+        <source>Chargepoint status:</source>
+        <translation>Chargepoint Status:</translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="117"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="117"/>
+        <source>Available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="118"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="118"/>
+        <source>Preparing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="119"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="119"/>
+        <source>Charging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="120"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="120"/>
+        <source>SuspendedEVSE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="121"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="121"/>
+        <source>SuspendedEV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="122"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="122"/>
+        <source>Finishing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="123"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="123"/>
+        <source>Reserved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="124"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="124"/>
+        <source>Unavailable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../OcppPage.qml" line="125"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/OcppPage.qml" line="125"/>
+        <source>Faulted</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1448,12 +1601,119 @@
     </message>
 </context>
 <context>
+    <name>SchedulerDayPage</name>
+    <message>
+        <location filename="../SchedulerDayPage.qml" line="6"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerDayPage.qml" line="6"/>
+        <source>Scheduler day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerDayPage.qml" line="31"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerDayPage.qml" line="31"/>
+        <source>24 Hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SchedulerPage</name>
     <message>
         <location filename="../SchedulerPage.qml" line="6"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="6"/>
         <source>Scheduler</source>
         <translation>Ladetimer</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="25"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="25"/>
+        <source>About Schedule</source>
+        <translation>Über den Ladetimer</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="32"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="32"/>
+        <source>Customize your charging routine on workdays, Saturdays, and Sundays. Define specific time slots for charging or blocking to perfectly align with your weekly schedule. Schedule can only start charging if all other functions like eco or access settings allow charging.</source>
+        <translation>Passe deine Laderoutine an Werktagen, Samstagen und Sonntagen an. Lege bestimmte Zeitfenster für das Aufladen oder Blockieren fest, um deinen Wochenplan perfekt abzustimmen. Der Ladevorgang kann nur gestartet werden, wenn alle anderen Funktionen wie Eco Modus oder Zugangskontrolle das Laden zulassen.</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="54"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="54"/>
+        <source>Charging schedule</source>
+        <translation>Laden erlauben</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="62"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="62"/>
+        <source>go-e Charger will exclusively charge your car during the time slots you set, and won&apos;t charge for the rest of the time.</source>
+        <translation>go-e Charger wird das Fahrzeug ausschließlich in den von dir eingestellten Zeitfenstern aufladen und in der restlichen Zeit nicht laden.</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="85"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="85"/>
+        <source>Blocking schedule</source>
+        <translation>Laden blockieren</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="93"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="93"/>
+        <source>go-e Charger will block charging your car during the time slots you set, but it will charge your car for the rest of the time.</source>
+        <translation>go-e Charger wird das Aufladen deines Fahrzeugs während des von dir eingestellten Zeitfensters verhindern. In der restlichen Zeit kann dein Auto geladen werden.</translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="102"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="102"/>
+        <source>Workdays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="109"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="109"/>
+        <source>Create workdays schedule</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="116"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="116"/>
+        <source>Saturdays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="123"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="123"/>
+        <source>Create saturdays schedule</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="130"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="130"/>
+        <source>Sundays</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SchedulerPage.qml" line="137"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="137"/>
+        <source>Create sundays schedule</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About eco</source>
+        <translation type="obsolete">Über Eco</translation>
+    </message>
+    <message>
+        <source>Flexible energy tariff</source>
+        <translation type="obsolete">Flexibler Energietarif</translation>
+    </message>
+    <message>
+        <source>We offer to charge your car during periods of low electricity price, If you have an electricity contract based on flexible energy tariffs.</source>
+        <translation type="obsolete">Du kannst dein Auto in Zeiten niedriger Strompreise aufladen, sofern du einen Stromvertrag mit flexiblen Tarifen hast.</translation>
+    </message>
+    <message>
+        <source>PV surplus energy</source>
+        <translation type="obsolete">PV-Überschuss</translation>
+    </message>
+    <message>
+        <source>By connecting a PV system and a controller to your charger, you can charge your EV particularly cheaply and use clean energy at the same time.</source>
+        <translation type="obsolete">Wenn du eine PV-Anlage und einen Controller an deinen Charger anschließt, kannst du dein Elektroauto besonders günstig aufladen und gleichzeitig grüne Energie nutzen.</translation>
     </message>
 </context>
 <context>
@@ -1665,98 +1925,104 @@
         <translation>Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="87"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="87"/>
+        <location filename="../SettingsTabPage.qml" line="92"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="92"/>
         <source>Wi-Fi</source>
         <translation>WLAN</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="88"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="88"/>
+        <location filename="../SettingsTabPage.qml" line="93"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="93"/>
         <source>Hotspot</source>
         <translation>Hotspot</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="89"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="89"/>
+        <location filename="../SettingsTabPage.qml" line="94"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="94"/>
         <source>Ethernet</source>
         <translation>Ethernet</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="90"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="90"/>
+        <location filename="../SettingsTabPage.qml" line="96"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="96"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="91"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="91"/>
+        <location filename="../SettingsTabPage.qml" line="95"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="95"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="92"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="92"/>
+        <location filename="../SettingsTabPage.qml" line="97"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="97"/>
+        <source>MQTT</source>
+        <translation>MQTT</translation>
+    </message>
+    <message>
+        <location filename="../SettingsTabPage.qml" line="98"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="98"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="116"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="116"/>
+        <location filename="../SettingsTabPage.qml" line="122"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="122"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="117"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="117"/>
+        <location filename="../SettingsTabPage.qml" line="123"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="123"/>
         <source>Switch Language</source>
         <translation>Sprache ändern</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="118"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="118"/>
+        <location filename="../SettingsTabPage.qml" line="124"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="124"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="119"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="119"/>
+        <location filename="../SettingsTabPage.qml" line="125"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="125"/>
         <source>Date and time</source>
         <translation>Datum und Uhrzeit</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="120"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="120"/>
+        <location filename="../SettingsTabPage.qml" line="126"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="126"/>
         <source>LED</source>
         <translation>LED</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="121"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="121"/>
+        <location filename="../SettingsTabPage.qml" line="127"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="127"/>
         <source>Controller</source>
         <translation>Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="122"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="122"/>
+        <location filename="../SettingsTabPage.qml" line="128"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="128"/>
         <source>Display settings</source>
         <translation>Display</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="130"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="130"/>
+        <location filename="../SettingsTabPage.qml" line="136"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="136"/>
         <source>Firmware</source>
         <translation>Firmware</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="131"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="131"/>
+        <location filename="../SettingsTabPage.qml" line="137"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="137"/>
         <source>Hardware information</source>
         <translation>Hardwareinformationen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="132"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="132"/>
+        <location filename="../SettingsTabPage.qml" line="138"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="138"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
@@ -1785,8 +2051,8 @@
         <translation type="vanished">Sensoren • Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="85"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="85"/>
+        <location filename="../SettingsTabPage.qml" line="90"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="90"/>
         <source>Connection</source>
         <translation>Verbindung</translation>
     </message>
@@ -1795,8 +2061,8 @@
         <translation type="vanished">WLAN • Hotspot • OCPP • API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="114"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="114"/>
+        <location filename="../SettingsTabPage.qml" line="120"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="120"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -1805,8 +2071,8 @@
         <translation type="vanished">Name • Sprache ändern • Benachrichtigungen • Datum und Uhrzeit • LED • Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="128"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="128"/>
+        <location filename="../SettingsTabPage.qml" line="134"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="134"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
@@ -1822,6 +2088,21 @@
         <location filename="../build/Desktop-Debug/EVChargerApp/SwitchLanguagePage.qml" line="6"/>
         <source>Switch Language</source>
         <translation>Sprache ändern</translation>
+    </message>
+</context>
+<context>
+    <name>TimePickerLabel</name>
+    <message>
+        <location filename="../TimePickerLabel.qml" line="88"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/TimePickerLabel.qml" line="88"/>
+        <source>AM</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TimePickerLabel.qml" line="106"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/TimePickerLabel.qml" line="106"/>
+        <source>PM</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

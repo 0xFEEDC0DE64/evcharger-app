@@ -25,7 +25,7 @@ NavigationPage {
             anchors.fill: parent
             columns: 2
 
-            Label {
+            Text {
                 text: qsTr("Trying to connect:")
                 font.bold: true
             }
@@ -34,7 +34,7 @@ NavigationPage {
                 apiKey: "cws"
             }
 
-            Label {
+            Text {
                 text: qsTr("Is connected:")
                 font.bold: true
             }
@@ -45,7 +45,7 @@ NavigationPage {
 
             // TODO cwsca
 
-            Label {
+            Text {
                 text: qsTr("Hello received:")
                 font.bold: true
             }
@@ -54,7 +54,7 @@ NavigationPage {
                 apiKey: "chr"
             }
 
-            Label {
+            Text {
                 text: qsTr("Queue size cloud:")
                 font.bold: true
             }
@@ -63,7 +63,7 @@ NavigationPage {
                 apiKey: "qsc"
             }
 
-            Label {
+            Text {
                 text: qsTr("Last error:")
                 font.bold: true
             }

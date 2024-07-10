@@ -17,7 +17,7 @@ NavigationPage {
             anchors.fill: parent
             columns: 2
 
-            Label {
+            Text {
                 text: qsTr("Trying to connect:")
                 font.bold: true
             }
@@ -26,7 +26,7 @@ NavigationPage {
                 apiKey: "mcs"
             }
 
-            Label {
+            Text {
                 text: qsTr("Is connected:")
                 font.bold: true
             }
@@ -35,7 +35,7 @@ NavigationPage {
                 apiKey: "mcc"
             }
 
-            Label {
+            Text {
                 text: qsTr("Connected since:")
                 font.bold: true
             }
@@ -50,7 +50,7 @@ NavigationPage {
                 text: connectedSince.value ? formatDuration(connectedSince.value - rebootTime.value) : ""
             }
 
-            Label {
+            Text {
                 text: qsTr("Command Counter:")
                 font.bold: true
             }
@@ -59,7 +59,7 @@ NavigationPage {
                 apiKey: "mcsl"
             }
 
-            Label {
+            Text {
                 text: qsTr("Last error:")
                 font.bold: true
             }
@@ -69,7 +69,7 @@ NavigationPage {
                 wrapMode: Text.Wrap
             }
 
-            Label {
+            Text {
                 text: qsTr("Last error age:")
                 font.bold: true
             }

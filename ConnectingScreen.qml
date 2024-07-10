@@ -37,7 +37,7 @@ ColumnLayout {
         model: collectedMessages
         clip: true
 
-        delegate: Label {
+        delegate: Text {
             text: message
         }
 

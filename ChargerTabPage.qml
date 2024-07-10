@@ -28,7 +28,7 @@ StackView {
             RowLayout {
                 anchors.fill: parent
 
-                Label {
+                Text {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
 

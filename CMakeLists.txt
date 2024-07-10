@@ -103,13 +103,19 @@ qt_add_qml_module(evcharger-app
         PvSurplusPage.qml
         RebootPage.qml
         RequestStatusText.qml
+        SchedulerDayPage.qml
         SchedulerPage.qml
         SecurityPage.qml
         SelectLogicModeItem.qml
         SensorsConfigurationPage.qml
         SetPriceLimitPage.qml
         SettingsTabPage.qml
+        SimpleNavigationItem.qml
         SwitchLanguagePage.qml
+        TimeComponentLabel.qml
+        TimePickerDialog.qml
+        TimePickerLabel.qml
+        TimePicker.qml
         VerticalTabButton.qml
         WhiteBox.qml
         WiFiErrorsPage.qml

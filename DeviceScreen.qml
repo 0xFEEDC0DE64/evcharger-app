@@ -92,7 +92,7 @@ Loader {
                 color: "red"
             }
 
-            Label {
+            Text {
                 text: qsTr("Password:")
                 Layout.alignment: Qt.AlignLeft | Qt.AlignBaseline
             }

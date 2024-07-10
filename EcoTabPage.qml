@@ -43,7 +43,7 @@ StackView {
                     fillMode: Image.PreserveAspectFit
                 }
 
-                Label {
+                Text {
                     Layout.fillWidth: true
                     font.pointSize: 20
                     font.bold: true

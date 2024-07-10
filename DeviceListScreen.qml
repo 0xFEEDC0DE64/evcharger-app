@@ -190,14 +190,14 @@ StackView {
                             Layout.fillWidth: true
                             Layout.fillHeight: true
 
-                            Label {
+                            Text {
                                 Layout.fillWidth: true
                                 text: delegate.friendlyName
                                 font.bold: true
                                 elide: Text.ElideRight
                             }
 
-                            Label {
+                            Text {
                                 Layout.fillWidth: true
                                 text: qsTr("Serial Number %0").arg(delegate.serial);
                             }
@@ -212,48 +212,48 @@ StackView {
                         rowSpacing: 10
                         columnSpacing: 10
 
-                        Label {
+                        Text {
                             text: qsTr("Manufacturer:")
                             Layout.leftMargin: 60
                         }
 
-                        Label {
+                        Text {
                             text: delegate.manufacturer
                             font.bold: true
                             elide: Text.ElideRight
                             Layout.fillWidth: true
                         }
 
-                        Label {
+                        Text {
                             text: qsTr("Device Type:")
                             Layout.leftMargin: 60
                         }
 
-                        Label {
+                        Text {
                             text: delegate.deviceType
                             font.bold: true
                             elide: Text.ElideRight
                             Layout.fillWidth: true
                         }
 
-                        Label {
+                        Text {
                             text: qsTr("Host Name:")
                             Layout.leftMargin: 60
                         }
 
-                        Label {
+                        Text {
                             text: delegate.hostName
                             font.bold: true
                             elide: Text.ElideRight
                             Layout.fillWidth: true
                         }
 
-                        Label {
+                        Text {
                             text: qsTr("Ip:")
                             Layout.leftMargin: 60
                         }
 
-                        Label {
+                        Text {
                             text: delegate.ip
                             font.bold: true
                             elide: Text.ElideRight

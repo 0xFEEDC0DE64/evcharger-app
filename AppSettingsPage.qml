@@ -14,7 +14,7 @@ NavigationPage {
             anchors.fill: parent
             columns: 2
 
-            Label {
+            Text {
                 text: qsTr("Number of app instances:")
                 font.bold: true
                 wrapMode: Text.Wrap
@@ -35,7 +35,7 @@ NavigationPage {
             anchors.fill: parent
             columns: 2
 
-            Label {
+            Text {
                 text: qsTr("solalaweb key:")
                 font.bold: true
                 wrapMode: Text.Wrap
@@ -52,7 +52,7 @@ NavigationPage {
                 }
             }
 
-            Label {
+            Text {
                 text: qsTr("solalaweb cert:")
                 font.bold: true
                 wrapMode: Text.Wrap
