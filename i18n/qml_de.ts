@@ -203,6 +203,12 @@
         <source>solalaweb cert:</source>
         <translation>solalaweb cert:</translation>
     </message>
+    <message>
+        <location filename="../AppSettingsPage.qml" line="74"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/AppSettingsPage.qml" line="74"/>
+        <source>Show solalaweb:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BaseNavigationPage</name>
@@ -887,8 +893,26 @@
         <translation>Seriennummer %0</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="316"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="316"/>
+        <location filename="../DeviceListScreen.qml" line="266"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="266"/>
+        <source>🛜</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../DeviceListScreen.qml" line="284"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="284"/>
+        <source>☁️</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../DeviceListScreen.qml" line="289"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="289"/>
+        <source>Solala</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../DeviceListScreen.qml" line="320"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="320"/>
         <source>Add or setup device</source>
         <translation>Gerät hinzufügen oder einrichten</translation>
     </message>
@@ -937,16 +961,12 @@
         <translation>Ip:</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="266"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="266"/>
         <source>Connect local</source>
-        <translation>Lokal verbinden</translation>
+        <translation type="vanished">Lokal verbinden</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="284"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="284"/>
         <source>Connect cloud</source>
-        <translation>Über cloud verbinden</translation>
+        <translation type="vanished">Über cloud verbinden</translation>
     </message>
     <message>
         <source>Settings</source>

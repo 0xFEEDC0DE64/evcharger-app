@@ -260,29 +260,41 @@ StackView {
                             Layout.fillWidth: true
                         }
 
-                        Button {
-                            enabled: delegate.ip != ""
+                        RowLayout {
+                            Layout.columnSpan: 2
 
-                            text: qsTr("Connect local")
-                            onClicked: deviceSelected("ws://" + delegate.ip + "/ws", delegate.password)
-                        }
+                            Button {
+                                Layout.fillWidth: true
+                                enabled: delegate.ip != ""
 
-                        Button {
-                            property var cloudUrl: {
-                                for (let i = 0; i < cloudUrlsModel.count; ++i) {
-                                    const entry = cloudUrlsModel.get(i);
-                                    if (delegate.manufacturer === entry.manufacturer &&
-                                        delegate.deviceType.includes(entry.deviceType)) {
-                                        return entry.url;
-                                    }
-                                }
-                                return null;
+                                text: qsTr("Local")
+                                onClicked: deviceSelected("ws://" + delegate.ip + "/ws", delegate.password)
                             }
 
-                            enabled: cloudUrl !== null
+                            Button {
+                                Layout.fillWidth: true
+                                property var cloudUrl: {
+                                    for (let i = 0; i < cloudUrlsModel.count; ++i) {
+                                        const entry = cloudUrlsModel.get(i);
+                                        if (delegate.manufacturer === entry.manufacturer &&
+                                            delegate.deviceType.includes(entry.deviceType)) {
+                                            return entry.url;
+                                        }
+                                    }
+                                    return null;
+                                }
 
-                            text: qsTr("Connect cloud")
-                            onClicked: deviceSelected(cloudUrl + delegate.serial, delegate.password)
+                                enabled: cloudUrl !== null
+
+                                text: qsTr("Cloud")
+                                onClicked: deviceSelected(cloudUrl + delegate.serial, delegate.password)
+                            }
+
+                            Button {
+                                Layout.fillWidth: true
+                                text: qsTr("Solala")
+                                visible: theSettings.showSolalaweb
+                            }
                         }
                     }
                 }

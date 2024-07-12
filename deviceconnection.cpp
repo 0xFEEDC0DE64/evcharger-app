@@ -105,7 +105,7 @@ void DeviceConnection::setPassword(const QString &password)
 
 void DeviceConnection::messageReceived(const QVariant &variant)
 {
-    if (variant.type() != QMetaType::QVariantMap)
+    if (variant.typeId() != QMetaType::QVariantMap)
     {
         emit logMessage(tr("Received something that is not a json object!"));
         return;
@@ -120,7 +120,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     }
 
     const auto &typeVariant = *typeIter;
-    if (typeVariant.type() != QMetaType::QString)
+    if (typeVariant.typeId() != QMetaType::QString)
     {
         emit logMessage(tr("Received something with a non-string type!"));
         return;
@@ -140,7 +140,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &serialVariant = *iter;
-            if (serialVariant.type() != QMetaType::QString)
+            if (serialVariant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received hello with a non-string serial!"));
                 return;
@@ -152,7 +152,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
         if (auto iter = map.find("secured"); iter != std::cend(map))
         {
             const auto &securedVariant = *iter;
-            if (securedVariant.type() != QMetaType::Bool)
+            if (securedVariant.typeId() != QMetaType::Bool)
             {
                 emit logMessage(tr("Received hello with a non-bool secured!"));
                 return;
@@ -172,7 +172,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &manufacturerVariant = *manufacturerIter;
-            if (manufacturerVariant.type() != QMetaType::QString)
+            if (manufacturerVariant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received hello with a non-string manufacturer!"));
                 return;
@@ -190,7 +190,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &deviceTypeVariant = *devicetypeIter;
-            if (deviceTypeVariant.type() != QMetaType::QString)
+            if (deviceTypeVariant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received hello with a non-string devicetype!"));
                 return;
@@ -208,7 +208,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &friendlyNameVariant = *friendlyNameIter;
-            if (friendlyNameVariant.type() != QMetaType::QString)
+            if (friendlyNameVariant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received hello with a non-string friendly_name!"));
                 return;
@@ -236,7 +236,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &token1Variant = *iter;
-            if (token1Variant.type() != QMetaType::QString)
+            if (token1Variant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received authRequired with a non-string token1!"));
                 return;
@@ -254,7 +254,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             }
 
             const auto &token2Variant = *iter;
-            if (token2Variant.type() != QMetaType::QString)
+            if (token2Variant.typeId() != QMetaType::QString)
             {
                 emit logMessage(tr("Received authRequired with a non-string token2!"));
                 return;
@@ -277,7 +277,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
         if (auto iter = map.find("partial"); iter != std::cend(map))
         {
             const auto &partialVariant = *iter;
-            if (partialVariant.type() != QMetaType::Bool)
+            if (partialVariant.typeId() != QMetaType::Bool)
             {
                 emit logMessage(tr("Received fullStatus with a non-bool partial!"));
                 return;
@@ -294,7 +294,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
         }
 
         const auto &statusVariant = *iter;
-        if (statusVariant.type() != QMetaType::QVariantMap)
+        if (statusVariant.typeId() != QMetaType::QVariantMap)
         {
             emit logMessage(tr("Received fullStatus with a non-object status!"));
             return;
@@ -321,7 +321,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
         }
 
         const auto &statusVariant = *iter;
-        if (statusVariant.type() != QMetaType::QVariantMap)
+        if (statusVariant.typeId() != QMetaType::QVariantMap)
         {
             emit logMessage(tr("Received deltaStatus with a non-object status!"));
             return;
@@ -335,7 +335,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
             if (iter.key() == "fna")
             {
                 const auto &friendlyNameVariant = iter.value();
-                if (friendlyNameVariant.type() == QMetaType::QString)
+                if (friendlyNameVariant.typeId() == QMetaType::QString)
                 {
                     const auto &friendlyName = friendlyNameVariant.toString();
                     if (m_friendlyName != friendlyName)
@@ -363,7 +363,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     if (auto iter = map.find("requestId"); iter != std::cend(map))
     {
         const auto &requestIdVariant = *iter;
-        if (requestIdVariant.type() != QMetaType::QString)
+        if (requestIdVariant.typeId() != QMetaType::QString)
         {
             emit logMessage(tr("Received message with a non-string requestId!"));
             return;

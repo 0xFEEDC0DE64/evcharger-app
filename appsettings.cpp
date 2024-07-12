@@ -155,3 +155,20 @@ bool AppSettings::loadSolalawebCert(const QString &url)
 
     return true;
 }
+
+bool AppSettings::showSolalaweb() const
+{
+    if (m_showSolalaweb)
+        return *m_showSolalaweb;
+
+    auto showSolalaweb = value("showSolalaweb").toBool();
+    m_showSolalaweb = showSolalaweb;
+    return showSolalaweb;
+}
+
+void AppSettings::setShowSolalaweb(bool showSolalaweb)
+{
+    setValue("showSolalaweb", showSolalaweb);
+    m_showSolalaweb = showSolalaweb;
+    emit showSolalawebChanged(showSolalaweb);
+}

@@ -68,6 +68,15 @@ NavigationPage {
                     onAccepted: theSettings.loadSolalawebCert(selectedFile)
                 }
             }
+
+            CheckDelegate {
+                Layout.columnSpan: 2
+                Layout.fillWidth: true
+
+                text: qsTr("Show solalaweb:")
+                checked: theSettings.showSolalaweb
+                onClicked: theSettings.showSolalaweb = checked
+            }
         }
     }
 }
