@@ -3,6 +3,7 @@ module EVChargerApp
 EVChargerApp 1.0 AboutPage.qml
 EVChargerApp 1.0 AccessPage.qml
 EVChargerApp 1.0 AddDeviceScreen.qml
+EVChargerApp 1.0 AnimatedStackView.qml
 EVChargerApp 1.0 ApiKeyValueItem.qml
 EVChargerApp 1.0 ApiSettingsPage.qml
 EVChargerApp 1.0 AppInstance.qml

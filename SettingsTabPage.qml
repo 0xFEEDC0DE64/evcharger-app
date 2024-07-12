@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-StackView {
+AnimatedStackView {
     id: stackView
 
     function backPressed() {

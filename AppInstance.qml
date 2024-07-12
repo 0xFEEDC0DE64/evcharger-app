@@ -12,6 +12,14 @@ Loader {
         return loader.item.backPressed()
     }
 
+    DevicesModel {
+        id: devicesModel
+
+        settings: theSettings
+
+        Component.onCompleted: start()
+    }
+
     Component {
         id: deviceList
 

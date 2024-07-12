@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-StackView {
+AnimatedStackView {
     id: stackView
 
     signal deviceSelected(url: string, password: string)
@@ -16,53 +16,12 @@ StackView {
         return false
     }
 
-    // pushEnter: Transition {
-    //     PropertyAnimation {
-    //         property: "opacity"
-    //         from: 0
-    //         to:1
-    //         duration: 200
-    //     }
-    // }
-    // pushExit: Transition {
-    //     PropertyAnimation {
-    //         property: "opacity"
-    //         from: 1
-    //         to:0
-    //         duration: 200
-    //     }
-    // }
-    // popEnter: Transition {
-    //     PropertyAnimation {
-    //         property: "opacity"
-    //         from: 0
-    //         to:1
-    //         duration: 200
-    //     }
-    // }
-    // popExit: Transition {
-    //     PropertyAnimation {
-    //         property: "opacity"
-    //         from: 1
-    //         to:0
-    //         duration: 200
-    //     }
-    // }
-
     initialItem: BaseNavigationPage {
         id: page
         title: qsTr("Device list")
 
         CloudUrlsModel {
             id: cloudUrlsModel
-        }
-
-        DevicesModel {
-            id: devicesModel
-
-            settings: theSettings
-
-            Component.onCompleted: start()
         }
 
         headerItems: [
