@@ -17,7 +17,7 @@ ItemDelegate {
 
     Component.onCompleted: {
         background.radius = 5
-        background.color = 'white'
+        background.color = "white"
     }
 
     onClicked: stackView.push(navigationItem.component)

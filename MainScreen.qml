@@ -47,12 +47,12 @@ ColumnLayout {
 
         const hours = duration%24;
 
-        return (wasNegative ? qsTr('%0 ago') : qsTr('in %0'))
+        return (wasNegative ? qsTr("%0 ago") : qsTr("in %0"))
             .arg(
-                (hours < 10 ? '0' : '') + hours + ':' +
-                (minutes < 10 ? '0' : '') + minutes + ':' +
-                (seconds < 10 ? '0' : '') + seconds + '.' +
-                (milliseconds < 100 ? '0' : '') + (milliseconds < 10 ? '0' : '') + milliseconds)
+                (hours < 10 ? "0" : "") + hours + ":" +
+                (minutes < 10 ? "0" : "") + minutes + ":" +
+                (seconds < 10 ? "0" : "") + seconds + "." +
+                (milliseconds < 100 ? "0" : "") + (milliseconds < 10 ? "0" : "") + milliseconds)
             ;
     }
 

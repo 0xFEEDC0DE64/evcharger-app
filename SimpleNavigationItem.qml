@@ -13,7 +13,7 @@ ItemDelegate {
 
     Component.onCompleted: {
         background.radius = 5
-        background.color = 'white'
+        background.color = "white"
         contentItem.children[0].color = navigationItem.color
     }
 

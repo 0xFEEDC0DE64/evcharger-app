@@ -170,17 +170,17 @@ StackView {
                             height: parent.height
                             //Layout.fillHeight: true
                             source: {
-                                if (delegate.deviceType == 'go-eCharger_V5' ||
-                                    delegate.deviceType == 'go-eCharger_V4' ||
-                                    delegate.deviceType == 'wattpilot_V2')
+                                if (delegate.deviceType == "go-eCharger_V5" ||
+                                    delegate.deviceType == "go-eCharger_V4" ||
+                                    delegate.deviceType == "wattpilot_V2")
                                 {
                                     return "icons/ChargerV4.svg"
-                                } else if (delegate.deviceType == 'go-eCharger' ||
-                                           delegate.deviceType == 'wattpilot') {
+                                } else if (delegate.deviceType == "go-eCharger" ||
+                                           delegate.deviceType == "wattpilot") {
                                     return "icons/ChargerV3.svg"
-                                } else if (delegate.deviceType == 'go-eCharger_Phoenix') {
+                                } else if (delegate.deviceType == "go-eCharger_Phoenix") {
                                     return "icons/Charger.svg"
-                                } else if (delegate.deviceType.includes('controller')) {
+                                } else if (delegate.deviceType.includes("controller")) {
                                     return "icons/Controller.svg"
                                 }
                             }
@@ -293,6 +293,7 @@ StackView {
                             Button {
                                 Layout.fillWidth: true
                                 text: qsTr("Solala")
+                                onClicked: deviceSelected("wss://solalaweb.com/" + delegate.serial, delegate.password)
                                 visible: theSettings.showSolalaweb
                             }
                         }

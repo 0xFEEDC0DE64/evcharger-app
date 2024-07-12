@@ -180,12 +180,12 @@ NavigationPage {
                     text: {
                         switch (updateStatus.value)
                         {
-                        case 0: return 'Idle'
-                        case 1: return 'Updating'
-                        case 2: return 'Failed'
-                        case 3: return 'Succeeded'
-                        case 4: return 'NotReady'
-                        case 5: return 'Verifying'
+                        case 0: return "Idle"
+                        case 1: return "Updating"
+                        case 2: return "Failed"
+                        case 3: return "Succeeded"
+                        case 4: return "NotReady"
+                        case 5: return "Verifying"
                         default: return updateStatus.value
                         }
                     }
@@ -212,7 +212,7 @@ NavigationPage {
                             apiKey: "ocl"
                         }
 
-                        text: updateProgress.value + ' / ' + updateLength.value
+                        text: updateProgress.value + " / " + updateLength.value
                     }
 
                     ProgressBar {

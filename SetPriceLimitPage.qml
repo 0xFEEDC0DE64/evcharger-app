@@ -31,7 +31,7 @@ NavigationPage {
             }
 
             Text {
-                text: '>'
+                text: ">"
             }
         }
     }

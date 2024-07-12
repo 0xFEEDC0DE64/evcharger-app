@@ -126,19 +126,19 @@ StackView {
                         }
 
                         source: {
-                            if (devicetype.value == 'go-eCharger_V5' ||
-                                devicetype.value == 'go-eCharger_V4')
+                            if (devicetype.value == "go-eCharger_V5" ||
+                                devicetype.value == "go-eCharger_V4")
                             {
                                 if (isgo.value)
                                     return "images/geminiFlex.png"
                                 else
                                     return "images/geminiFix.png"
-                            } else if (devicetype.value == 'wattpilot_V2') {
+                            } else if (devicetype.value == "wattpilot_V2") {
                                 return "images/wattpilot.png"
-                            } else if (devicetype.value == 'go-eCharger' ||
-                                       devicetype.value == 'wattpilot') {
+                            } else if (devicetype.value == "go-eCharger" ||
+                                       devicetype.value == "wattpilot") {
                                 return "images/homeFix.png"
-                            } else if (devicetype.value == 'go-eCharger_Phoenix') {
+                            } else if (devicetype.value == "go-eCharger_Phoenix") {
                                 return "images/phoenix.png"
                             }
 

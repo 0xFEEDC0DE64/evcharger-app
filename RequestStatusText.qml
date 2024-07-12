@@ -16,7 +16,7 @@ Text {
         if (request.response.type == "response") {
             if (request.response.success)
                 return "OK"
-            if ('message' in request.response)
+            if ("message" in request.response)
                 return request.response.message
         }
         return JSON.stringify(request.response)

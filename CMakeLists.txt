@@ -20,17 +20,17 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick WebSockets LinguistTools)
 qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
 
 qt_add_executable(evcharger-app WIN32 MACOSX_BUNDLE
-apikeyvaluehelper.cpp
-apikeyvaluehelper.h
-appsettings.cpp
-appsettings.h
-deviceconnection.cpp
-deviceconnection.h
-devicesmodel.cpp
-devicesmodel.h
-main.cpp
-sendmessagehelper.cpp
-sendmessagehelper.h
+    apikeyvaluehelper.cpp
+    apikeyvaluehelper.h
+    appsettings.cpp
+    appsettings.h
+    deviceconnection.cpp
+    deviceconnection.h
+    devicesmodel.cpp
+    devicesmodel.h
+    main.cpp
+    sendmessagehelper.cpp
+    sendmessagehelper.h
 )
 
 qt6_add_translations(evcharger-app
@@ -121,6 +121,7 @@ qt_add_qml_module(evcharger-app
         WiFiErrorsPage.qml
         WiFiOnOffSwitch.qml
         WiFiPage.qml
+        WiFiScanPage.qml
     RESOURCES
         icons/Charger.svg
         icons/ChargerV3.svg
