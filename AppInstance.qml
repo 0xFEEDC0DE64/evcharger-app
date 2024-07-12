@@ -3,41 +3,28 @@ import QtQuick.Controls.Material
 import QtQuick.Layouts
 import EVChargerApp
 
-Loader {
-    id: loader
-
-    sourceComponent: deviceList
+AnimatedStackView {
+    id: stackView
 
     function backPressed() {
-        return loader.item.backPressed()
-    }
-
-    DevicesModel {
-        id: devicesModel
-
-        settings: theSettings
-
-        Component.onCompleted: start()
-    }
-
-    Component {
-        id: deviceList
-
-        DeviceListScreen {
-            //onDeviceSelected: (url, password) => loader.setSource("DeviceScreen.qml", { url, password })
-            onDeviceSelected: function(url, password) {
-                loader.sourceComponent = deviceScreen
-                loader.item.url = url;
-                loader.item.password = password;
-            }
+        if (stackView.currentItem.backPressed())
+            return true
+        if (depth > 1) {
+            pop()
+            return true
         }
+        return false
+    }
+
+    initialItem: DeviceListScreen {
+        onDeviceSelected: (url, password) => stackView.push(deviceScreenComponent, { url, password })
     }
 
     Component {
-        id: deviceScreen
+        id: deviceScreenComponent
 
         DeviceScreen {
-            onClose: loader.sourceComponent = deviceList
+            onCloseRequested: stackView.pop()
         }
     }
 }

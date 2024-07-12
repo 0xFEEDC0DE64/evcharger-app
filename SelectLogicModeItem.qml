@@ -60,9 +60,16 @@ WhiteBox {
             description: qsTr("Specific energy and time")
             onClicked: {
                 if (selectedMode)
-                    stackView.push("DailyTripPage.qml")
+                    stackView.push(dailyTripPageComponent)
                 else
                     valueChanger.sendMessage({type: "setValue", key: "lmo", value: 5})
+            }
+
+            Component {
+                id: dailyTripPageComponent
+
+                DailyTripPage {
+                }
             }
         }
 

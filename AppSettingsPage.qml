@@ -7,6 +7,10 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("App Settings")
 
+    function backPressed() {
+        return false
+    }
+
     WhiteBox {
         Layout.fillWidth: true
 

@@ -16,6 +16,14 @@ ApplicationWindow {
         id: theSettings
     }
 
+    DevicesModel {
+        id: devicesModel
+
+        settings: theSettings
+
+        Component.onCompleted: start()
+    }
+
     FontLoader {
         id: materialIcons
         source: "ui-icons/MaterialIcons-Regular.ttf"
@@ -33,6 +41,7 @@ ApplicationWindow {
 
             AppInstance {
                 width: view.width
+                height: view.height
             }
         }
     }

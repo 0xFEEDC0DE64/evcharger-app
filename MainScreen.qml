@@ -6,6 +6,8 @@ import EVChargerApp
 ColumnLayout {
     id: mainScreen
 
+    signal closeRequested
+
     required property DeviceConnection deviceConnection
 
     function backPressed() {
@@ -16,8 +18,7 @@ ColumnLayout {
             stackLayout.currentIndex = Qt.binding(() => tabBar.currentIndex)
             return true
         }
-        loader.close()
-        return true
+        return false
     }
 
     ApiKeyValueHelper {
@@ -187,6 +188,10 @@ ColumnLayout {
 
             delegate: Loader {
                 source: model.source
+                onLoaded: {
+                    if (item.closeRequested)
+                        item.closeRequested.connect(closeRequested)
+                }
             }
         }
     }

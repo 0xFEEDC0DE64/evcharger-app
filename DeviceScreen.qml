@@ -6,7 +6,7 @@ import EVChargerApp
 Loader {
     id: loader
 
-    signal close
+    signal closeRequested()
 
     property alias url: theDeviceConnection.url
     property alias password: theDeviceConnection.password
@@ -61,6 +61,7 @@ Loader {
 
         MainScreen {
             deviceConnection: theDeviceConnection
+            onCloseRequested: loader.closeRequested()
         }
     }
 

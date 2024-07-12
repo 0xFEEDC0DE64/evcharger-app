@@ -6,6 +6,8 @@ import EVChargerApp
 AnimatedStackView {
     id: stackView
 
+    signal closeRequested()
+
     function backPressed() {
         if (depth > 1) {
             pop()
@@ -46,7 +48,7 @@ AnimatedStackView {
                     Layout.fillHeight: true
 
                     text: qsTr("Devices")
-                    onClicked: loader.close()
+                    onClicked: closeRequested()
                 }
             }
         }

@@ -54,8 +54,15 @@ NavigationPage {
         }
 
         text: qsTr("(%0) Wi-Fi Scan").arg(wifiScanResult.value == null ? 0 : wifiScanResult.value.length)
-        onClicked: stackView.push("WiFiScanPage.qml", {wifiScanResult} )
+        onClicked: stackView.push(wiFiScanPageComponent, {wifiScanResult} )
         enabled: wifiScanResult.value != null
+
+        Component {
+            id: wiFiScanPageComponent
+
+            WiFiScanPage {
+            }
+        }
     }
 
     Button {
@@ -66,8 +73,15 @@ NavigationPage {
         }
 
         text: qsTr("(%0) Wi-Fi Errors").arg(wifiErrorLog.value == null ? 0 : wifiErrorLog.value.length)
-        onClicked: stackView.push("WiFiErrorsPage.qml", {wifiErrorLog} )
+        onClicked: stackView.push(wiFiErrorsPageComponent, {wifiErrorLog} )
         enabled: wifiErrorLog.value != null
+
+        Component {
+            id: wiFiErrorsPageComponent
+
+            WiFiErrorsPage {
+            }
+        }
     }
 
     Item {

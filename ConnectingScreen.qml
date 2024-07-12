@@ -9,8 +9,7 @@ ColumnLayout {
     required property DeviceConnection deviceConnection
 
     function backPressed() {
-        close()
-        return true
+        return false
     }
 
     Connections {
@@ -47,6 +46,6 @@ ColumnLayout {
     Button {
         text: qsTr("Cancel")
 
-        onClicked: close()
+        onClicked: stackView.pop()
     }
 }

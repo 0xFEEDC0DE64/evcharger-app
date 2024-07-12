@@ -4,6 +4,10 @@ import QtQuick.Layouts
 import EVChargerApp
 
 NavigationPage {
+    function backPressed() {
+        return false
+    }
+
     title: qsTr("Setup or add device")
 
     WhiteBox {
