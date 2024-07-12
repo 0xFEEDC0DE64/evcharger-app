@@ -53,6 +53,7 @@ qt_add_qml_module(evcharger-app
         AboutPage.qml
         AccessPage.qml
         AddDeviceScreen.qml
+        AnimatedStackLayout.qml
         AnimatedStackView.qml
         ApiKeyValueItem.qml
         ApiSettingsPage.qml

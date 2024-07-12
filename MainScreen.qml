@@ -175,7 +175,7 @@ ColumnLayout {
         }
     }
 
-    StackLayout {
+    AnimatedStackLayout {
         id: stackLayout
         Layout.fillWidth: true
         Layout.fillHeight: true
