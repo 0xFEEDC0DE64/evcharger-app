@@ -18,9 +18,10 @@ WhiteCheckDelegate {
         apiKey: "wen"
     }
 
-    SendMessageHelper {
+    SetValueHelper {
         id: staEnabledChanger
         deviceConnection: theDeviceConnection
+        apiKey: "wen"
     }
 
     checked: staEnabled.value
@@ -28,11 +29,7 @@ WhiteCheckDelegate {
 
     onClicked: {
         if (checked)
-            staEnabledChanger.sendMessage({
-                type: "setValue",
-                key: "wen",
-                value: checked
-            })
+            staEnabledChanger.setValue(checked)
         else {
             checked = true
             disableStaDialog.open()
@@ -57,11 +54,7 @@ WhiteCheckDelegate {
 
         onAccepted: {
             checkDelegate.checked = false
-            staEnabledChanger.sendMessage({
-                type: "setValue",
-                key: "wen",
-                value: false
-            })
+            staEnabledChanger.setValue(false)
         }
         onRejected: checkDelegate.checked = Qt.binding(function() { return staEnabled.value })
 

@@ -168,10 +168,16 @@ AnimatedStackView {
                 }
 
                 NavigationItem {
+                    ApiKeyValueHelper {
+                        id: priceLimitHelper
+                        deviceConnection: theDeviceConnection
+                        apiKey: "awp"
+                    }
+
                     visible: logicMode.value == 4
                     iconSource: "material-icons/grid_guides.svg"
                     title: qsTr("Price limit")
-                    description: qsTr("%0 ct/kWh").arg(0)
+                    description: qsTr("%0 ct/kWh").arg(priceLimitHelper.value)
                     component: "SetPriceLimitPage.qml"
                 }
 

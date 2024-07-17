@@ -5,9 +5,20 @@ import QtQuick.Layouts
 NavigationPage {
     title: qsTr("Name")
 
-    Text {
-        text: "TODO"
+    NavigationItem {
+        iconSource: "material-icons/grid_guides.svg"
+        title: qsTr("Name")
+        component: "NamePage.qml"
+    }
 
-        Layout.fillHeight: true
+    EditValueItem {
+        id: test
+        text: qsTr("Name")
+        apiKey: "fna"
+        fullWidth: true
+        editableItem: TextField {
+            id: textField
+            property alias value: textField.text
+        }
     }
 }

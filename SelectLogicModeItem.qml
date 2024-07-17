@@ -9,9 +9,10 @@ WhiteBox {
     RowLayout {
         anchors.fill: parent
 
-        SendMessageHelper {
+        SetValueHelper {
             id: valueChanger
             deviceConnection: theDeviceConnection
+            apiKey: "lmo"
             onResponseChanged: {
                 ecoButton.checked = Qt.binding(() => ecoButton.selectedMode)
                 basicButton.checked = Qt.binding(() => basicButton.selectedMode)
@@ -35,7 +36,7 @@ WhiteBox {
                 if (selectedMode)
                     tabBar.setCurrentIndex(1)
                 else
-                    valueChanger.sendMessage({type: "setValue", key: "lmo", value: 4})
+                    valueChanger.setValue(4)
             }
         }
 
@@ -47,7 +48,7 @@ WhiteBox {
             text: qsTr("Basic")
             icon.source: "icons/EcoModeFilled.svg"
             description: qsTr("Basic charging")
-            onClicked: valueChanger.sendMessage({type: "setValue", key: "lmo", value: 3})
+            onClicked: valueChanger.setValue(3)
         }
 
         LogicModeButton {
@@ -62,7 +63,7 @@ WhiteBox {
                 if (selectedMode)
                     stackView.push(dailyTripPageComponent)
                 else
-                    valueChanger.sendMessage({type: "setValue", key: "lmo", value: 5})
+                    valueChanger.setValue(5)
             }
 
             Component {

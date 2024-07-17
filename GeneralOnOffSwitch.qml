@@ -21,9 +21,10 @@ WhiteCheckDelegate {
         apiKey: checkDelegate.apiKey
     }
 
-    SendMessageHelper {
+    SetValueHelper {
         id: valueChanger
         deviceConnection: theDeviceConnection
+        apiKey: checkDelegate.apiKey
         onResponseChanged: checkDelegate.checked = Qt.binding(function(){ return valueHelper.value; })
     }
 
@@ -31,11 +32,7 @@ WhiteCheckDelegate {
     text: valueHelper.value ? qsTr("On") : qsTr("Off")
 
     onClicked: {
-        valueChanger.sendMessage({
-            type: "setValue",
-            key: checkDelegate.apiKey,
-            value: checked
-        })
+        valueChanger.setValue(checked)
     }
 
     BusyIndicator {

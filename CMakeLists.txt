@@ -63,7 +63,6 @@ qt_add_qml_module(evcharger-app
         CablePage.qml
         CarPage.qml
         CenteredDialog.qml
-        ChangeNumberItem.qml
         ChargerTabPage.qml
         ChargingConfigurationPage.qml
         ChargingSpeedPage.qml
@@ -79,7 +78,9 @@ qt_add_qml_module(evcharger-app
         DeviceListScreen.qml
         DeviceScreen.qml
         DisplaySettingsPage.qml
+        DoubleSpinBox.qml
         EcoTabPage.qml
+        EditValueItem.qml
         EthernetPage.qml
         EVChargerApp.qml
         FirmwarePage.qml
@@ -114,6 +115,7 @@ qt_add_qml_module(evcharger-app
         SensorsConfigurationPage.qml
         SetPriceLimitPage.qml
         SettingsTabPage.qml
+        SetValueHelper.qml
         SimpleNavigationItem.qml
         SwitchLanguagePage.qml
         TimeComponentLabel.qml

@@ -11,9 +11,16 @@ NavigationPage {
         wrapMode: Text.Wrap
     }
 
-    ChangeNumberItem {
-        descriptionText: qsTr("Price limit")
-        valueText: qsTr("%0 ct/kWh").arg(0)
+    EditValueItem {
+        id: test
+        text: qsTr("Price limit")
+        valueText: qsTr("%0 ct/kWh").arg(test.value)
+        apiKey: "awp"
+        editableItem: DoubleSpinBox {
+            from: -1000.
+            to: 1000.
+            stepSize: .1
+        }
     }
 
     Item {

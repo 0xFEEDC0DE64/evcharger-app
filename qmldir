@@ -13,7 +13,6 @@ EVChargerApp 1.0 BaseNavigationPage.qml
 EVChargerApp 1.0 CablePage.qml
 EVChargerApp 1.0 CarPage.qml
 EVChargerApp 1.0 CenteredDialog.qml
-EVChargerApp 1.0 ChangeNumberItem.qml
 EVChargerApp 1.0 ChargerTabPage.qml
 EVChargerApp 1.0 ChargingConfigurationPage.qml
 EVChargerApp 1.0 ChargingSpeedPage.qml
@@ -29,7 +28,9 @@ EVChargerApp 1.0 DateAndTimePage.qml
 EVChargerApp 1.0 DeviceListScreen.qml
 EVChargerApp 1.0 DeviceScreen.qml
 EVChargerApp 1.0 DisplaySettingsPage.qml
+EVChargerApp 1.0 DoubleSpinBox.qml
 EVChargerApp 1.0 EcoTabPage.qml
+EVChargerApp 1.0 EditValueItem.qml
 EVChargerApp 1.0 EthernetPage.qml
 EVChargerApp 1.0 EVChargerApp.qml
 EVChargerApp 1.0 FirmwarePage.qml
@@ -64,6 +65,7 @@ EVChargerApp 1.0 SelectLogicModeItem.qml
 EVChargerApp 1.0 SensorsConfigurationPage.qml
 EVChargerApp 1.0 SetPriceLimitPage.qml
 EVChargerApp 1.0 SettingsTabPage.qml
+EVChargerApp 1.0 SetValueHelper.qml
 EVChargerApp 1.0 SimpleNavigationItem.qml
 EVChargerApp 1.0 SwitchLanguagePage.qml
 EVChargerApp 1.0 TimeComponentLabel.qml
