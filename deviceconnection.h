@@ -29,6 +29,8 @@ public:
     QString url() const { return m_url; }
     void setUrl(const QString &url);
 
+    Q_INVOKABLE void start();
+
     QString password() const { return m_password; }
     void setPassword(const QString &password);
 

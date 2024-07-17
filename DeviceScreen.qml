@@ -28,6 +28,8 @@ Loader {
     DeviceConnection {
         id: theDeviceConnection
 
+        Component.onCompleted: start()
+
         settings: theSettings
 
         onLogMessage: (message) => collectedMessages.push(message)

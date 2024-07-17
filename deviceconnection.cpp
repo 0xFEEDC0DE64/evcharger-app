@@ -9,10 +9,13 @@
 #include <QSslConfiguration>
 #include <QSslCertificate>
 #include <QSslKey>
+#include <QTimer>
 
 #include <utility>
 
 #include "msgpack.h"
+
+using namespace std::chrono_literals;
 
 namespace {
 template<typename QEnum>
@@ -58,7 +61,10 @@ void DeviceConnection::setUrl(const QString &url)
         return;
 
     emit urlChanged(m_url = url);
+}
 
+void DeviceConnection::start()
+{
     emit logMessage(tr("Connecting to %0").arg(m_url));
 
     if (m_settings && !m_settings->solalawebKey().isEmpty() && !m_settings->solalawebCert().isEmpty())
@@ -91,7 +97,6 @@ void DeviceConnection::setUrl(const QString &url)
     }
 
 after:
-
     m_websocket.open(QUrl{m_url});
 }
 
@@ -451,18 +456,24 @@ void DeviceConnection::sendAuth(const QString &password)
 
 void DeviceConnection::connected()
 {
+    qDebug() << "called";
     emit logMessage(tr("Connected!"));
 }
 
 void DeviceConnection::disconnected()
 {
+    qDebug() << "called";
     emit logMessage(tr("Disconnected!"));
+
     emit logMessage(tr("Reconnecting to %0").arg(m_url));
-    m_websocket.open(QUrl{m_url});
+    QTimer::singleShot(1s, this, [this](){
+        m_websocket.open(QUrl{m_url});
+    });
 }
 
 void DeviceConnection::stateChanged(QAbstractSocket::SocketState state)
 {
+    qDebug() << state;
     emit logMessage(tr("state changed: %0").arg(enumToString(state)));
 }
 
@@ -496,16 +507,19 @@ void DeviceConnection::binaryMessageReceived(QByteArray message)
 
 void DeviceConnection::errorOccurred(QAbstractSocket::SocketError error)
 {
+    qDebug() << error;
     emit logMessage(tr("error occured: %0").arg(enumToString(error)));
 }
 
 void DeviceConnection::peerVerifyError(const QSslError &error)
 {
+    qDebug() << error;
     emit logMessage(tr("ssl peer verify error"));
 }
 
 void DeviceConnection::sslErrors(const QList<QSslError> &errors)
 {
+    qDebug() << errors;
     emit logMessage(tr("ssl errors"));
 }
 
@@ -516,16 +530,19 @@ void DeviceConnection::sslErrors(const QList<QSslError> &errors)
 
 void DeviceConnection::alertSent(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
 {
+    qDebug() << level << type << description;
     emit logMessage(tr("ssl alert sent level=%0 type=%1 description=%2").arg(enumToString(level)).arg(enumToString(type)).arg(description));
 }
 
 void DeviceConnection::alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
 {
+    qDebug() << level << type << description;
     emit logMessage(tr("ssl alert received level=%0 type=%1 description=%2").arg(enumToString(level)).arg(enumToString(type)).arg(description));
 }
 
 void DeviceConnection::handshakeInterruptedOnError(const QSslError &error)
 {
+    qDebug() << error;
     emit logMessage(tr("ssl handshake interrupted on error"));
 }
 
