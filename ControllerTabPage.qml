@@ -4,6 +4,8 @@ import QtQuick.Layouts
 import EVChargerApp
 
 Page {
+    signal closeRequested()
+
     function backPressed() {
         return false
     }
@@ -36,7 +38,7 @@ Page {
                 Layout.fillHeight: true
 
                 text: qsTr("Devices")
-                onClicked: loader.close()
+                onClicked: closeRequested()
             }
         }
     }
