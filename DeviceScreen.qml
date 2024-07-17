@@ -25,8 +25,6 @@ Loader {
         }
     }
 
-    anchors.fill: parent
-
     DeviceConnection {
         id: theDeviceConnection
 
