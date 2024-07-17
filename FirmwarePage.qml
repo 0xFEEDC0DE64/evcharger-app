@@ -33,7 +33,7 @@ NavigationPage {
 
                 ApiKeyValueHelper {
                     id: runningVersionDetails
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                     apiKey: "apd"
                 }
 
@@ -70,7 +70,7 @@ NavigationPage {
 
                     ApiKeyValueHelper {
                         id: availableUrls
-                        deviceConnection: mainScreen.deviceConnection
+                        deviceConnection: theDeviceConnection
                         apiKey: "ocu"
                     }
 
@@ -88,7 +88,7 @@ NavigationPage {
 
                 SendMessageHelper {
                     id: startFirmwareUpdate
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                 }
 
                 Button {
@@ -114,7 +114,7 @@ NavigationPage {
 
                 SendMessageHelper {
                     id: abortFirmwareUpdate
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                 }
 
                 Button {
@@ -139,7 +139,7 @@ NavigationPage {
 
                 SendMessageHelper {
                     id: switchAppPartition
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                 }
 
                 Button {
@@ -173,7 +173,7 @@ NavigationPage {
 
                     ApiKeyValueHelper {
                         id: updateStatus
-                        deviceConnection: mainScreen.deviceConnection
+                        deviceConnection: theDeviceConnection
                         apiKey: "ocs"
                     }
 
@@ -202,13 +202,13 @@ NavigationPage {
 
                         ApiKeyValueHelper {
                             id: updateProgress
-                            deviceConnection: mainScreen.deviceConnection
+                            deviceConnection: theDeviceConnection
                             apiKey: "ocp"
                         }
 
                         ApiKeyValueHelper {
                             id: updateLength
-                            deviceConnection: mainScreen.deviceConnection
+                            deviceConnection: theDeviceConnection
                             apiKey: "ocl"
                         }
 

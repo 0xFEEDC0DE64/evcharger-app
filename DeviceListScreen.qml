@@ -72,7 +72,7 @@ BaseNavigationPage {
             }
         }
 
-        delegate: SwipeDelegate {
+        delegate: WhiteSwipeDelegate {
             id: delegate
             checkable: true
             width: ListView.view.width - 30
@@ -88,11 +88,6 @@ BaseNavigationPage {
             required property bool saved
             required property string hostName
             required property string ip
-
-            Component.onCompleted: {
-                background.color = "white"
-                background.radius = 5
-            }
 
             swipe.enabled: saved
 

@@ -12,6 +12,8 @@ EVChargerApp 1.0 AppSettingsPage.qml
 EVChargerApp 1.0 BaseNavigationPage.qml
 EVChargerApp 1.0 CablePage.qml
 EVChargerApp 1.0 CarPage.qml
+EVChargerApp 1.0 CenteredDialog.qml
+EVChargerApp 1.0 ChangeNumberItem.qml
 EVChargerApp 1.0 ChargerTabPage.qml
 EVChargerApp 1.0 ChargingConfigurationPage.qml
 EVChargerApp 1.0 ChargingSpeedPage.qml
@@ -70,6 +72,9 @@ EVChargerApp 1.0 TimePickerLabel.qml
 EVChargerApp 1.0 TimePicker.qml
 EVChargerApp 1.0 VerticalTabButton.qml
 EVChargerApp 1.0 WhiteBox.qml
+EVChargerApp 1.0 WhiteCheckDelegate.qml
+EVChargerApp 1.0 WhiteItemDelegate.qml
+EVChargerApp 1.0 WhiteSwipeDelegate.qml
 EVChargerApp 1.0 WiFiErrorsPage.qml
 EVChargerApp 1.0 WiFiOnOffSwitch.qml
 EVChargerApp 1.0 WiFiPage.qml

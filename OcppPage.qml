@@ -42,7 +42,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: connectedSince
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ocppca"
             }
 
@@ -66,7 +66,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: acceptedSince
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ocppaa"
             }
 
@@ -91,7 +91,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: lastErrorAge
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ocpplea"
             }
 
@@ -106,7 +106,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: chargepointStatus
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ocppcs"
             }
 

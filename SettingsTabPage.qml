@@ -57,32 +57,32 @@ AnimatedStackView {
         NavigationItem {
             ApiKeyValueHelper {
                 id: wifiStaApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "wen"
             }
             ApiKeyValueHelper {
                 id: wifiApApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "wae"
             }
             ApiKeyValueHelper {
                 id: ethernetApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ee"
             }
             ApiKeyValueHelper {
                 id: cloudApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "cwe"
             }
             ApiKeyValueHelper {
                 id: ocppApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ocppe"
             }
             ApiKeyValueHelper {
                 id: mqttApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "mce"
             }
 
@@ -102,17 +102,17 @@ AnimatedStackView {
         NavigationItem {
             ApiKeyValueHelper {
                 id: ledApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "lbr"
             }
             ApiKeyValueHelper {
                 id: controllerApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "ccd"
             }
             ApiKeyValueHelper {
                 id: displayApiKeyValueHelper
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "dro"
             }
 

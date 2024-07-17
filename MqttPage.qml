@@ -42,7 +42,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: connectedSince
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "mcca"
             }
 
@@ -76,7 +76,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: lastErrorAge
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "mlra"
             }
 

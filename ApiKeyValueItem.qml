@@ -11,7 +11,7 @@ Text {
 
     ApiKeyValueHelper {
         id: apiKeyValueHelper
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
     }
 
     text: apiKeyValueHelper.value

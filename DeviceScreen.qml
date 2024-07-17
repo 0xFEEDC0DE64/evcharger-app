@@ -48,8 +48,6 @@ Loader {
 
     sourceComponent: Component {
         ConnectingScreen {
-            deviceConnection: theDeviceConnection
-
             anchors.fill: parent
 
             onConnected: loader.sourceComponent = mainScreen;
@@ -60,16 +58,12 @@ Loader {
         id: mainScreen
 
         MainScreen {
-            deviceConnection: theDeviceConnection
             onCloseRequested: loader.closeRequested()
         }
     }
 
-    Dialog {
+    CenteredDialog {
         id: passwordDialog
-
-        x: parent.width / 2 - width / 2
-        y: parent.height / 2 - height / 2
 
         title: qsTr("Password required")
         standardButtons: Dialog.Ok | Dialog.Cancel
@@ -111,11 +105,8 @@ Loader {
         }
     }
 
-    Dialog {
+    CenteredDialog {
         id: authImpossibleDialog
-
-        x: parent.width / 2 - width / 2
-        y: parent.height / 2 - height / 2
 
         title: qsTr("Authentication impossible!")
         standardButtons: Dialog.Ok | Dialog.Cancel

@@ -28,7 +28,7 @@ NavigationPage {
 
                 SendMessageHelper {
                     id: apiToken
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                 }
 
                 Button {
@@ -61,7 +61,7 @@ NavigationPage {
 
                 ApiKeyValueHelper {
                     id: tokenSetup
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                     apiKey: "hatv"
                 }
 
@@ -69,7 +69,7 @@ NavigationPage {
 
                 SendMessageHelper {
                     id: abortFirmwareUpdate
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                 }
 
                 Button {
@@ -105,7 +105,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: cloudApiKey
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "cak"
             }
 
@@ -136,7 +136,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: gridApiKey
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "gmk"
             }
 

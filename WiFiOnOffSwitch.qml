@@ -3,26 +3,24 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-CheckDelegate {
+WhiteCheckDelegate {
     id: checkDelegate
 
     Layout.fillWidth: true
 
     Component.onCompleted: {
-        background.color = "white"
-        background.radius = 5
         contentItem.children[0].wrapMode = Text.Wrap
     }
 
     ApiKeyValueHelper {
         id: staEnabled
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         apiKey: "wen"
     }
 
     SendMessageHelper {
         id: staEnabledChanger
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
     }
 
     checked: staEnabled.value
@@ -49,14 +47,10 @@ CheckDelegate {
         request: staEnabledChanger
     }
 
-    Dialog {
+    CenteredDialog {
         id: disableStaDialog
 
-        x: window.width / 2 - width / 2
-        y: window.height / 2 - height / 2
-        width: Math.min(implicitWidth, window.width - 20)
-
-        title: qsTr("Do you really want to disable Wi-Fi?")
+        title: qsTr("Are you sure?")
         standardButtons: Dialog.Ok | Dialog.Cancel
         focus: true
         modal: true
@@ -72,7 +66,7 @@ CheckDelegate {
         onRejected: checkDelegate.checked = Qt.binding(function() { return staEnabled.value })
 
         contentItem: Text {
-            text: qsTr("This action could make your device unreachable from your local homenetwork or the cloud!");
+            text: qsTr("Disabling Wi-Fi could make your device unreachable from your local homenetwork or the cloud!");
             wrapMode: Text.Wrap
         }
     }

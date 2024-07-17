@@ -11,7 +11,7 @@ WhiteBox {
 
         SendMessageHelper {
             id: valueChanger
-            deviceConnection: mainScreen.deviceConnection
+            deviceConnection: theDeviceConnection
             onResponseChanged: {
                 ecoButton.checked = Qt.binding(() => ecoButton.selectedMode)
                 basicButton.checked = Qt.binding(() => basicButton.selectedMode)

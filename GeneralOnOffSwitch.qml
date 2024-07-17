@@ -3,7 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-CheckDelegate {
+WhiteCheckDelegate {
     id: checkDelegate
 
     required property string apiKey
@@ -12,20 +12,18 @@ CheckDelegate {
     Layout.fillWidth: true
 
     Component.onCompleted: {
-        background.color = "white"
-        background.radius = 5
         contentItem.children[0].wrapMode = Text.Wrap
     }
 
     ApiKeyValueHelper {
         id: valueHelper
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         apiKey: checkDelegate.apiKey
     }
 
     SendMessageHelper {
         id: valueChanger
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         onResponseChanged: checkDelegate.checked = Qt.binding(function(){ return valueHelper.value; })
     }
 

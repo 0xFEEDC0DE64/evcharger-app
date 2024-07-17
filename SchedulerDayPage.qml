@@ -39,7 +39,6 @@ NavigationPage {
 
     TimePickerDialog {
         id: timePickerDialog
-        anchors.centerIn: parent
         is24Hour: is24HourSwitch.checked
 
         onTimeAccepted: print("A time was chosen - do something here!")

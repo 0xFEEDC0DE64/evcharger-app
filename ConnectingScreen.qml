@@ -6,14 +6,12 @@ import EVChargerApp
 ColumnLayout {
     signal connected
 
-    required property DeviceConnection deviceConnection
-
     function backPressed() {
         return false
     }
 
     Connections {
-        target: deviceConnection
+        target: theDeviceConnection
         function onFullStatusReceived() {
             connected()
         }

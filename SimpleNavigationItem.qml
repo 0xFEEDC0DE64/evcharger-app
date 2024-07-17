@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-ItemDelegate {
+WhiteItemDelegate {
     id: navigationItem
 
     property color color
@@ -12,8 +12,6 @@ ItemDelegate {
     Layout.fillWidth: true
 
     Component.onCompleted: {
-        background.radius = 5
-        background.color = "white"
         contentItem.children[0].color = navigationItem.color
     }
 

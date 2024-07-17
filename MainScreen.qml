@@ -8,8 +8,6 @@ ColumnLayout {
 
     signal closeRequested
 
-    required property DeviceConnection deviceConnection
-
     function backPressed() {
         if (stackLayout.currentItem.item.backPressed())
             return true
@@ -23,7 +21,7 @@ ColumnLayout {
 
     ApiKeyValueHelper {
         id: rebootTime
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         apiKey: "rbt"
     }
 
@@ -59,13 +57,13 @@ ColumnLayout {
 
     ApiKeyValueHelper {
         id: carApiKeyHelper
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         apiKey: "car"
     }
 
     ApiKeyValueHelper {
         id: controllerApiKeyHelper
-        deviceConnection: mainScreen.deviceConnection
+        deviceConnection: theDeviceConnection
         apiKey: "ccp"
     }
 

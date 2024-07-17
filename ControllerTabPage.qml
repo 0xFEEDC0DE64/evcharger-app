@@ -26,7 +26,7 @@ Page {
 
                 ApiKeyValueHelper {
                     id: friendlyName
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                     apiKey: "fna"
                 }
 

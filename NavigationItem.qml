@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-ItemDelegate {
+WhiteItemDelegate {
     id: navigationItem
 
     property alias iconSource: icon.source
@@ -14,11 +14,6 @@ ItemDelegate {
 
     implicitWidth: row.implicitWidth
     implicitHeight: Math.max(row.implicitHeight, 50)
-
-    Component.onCompleted: {
-        background.radius = 5
-        background.color = "white"
-    }
 
     onClicked: stackView.push(navigationItem.component)
 

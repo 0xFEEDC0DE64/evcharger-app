@@ -22,7 +22,7 @@ NavigationPage {
 
             ApiKeyValueHelper {
                 id: staStatus
-                deviceConnection: mainScreen.deviceConnection
+                deviceConnection: theDeviceConnection
                 apiKey: "wst"
             }
 
@@ -49,7 +49,7 @@ NavigationPage {
     Button {
         ApiKeyValueHelper {
             id: wifiScanResult
-            deviceConnection: mainScreen.deviceConnection
+            deviceConnection: theDeviceConnection
             apiKey: "scan"
         }
 
@@ -68,7 +68,7 @@ NavigationPage {
     Button {
         ApiKeyValueHelper {
             id: wifiErrorLog
-            deviceConnection: mainScreen.deviceConnection
+            deviceConnection: theDeviceConnection
             apiKey: "wsl"
         }
 

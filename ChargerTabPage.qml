@@ -36,7 +36,7 @@ AnimatedStackView {
 
                     ApiKeyValueHelper {
                         id: friendlyName
-                        deviceConnection: mainScreen.deviceConnection
+                        deviceConnection: theDeviceConnection
                         apiKey: "fna"
                     }
 
@@ -117,13 +117,13 @@ AnimatedStackView {
 
                         ApiKeyValueHelper {
                             id: devicetype
-                            deviceConnection: mainScreen.deviceConnection
+                            deviceConnection: theDeviceConnection
                             apiKey: "typ"
                         }
 
                         ApiKeyValueHelper {
                             id: isgo
-                            deviceConnection: mainScreen.deviceConnection
+                            deviceConnection: theDeviceConnection
                             apiKey: "isgo"
                         }
 
@@ -159,7 +159,7 @@ AnimatedStackView {
 
                 ApiKeyValueHelper {
                     id: logicMode
-                    deviceConnection: mainScreen.deviceConnection
+                    deviceConnection: theDeviceConnection
                     apiKey: "lmo"
                 }
 

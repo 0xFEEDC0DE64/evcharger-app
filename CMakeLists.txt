@@ -62,6 +62,8 @@ qt_add_qml_module(evcharger-app
         BaseNavigationPage.qml
         CablePage.qml
         CarPage.qml
+        CenteredDialog.qml
+        ChangeNumberItem.qml
         ChargerTabPage.qml
         ChargingConfigurationPage.qml
         ChargingSpeedPage.qml
@@ -120,6 +122,9 @@ qt_add_qml_module(evcharger-app
         TimePicker.qml
         VerticalTabButton.qml
         WhiteBox.qml
+        WhiteCheckDelegate.qml
+        WhiteItemDelegate.qml
+        WhiteSwipeDelegate.qml
         WiFiErrorsPage.qml
         WiFiOnOffSwitch.qml
         WiFiPage.qml
