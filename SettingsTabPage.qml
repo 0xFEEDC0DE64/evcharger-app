@@ -113,7 +113,7 @@ AnimatedStackView {
             ApiKeyValueHelper {
                 id: displayApiKeyValueHelper
                 deviceConnection: mainScreen.deviceConnection
-                apiKey: "ccd"
+                apiKey: "dro"
             }
 
             iconSource: "material-icons/grid_guides.svg"
