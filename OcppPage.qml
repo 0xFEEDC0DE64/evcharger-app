@@ -10,6 +10,21 @@ NavigationPage {
         apiKey: "ocppe"
     }
 
+    EditValueItem {
+        text: qsTr("Backend url")
+        apiKey: "ocppu"
+        fullWidth: true
+        editableItem: TextField {
+            id: textField0
+            property alias value: textField0.text
+        }
+    }
+
+    Button {
+        text: qsTr("API documentation")
+        onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/ocpp-en.md"))
+    }
+
     WhiteBox {
         Layout.fillWidth: true
 
@@ -128,5 +143,102 @@ NavigationPage {
                 }
             }
         }
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppg"
+        text: qsTr("Use global CA store")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppcn"
+        text: qsTr("Skip cert commonName check")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppss"
+        text: qsTr("Skip server cert verification")
+    }
+
+    // TODO clientKey
+
+    // TODO clientCert
+
+    // TODO serverCert
+
+    // TODO fallbackCurrentLimit
+
+    // TODO transactionId
+
+    EditValueItem {
+        text: qsTr("Heartbeat interval:")
+        valueText: Qt.locale().toString(value)
+        apiKey: "ocpph"
+        editableItem: SpinBox {
+            from: 0
+            to: 3600
+        }
+    }
+
+    EditValueItem {
+        text: qsTr("MeterValues sample interval:")
+        valueText: Qt.locale().toString(value)
+        apiKey: "ocppi"
+        editableItem: SpinBox {
+            from: 0
+            to: 3600
+        }
+    }
+
+    EditValueItem {
+        text: qsTr("Clock aligned data interval:")
+        valueText: Qt.locale().toString(value)
+        apiKey: "ocppai"
+        editableItem: SpinBox {
+            from: 0
+            to: 3600
+        }
+    }
+
+    EditValueItem {
+        text: qsTr("Dummy card id")
+        apiKey: "ocppd"
+        fullWidth: true
+        editableItem: TextField {
+            id: textField1
+            property alias value: textField1.text
+        }
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppr"
+        text: qsTr("Rotate phases on charger")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppao"
+        text: qsTr("Allow Offline Tx For UnknownId")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocpplo"
+        text: qsTr("Local Authorize Offline")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppla"
+        text: qsTr("Local Auth List Enabled")
+    }
+
+    // TODO MeterValuesCondition
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppt"
+        text: qsTr("Accept time from backend")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "ocppio"
+        text: qsTr("Set as inoperable")
     }
 }

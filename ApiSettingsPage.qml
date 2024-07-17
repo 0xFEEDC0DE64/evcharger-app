@@ -21,6 +21,7 @@ NavigationPage {
 
             Button {
                 text: qsTr("API documentation")
+                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/http-en.md"))
             }
 
             RowLayout {
@@ -116,6 +117,7 @@ NavigationPage {
 
             Button {
                 text: qsTr("API documentation")
+                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/cloudapi-en.md"))
             }
         }
     }
@@ -148,6 +150,7 @@ NavigationPage {
 
             Button {
                 text: qsTr("API documentation")
+                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/gridapi-en.md"))
             }
         }
     }
@@ -167,6 +170,7 @@ NavigationPage {
 
             Button {
                 text: qsTr("API documentation")
+                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v1/blob/master/go-eCharger%20API%20v1%20EN.md"))
             }
         }
     }

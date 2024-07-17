@@ -29,7 +29,7 @@ WhiteCheckDelegate {
     }
 
     checked: valueHelper.value
-    text: valueHelper.value ? qsTr("On") : qsTr("Off")
+    text: valueHelper.value === true ? qsTr("On") : valueHelper.value === false ? qsTr("Off") : qsTr("Unknown")
 
     onClicked: {
         valueChanger.setValue(checked)

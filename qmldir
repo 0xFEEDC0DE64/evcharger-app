@@ -18,6 +18,7 @@ EVChargerApp 1.0 ChargingConfigurationPage.qml
 EVChargerApp 1.0 ChargingSpeedPage.qml
 EVChargerApp 1.0 CloudPage.qml
 EVChargerApp 1.0 CloudUrlsModel.qml
+EVChargerApp 1.0 ConfirmingOnOffSwitch.qml
 EVChargerApp 1.0 ConnectingScreen.qml
 EVChargerApp 1.0 ConnectionPage.qml
 EVChargerApp 1.0 ControllerPage.qml
@@ -78,6 +79,5 @@ EVChargerApp 1.0 WhiteCheckDelegate.qml
 EVChargerApp 1.0 WhiteItemDelegate.qml
 EVChargerApp 1.0 WhiteSwipeDelegate.qml
 EVChargerApp 1.0 WiFiErrorsPage.qml
-EVChargerApp 1.0 WiFiOnOffSwitch.qml
 EVChargerApp 1.0 WiFiPage.qml
 EVChargerApp 1.0 WiFiScanPage.qml

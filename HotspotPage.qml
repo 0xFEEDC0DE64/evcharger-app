@@ -14,9 +14,33 @@ NavigationPage {
         text: qsTr("Disable AP when online")
     }
 
-    Text {
-        text: "TODO"
+    EditValueItem {
+        text: qsTr("SSID")
+        apiKey: "wan"
+        fullWidth: true
+        editableItem: TextField {
+            id: textField0
+            property alias value: textField0.text
+        }
+    }
 
-        Layout.fillHeight: true
+    EditValueItem {
+        text: qsTr("Password")
+        apiKey: "wak"
+        fullWidth: true
+        editableItem: TextField {
+            id: textField1
+            property alias value: textField1.text
+        }
+    }
+
+    EditValueItem {
+        text: qsTr("Channel")
+        valueText: Qt.locale().toString(value)
+        apiKey: "wapc"
+        editableItem: SpinBox {
+            from: 0
+            to: 15
+        }
     }
 }

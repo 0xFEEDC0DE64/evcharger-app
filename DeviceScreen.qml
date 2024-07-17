@@ -71,7 +71,7 @@ Loader {
         modal: true
 
         onAccepted: theDeviceConnection.sendAuth(passwordInput.text)
-        onRejected: loader.close()
+        onRejected: loader.closeRequested()
 
         contentItem: GridLayout {
             property int minimumInputSize: 120
@@ -109,12 +109,12 @@ Loader {
         id: authImpossibleDialog
 
         title: qsTr("Authentication impossible!")
-        standardButtons: Dialog.Ok | Dialog.Cancel
+        standardButtons: Dialog.Ok
         focus: true
         modal: true
 
-        onAccepted: loader.close()
-        onRejected: loader.close()
+        onAccepted: loader.closeRequested()
+        onRejected: loader.closeRequested()
 
         contentItem: Text {
             text: qsTr("To use this password remotely a password has to be setup first. This can be done over the AccessPoint.");

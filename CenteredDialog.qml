@@ -3,5 +3,6 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Dialog {
-    anchors.centerIn: parent
+    parent: Overlay.overlay
+    anchors.centerIn: Overlay.overlay
 }

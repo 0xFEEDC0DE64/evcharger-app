@@ -12,9 +12,8 @@ NavigationPage {
     }
 
     EditValueItem {
-        id: test
         text: qsTr("Price limit")
-        valueText: qsTr("%0 ct/kWh").arg(test.value)
+        valueText: qsTr("%0 ct/kWh").arg(Qt.locale().toString(value, 'f', 1))
         apiKey: "awp"
         editableItem: DoubleSpinBox {
             from: -1000.

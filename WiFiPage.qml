@@ -6,8 +6,10 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("Wi-Fi")
 
-    WiFiOnOffSwitch {
-
+    ConfirmingOnOffSwitch {
+        apiKey: "wen"
+        dialogTitle: qsTr("Are you sure?")
+        dialogText: qsTr("Disabling Wi-Fi could make your device unreachable from your local homenetwork or the cloud!")
     }
 
     GridLayout {
@@ -84,7 +86,23 @@ NavigationPage {
         }
     }
 
-    Item {
-        Layout.fillHeight: true
+    EditValueItem {
+        text: qsTr("Min RSSI")
+        valueText: Qt.locale().toString(value)
+        apiKey: "wsmr"
+        editableItem: SpinBox {
+            from: -100
+            to: 0
+        }
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "wspc"
+        text: qsTr("Pmf capable")
+    }
+
+    GeneralOnOffSwitch {
+        apiKey: "wspr"
+        text: qsTr("Pmf required")
     }
 }

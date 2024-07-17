@@ -68,6 +68,7 @@ qt_add_qml_module(evcharger-app
         ChargingSpeedPage.qml
         CloudPage.qml
         CloudUrlsModel.qml
+        ConfirmingOnOffSwitch.qml
         ConnectingScreen.qml
         ConnectionPage.qml
         ControllerPage.qml
@@ -128,7 +129,6 @@ qt_add_qml_module(evcharger-app
         WhiteItemDelegate.qml
         WhiteSwipeDelegate.qml
         WiFiErrorsPage.qml
-        WiFiOnOffSwitch.qml
         WiFiPage.qml
         WiFiScanPage.qml
     RESOURCES

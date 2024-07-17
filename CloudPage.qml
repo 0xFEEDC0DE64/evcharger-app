@@ -6,10 +6,11 @@ import EVChargerApp
 NavigationPage {
     title: qsTr("Cloud")
 
-    GeneralOnOffSwitch {
-        Layout.fillWidth: true
+    ConfirmingOnOffSwitch {
         apiKey: "cwe"
         text: qsTr("Enable cloud connection")
+        dialogTitle: qsTr("Are you sure?")
+        dialogText: qsTr("Disabling could connection could make your device unreachable from other places than home!")
     }
 
     Text {

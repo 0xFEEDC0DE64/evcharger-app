@@ -6,6 +6,10 @@ import EVChargerApp
 WhiteCheckDelegate {
     id: checkDelegate
 
+    required property string apiKey
+    required property string dialogTitle
+    required property string dialogText
+
     Layout.fillWidth: true
 
     Component.onCompleted: {
@@ -13,23 +17,23 @@ WhiteCheckDelegate {
     }
 
     ApiKeyValueHelper {
-        id: staEnabled
+        id: apiKeyValueHelper
         deviceConnection: theDeviceConnection
-        apiKey: "wen"
+        apiKey: checkDelegate.apiKey
     }
 
     SetValueHelper {
-        id: staEnabledChanger
+        id: setValueHelper
         deviceConnection: theDeviceConnection
-        apiKey: "wen"
+        apiKey: checkDelegate.apiKey
     }
 
-    checked: staEnabled.value
-    text: staEnabled.value ? qsTr("On") : qsTr("Off")
+    checked: apiKeyValueHelper.value
+    text: apiKeyValueHelper.value === true ? qsTr("On") : apiKeyValueHelper.value === false ? qsTr("Off") : qsTr("Unknown")
 
     onClicked: {
         if (checked)
-            staEnabledChanger.setValue(checked)
+            setValueHelper.setValue(checked)
         else {
             checked = true
             disableStaDialog.open()
@@ -37,29 +41,29 @@ WhiteCheckDelegate {
     }
 
     BusyIndicator {
-        visible: staEnabledChanger.pending
+        visible: setValueHelper.pending
     }
 
     RequestStatusText {
-        request: staEnabledChanger
+        request: setValueHelper
     }
 
     CenteredDialog {
         id: disableStaDialog
 
-        title: qsTr("Are you sure?")
+        title: checkDelegate.dialogTitle
         standardButtons: Dialog.Ok | Dialog.Cancel
         focus: true
         modal: true
 
         onAccepted: {
             checkDelegate.checked = false
-            staEnabledChanger.setValue(false)
+            setValueHelper.setValue(false)
         }
-        onRejected: checkDelegate.checked = Qt.binding(function() { return staEnabled.value })
+        onRejected: checkDelegate.checked = Qt.binding(function() { return apiKeyValueHelper.value })
 
         contentItem: Text {
-            text: qsTr("Disabling Wi-Fi could make your device unreachable from your local homenetwork or the cloud!");
+            text: checkDelegate.dialogText
             wrapMode: Text.Wrap
         }
     }

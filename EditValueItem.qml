@@ -34,6 +34,14 @@ WhiteItemDelegate {
             text: itemDelegate.text
         }
 
+        BusyIndicator {
+            visible: setValueHelper.pending
+        }
+
+        RequestStatusText {
+            request: setValueHelper
+        }
+
         Text {
             text: itemDelegate.valueText
         }

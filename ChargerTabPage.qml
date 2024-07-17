@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQml
 import EVChargerApp
 
 AnimatedStackView {
@@ -177,7 +178,7 @@ AnimatedStackView {
                     visible: logicMode.value == 4
                     iconSource: "material-icons/grid_guides.svg"
                     title: qsTr("Price limit")
-                    description: qsTr("%0 ct/kWh").arg(priceLimitHelper.value)
+                    description: qsTr("%0 ct/kWh").arg(Qt.locale().toString(priceLimitHelper.value, 'f', 1))
                     component: "SetPriceLimitPage.qml"
                 }
 
