@@ -12,7 +12,12 @@ Loader {
     property alias password: theDeviceConnection.password
 
     function backPressed() {
-        return item.backPressed()
+        if (connectionDisturbed.visible) {
+            closeRequested()
+            return true
+        }
+        else
+            return item.backPressed()
     }
 
     ListModel {
@@ -33,6 +38,9 @@ Loader {
         settings: theSettings
 
         onLogMessage: (message) => collectedMessages.push(message)
+
+        onShowDisturbed: connectionDisturbed.open()
+        onHideDisturbed: connectionDisturbed.close()
 
         onAuthRequired: {
             passwordError.visible = false;
@@ -118,6 +126,28 @@ Loader {
 
         contentItem: Text {
             text: qsTr("To use this password remotely a password has to be setup first. This can be done over the AccessPoint.");
+        }
+    }
+
+    Popup {
+        id: connectionDisturbed
+
+        parent: Overlay.overlay
+        anchors.centerIn: Overlay.overlay
+
+        // x: 100
+        // y: 100
+        // width: 200
+        // height: 300
+
+        modal: true
+        focus: true
+
+        closePolicy: Popup.NoAutoClose
+
+        contentItem: Text {
+            text: qsTr("Connection disturbed")
+            wrapMode: Text.Wrap
         }
     }
 }

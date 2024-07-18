@@ -12,6 +12,7 @@ EVChargerApp 1.0 AppSettingsPage.qml
 EVChargerApp 1.0 BaseNavigationPage.qml
 EVChargerApp 1.0 CablePage.qml
 EVChargerApp 1.0 CarPage.qml
+EVChargerApp 1.0 CellularPage.qml
 EVChargerApp 1.0 CenteredDialog.qml
 EVChargerApp 1.0 ChargerTabPage.qml
 EVChargerApp 1.0 ChargingConfigurationPage.qml

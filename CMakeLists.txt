@@ -62,6 +62,7 @@ qt_add_qml_module(evcharger-app
         BaseNavigationPage.qml
         CablePage.qml
         CarPage.qml
+        CellularPage.qml
         CenteredDialog.qml
         ChargerTabPage.qml
         ChargingConfigurationPage.qml

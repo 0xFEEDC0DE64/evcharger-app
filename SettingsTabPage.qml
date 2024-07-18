@@ -61,6 +61,11 @@ AnimatedStackView {
                 apiKey: "wen"
             }
             ApiKeyValueHelper {
+                id: cellularApiKeyValueHelper
+                deviceConnection: theDeviceConnection
+                apiKey: "cen"
+            }
+            ApiKeyValueHelper {
                 id: wifiApApiKeyValueHelper
                 deviceConnection: theDeviceConnection
                 apiKey: "wae"
@@ -90,6 +95,7 @@ AnimatedStackView {
             title: qsTr("Connection")
             description: [
                 wifiStaApiKeyValueHelper.exists ? qsTr("Wi-Fi") : null,
+                cellularApiKeyValueHelper.exists ? qsTr("Cellular") : null,
                 wifiApApiKeyValueHelper.exists ? qsTr("Hotspot") : null,
                 ethernetApiKeyValueHelper.exists ? qsTr("Ethernet") : null,
                 cloudApiKeyValueHelper.exists ? qsTr("Cloud") : null,

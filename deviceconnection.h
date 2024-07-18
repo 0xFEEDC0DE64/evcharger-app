@@ -52,6 +52,8 @@ signals:
     void passwordChanged(const QString &password);
 
     void logMessage(const QString &message);
+    void showDisturbed();
+    void hideDisturbed();
 
     void responseReceived(const QString &requestId, const QVariantMap &message);
 

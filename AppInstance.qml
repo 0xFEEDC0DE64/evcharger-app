@@ -17,6 +17,7 @@ AnimatedStackView {
     }
 
     initialItem: DeviceListScreen {
+        id: deviceListScreen
         onDeviceSelected: (url, password) => stackView.push(deviceScreenComponent, { url, password })
     }
 
@@ -24,7 +25,7 @@ AnimatedStackView {
         id: deviceScreenComponent
 
         DeviceScreen {
-            onCloseRequested: stackView.pop()
+            onCloseRequested: stackView.pop(deviceListScreen)
         }
     }
 }

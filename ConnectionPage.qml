@@ -15,6 +15,13 @@ NavigationPage {
 
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
+        title: qsTr("Cellular")
+        component: "CellularPage.qml"
+        visible: cellularApiKeyValueHelper.exists
+    }
+
+    NavigationItem {
+        iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Hotspot")
         component: "HotspotPage.qml"
         visible: wifiApApiKeyValueHelper.exists

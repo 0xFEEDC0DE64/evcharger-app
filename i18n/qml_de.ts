@@ -262,6 +262,51 @@
     </message>
 </context>
 <context>
+    <name>CellularPage</name>
+    <message>
+        <location filename="../CellularPage.qml" line="7"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="7"/>
+        <source>Cellular</source>
+        <translation>Mobilfunk</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="11"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="11"/>
+        <source>Are you sure?</source>
+        <translation>Sind Sie sicher?</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="12"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="12"/>
+        <source>Disabling Cellular could make your device unreachable from the cloud!</source>
+        <translation>Wenn die Mobilfunkverbindung ausgeschaltet wird, kann Ihr Gerät unerreichbar werden, wenn die App über Mobilfunk verbunden ist!</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="16"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="16"/>
+        <source>APN</source>
+        <translation>APN</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="26"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="26"/>
+        <source>PIN</source>
+        <translation>PIN</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="38"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="38"/>
+        <source>Username</source>
+        <translation>Benutzername</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="48"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="48"/>
+        <source>Password</source>
+        <translation>Passwort</translation>
+    </message>
+</context>
+<context>
     <name>ChargerTabPage</name>
     <message>
         <location filename="../ChargerTabPage.qml" line="51"/>
@@ -597,36 +642,42 @@
     <message>
         <location filename="../ConnectionPage.qml" line="18"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="18"/>
-        <source>Hotspot</source>
-        <translation>Hotspot</translation>
+        <source>Cellular</source>
+        <translation>Mobilfunk</translation>
     </message>
     <message>
         <location filename="../ConnectionPage.qml" line="25"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="25"/>
-        <source>Ethernet</source>
-        <translation>Ethernet</translation>
-    </message>
-    <message>
-        <location filename="../ConnectionPage.qml" line="39"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="39"/>
-        <source>OCPP</source>
-        <translation>OCPP</translation>
+        <source>Hotspot</source>
+        <translation>Hotspot</translation>
     </message>
     <message>
         <location filename="../ConnectionPage.qml" line="32"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="32"/>
-        <source>Cloud</source>
-        <translation>Cloud</translation>
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
     </message>
     <message>
         <location filename="../ConnectionPage.qml" line="46"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="46"/>
-        <source>MQTT</source>
-        <translation>MQTT</translation>
+        <source>OCPP</source>
+        <translation>OCPP</translation>
+    </message>
+    <message>
+        <location filename="../ConnectionPage.qml" line="39"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="39"/>
+        <source>Cloud</source>
+        <translation>Cloud</translation>
     </message>
     <message>
         <location filename="../ConnectionPage.qml" line="53"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="53"/>
+        <source>MQTT</source>
+        <translation>MQTT</translation>
+    </message>
+    <message>
+        <location filename="../ConnectionPage.qml" line="60"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="60"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
@@ -705,42 +756,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="143"/>
+        <location filename="../deviceconnection.cpp" line="144"/>
         <source>Received hello without serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="150"/>
+        <location filename="../deviceconnection.cpp" line="151"/>
         <source>Received hello with a non-string serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="162"/>
+        <location filename="../deviceconnection.cpp" line="163"/>
         <source>Received hello with a non-bool secured!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="175"/>
+        <location filename="../deviceconnection.cpp" line="176"/>
         <source>Received hello without manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="182"/>
+        <location filename="../deviceconnection.cpp" line="183"/>
         <source>Received hello with a non-string manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="211"/>
+        <location filename="../deviceconnection.cpp" line="212"/>
         <source>Received hello without friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="218"/>
+        <location filename="../deviceconnection.cpp" line="219"/>
         <source>Received hello with a non-string friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="193"/>
+        <location filename="../deviceconnection.cpp" line="194"/>
         <source>Received hello without devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -755,142 +806,142 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="200"/>
+        <location filename="../deviceconnection.cpp" line="201"/>
         <source>Received hello with a non-string devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="239"/>
+        <location filename="../deviceconnection.cpp" line="240"/>
         <source>Received authRequired without token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="246"/>
+        <location filename="../deviceconnection.cpp" line="247"/>
         <source>Received authRequired with a non-string token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="257"/>
+        <location filename="../deviceconnection.cpp" line="258"/>
         <source>Received authRequired without token2!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="264"/>
+        <location filename="../deviceconnection.cpp" line="265"/>
         <source>Received authRequired with a non-string token2!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="287"/>
+        <location filename="../deviceconnection.cpp" line="290"/>
         <source>Received fullStatus with a non-bool partial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="297"/>
+        <location filename="../deviceconnection.cpp" line="300"/>
         <source>Received fullStatus without a status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="304"/>
+        <location filename="../deviceconnection.cpp" line="307"/>
         <source>Received fullStatus with a non-object status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="312"/>
+        <location filename="../deviceconnection.cpp" line="315"/>
         <source>Received partial fullStatus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="312"/>
+        <location filename="../deviceconnection.cpp" line="315"/>
         <source>Received last fullStatus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="324"/>
+        <location filename="../deviceconnection.cpp" line="327"/>
         <source>Received deltaStatus without a status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="331"/>
+        <location filename="../deviceconnection.cpp" line="334"/>
         <source>Received deltaStatus with a non-object status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="365"/>
+        <location filename="../deviceconnection.cpp" line="372"/>
         <source>Received message type %0 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="373"/>
+        <location filename="../deviceconnection.cpp" line="380"/>
         <source>Received message with a non-string requestId!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="426"/>
+        <location filename="../deviceconnection.cpp" line="433"/>
         <source>Sending %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="460"/>
+        <location filename="../deviceconnection.cpp" line="467"/>
         <source>Connected!</source>
         <translation>Verbunden!</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="466"/>
+        <location filename="../deviceconnection.cpp" line="473"/>
         <source>Disconnected!</source>
         <translation>Verbindung verloren!</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="468"/>
+        <location filename="../deviceconnection.cpp" line="477"/>
         <source>Reconnecting to %0</source>
         <translation>Verbinde wieder zu %0</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="477"/>
+        <location filename="../deviceconnection.cpp" line="486"/>
         <source>state changed: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="486"/>
+        <location filename="../deviceconnection.cpp" line="495"/>
         <source>could not parse received json: %0 at offset %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="503"/>
+        <location filename="../deviceconnection.cpp" line="512"/>
         <source>unknown binary message type %0 received</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="511"/>
+        <location filename="../deviceconnection.cpp" line="520"/>
         <source>error occured: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="517"/>
+        <location filename="../deviceconnection.cpp" line="526"/>
         <source>ssl peer verify error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="523"/>
+        <location filename="../deviceconnection.cpp" line="532"/>
         <source>ssl errors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="534"/>
+        <location filename="../deviceconnection.cpp" line="543"/>
         <source>ssl alert sent level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="540"/>
+        <location filename="../deviceconnection.cpp" line="549"/>
         <source>ssl alert received level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="546"/>
+        <location filename="../deviceconnection.cpp" line="555"/>
         <source>ssl handshake interrupted on error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="593"/>
+        <location filename="../deviceconnection.cpp" line="602"/>
         <source>unknown response type %0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1033,34 +1084,40 @@
 <context>
     <name>DeviceScreen</name>
     <message>
-        <location filename="../DeviceScreen.qml" line="68"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="68"/>
+        <location filename="../DeviceScreen.qml" line="76"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="76"/>
         <source>Password required</source>
         <translation>Passwort erforderlich</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="91"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="91"/>
+        <location filename="../DeviceScreen.qml" line="99"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="99"/>
         <source>Password:</source>
         <translation>Passwort:</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="101"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="101"/>
+        <location filename="../DeviceScreen.qml" line="109"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="109"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="111"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="111"/>
+        <location filename="../DeviceScreen.qml" line="119"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="119"/>
         <source>Authentication impossible!</source>
         <translation>Authentifizierung unmöglich!</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="120"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="120"/>
+        <location filename="../DeviceScreen.qml" line="128"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="128"/>
         <source>To use this password remotely a password has to be setup first. This can be done over the AccessPoint.</source>
         <translation>Um dieses Gerät aus der Ferne nutzen zu können, müssen Sie erst ein Passwort einrichten. Dies kann über den AccessPoint gemacht werden.</translation>
+    </message>
+    <message>
+        <location filename="../DeviceScreen.qml" line="149"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="149"/>
+        <source>Connection disturbed</source>
+        <translation>Verbindung schwer gestört</translation>
     </message>
 </context>
 <context>
@@ -2184,104 +2241,110 @@
         <translation>Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="92"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="92"/>
+        <location filename="../SettingsTabPage.qml" line="97"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="97"/>
         <source>Wi-Fi</source>
         <translation>WLAN</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="93"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="93"/>
+        <location filename="../SettingsTabPage.qml" line="98"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="98"/>
+        <source>Cellular</source>
+        <translation>Mobilfunk</translation>
+    </message>
+    <message>
+        <location filename="../SettingsTabPage.qml" line="99"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="99"/>
         <source>Hotspot</source>
         <translation>Hotspot</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="94"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="94"/>
+        <location filename="../SettingsTabPage.qml" line="100"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="100"/>
         <source>Ethernet</source>
         <translation>Ethernet</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="96"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="96"/>
+        <location filename="../SettingsTabPage.qml" line="102"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="102"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="95"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="95"/>
+        <location filename="../SettingsTabPage.qml" line="101"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="101"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="97"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="97"/>
+        <location filename="../SettingsTabPage.qml" line="103"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="103"/>
         <source>MQTT</source>
         <translation>MQTT</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="98"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="98"/>
+        <location filename="../SettingsTabPage.qml" line="104"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="104"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="122"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="122"/>
+        <location filename="../SettingsTabPage.qml" line="128"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="128"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="123"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="123"/>
+        <location filename="../SettingsTabPage.qml" line="129"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="129"/>
         <source>Switch Language</source>
         <translation>Sprache ändern</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="124"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="124"/>
+        <location filename="../SettingsTabPage.qml" line="130"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="130"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="125"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="125"/>
+        <location filename="../SettingsTabPage.qml" line="131"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="131"/>
         <source>Date and time</source>
         <translation>Datum und Uhrzeit</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="126"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="126"/>
+        <location filename="../SettingsTabPage.qml" line="132"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="132"/>
         <source>LED</source>
         <translation>LED</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="127"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="127"/>
+        <location filename="../SettingsTabPage.qml" line="133"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="133"/>
         <source>Controller</source>
         <translation>Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="128"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="128"/>
+        <location filename="../SettingsTabPage.qml" line="134"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="134"/>
         <source>Display settings</source>
         <translation>Display</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="136"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="136"/>
+        <location filename="../SettingsTabPage.qml" line="142"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="142"/>
         <source>Firmware</source>
         <translation>Firmware</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="137"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="137"/>
+        <location filename="../SettingsTabPage.qml" line="143"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="143"/>
         <source>Hardware information</source>
         <translation>Hardwareinformationen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="138"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="138"/>
+        <location filename="../SettingsTabPage.qml" line="144"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="144"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
@@ -2310,8 +2373,8 @@
         <translation type="vanished">Sensoren • Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="90"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="90"/>
+        <location filename="../SettingsTabPage.qml" line="95"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="95"/>
         <source>Connection</source>
         <translation>Verbindung</translation>
     </message>
@@ -2320,8 +2383,8 @@
         <translation type="vanished">WLAN • Hotspot • OCPP • API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="120"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="120"/>
+        <location filename="../SettingsTabPage.qml" line="126"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="126"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -2330,8 +2393,8 @@
         <translation type="vanished">Name • Sprache ändern • Benachrichtigungen • Datum und Uhrzeit • LED • Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="134"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="134"/>
+        <location filename="../SettingsTabPage.qml" line="140"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="140"/>
         <source>About</source>
         <translation>Über</translation>
     </message>

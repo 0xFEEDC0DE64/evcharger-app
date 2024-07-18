@@ -132,6 +132,7 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     }
 
     const auto &type = typeVariant.toString();
+    qDebug() << type;
     bool omitLog{};
 
     if (type == "hello")
@@ -277,6 +278,8 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     {
         omitLog = true;
 
+        emit hideDisturbed();
+
         bool partial{};
 
         if (auto iter = map.find("partial"); iter != std::cend(map))
@@ -358,6 +361,10 @@ void DeviceConnection::messageReceived(const QVariant &variant)
                 }
             }
         }
+    }
+    else if (type == "offline")
+    {
+        emit showDisturbed();
     }
 
     if (!omitLog)
@@ -464,6 +471,8 @@ void DeviceConnection::disconnected()
 {
     qDebug() << "called";
     emit logMessage(tr("Disconnected!"));
+
+    emit showDisturbed();
 
     emit logMessage(tr("Reconnecting to %0").arg(m_url));
     QTimer::singleShot(1s, this, [this](){
