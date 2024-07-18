@@ -1,0 +1,13 @@
+name: build-aarch64-app
+
+on:
+  push:
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/0xfeedc0de64/evcharger-app-build:aarch64-qt6.7.1
+    steps:
+      - name: Check for dockerenv file
+        run: ls / -lah
