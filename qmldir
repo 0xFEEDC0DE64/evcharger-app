@@ -64,6 +64,7 @@ EVChargerApp 1.0 SchedulerDayPage.qml
 EVChargerApp 1.0 SchedulerPage.qml
 EVChargerApp 1.0 SecurityPage.qml
 EVChargerApp 1.0 SelectLogicModeItem.qml
+EVChargerApp 1.0 SelectPhaseSwitchModeItem.qml
 EVChargerApp 1.0 SensorsConfigurationPage.qml
 EVChargerApp 1.0 SetPriceLimitPage.qml
 EVChargerApp 1.0 SettingsTabPage.qml

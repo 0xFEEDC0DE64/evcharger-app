@@ -190,10 +190,32 @@ AnimatedStackView {
                     component: "DailyTripPage.qml"
                 }
 
+                ApiKeyValueHelper {
+                    id: requestedCurrent
+                    deviceConnection: theDeviceConnection
+                    apiKey: "amp"
+                }
+
+                ApiKeyValueHelper {
+                    id: phaseSwitchMode
+                    deviceConnection: theDeviceConnection
+                    apiKey: "psm"
+                }
+
                 NavigationItem {
                     iconSource: "material-icons/grid_guides.svg"
                     title: qsTr("Charging speed")
-                    description: qsTr("%0 Ampere & %1-phase").arg(0).arg(0)
+                    description: qsTr("%0 & %1")
+                        .arg(qsTr("%0 Ampere").arg(requestedCurrent.value))
+                        .arg((function(){
+                            switch (phaseSwitchMode.value)
+                            {
+                            case 0: return qsTr("Automatic phase selection");
+                            case 1: return qsTr("1-phase");
+                            case 2: return qsTr("3-phase");
+                            case 3: return qsTr("Unknown phase selection (%0)").arg(phaseSwitchMode.value);
+                            }
+                        })())
                     component: "ChargingSpeedPage.qml"
                 }
             }

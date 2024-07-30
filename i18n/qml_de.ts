@@ -393,16 +393,50 @@
         <translation>%0 km</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="195"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="195"/>
+        <location filename="../ChargerTabPage.qml" line="207"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="207"/>
         <source>Charging speed</source>
         <translation>Ladegeschwindigkeit</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="196"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="196"/>
+        <location filename="../ChargerTabPage.qml" line="208"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="208"/>
+        <source>%0 &amp; %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="209"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="209"/>
+        <source>%0 Ampere</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="213"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="213"/>
+        <source>Automatic phase selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="214"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="214"/>
+        <source>1-phase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="215"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="215"/>
+        <source>3-phase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="216"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="216"/>
+        <source>Unknown phase selection (%0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>%0 Ampere &amp; %1-phase</source>
-        <translation>%0 Ampere &amp; %1-phasic</translation>
+        <translation type="vanished">%0 Ampere &amp; %1-phasic</translation>
     </message>
     <message>
         <source>Connect the cable to charge your car</source>
@@ -2108,6 +2142,33 @@
         <location filename="../build/Desktop-Debug/EVChargerApp/SelectLogicModeItem.qml" line="61"/>
         <source>Specific energy and time</source>
         <translation>Energie zur bestimmten Zeit</translation>
+    </message>
+</context>
+<context>
+    <name>SelectPhaseSwitchModeItem</name>
+    <message>
+        <location filename="../SelectPhaseSwitchModeItem.qml" line="25"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="25"/>
+        <source>Phase switching</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SelectPhaseSwitchModeItem.qml" line="42"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="42"/>
+        <source>Automatic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SelectPhaseSwitchModeItem.qml" line="49"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="49"/>
+        <source>1-Phase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../SelectPhaseSwitchModeItem.qml" line="56"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="56"/>
+        <source>3-Phase</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

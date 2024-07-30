@@ -114,6 +114,7 @@ qt_add_qml_module(evcharger-app
         SchedulerPage.qml
         SecurityPage.qml
         SelectLogicModeItem.qml
+        SelectPhaseSwitchModeItem.qml
         SensorsConfigurationPage.qml
         SetPriceLimitPage.qml
         SettingsTabPage.qml

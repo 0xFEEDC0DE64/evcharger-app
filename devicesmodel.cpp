@@ -162,19 +162,18 @@ bool DevicesModel::removeRows(int row, int count, const QModelIndex &parent)
 
 void DevicesModel::error(QZeroConf::error_t error)
 {
-    qDebug() << "error()" << error;
+    qDebug() << error;
 }
 
 void DevicesModel::serviceAdded(QZeroConfService service)
 {
-    qDebug() << "serviceAdded()" << service->host();
 
     auto txt = service->txt();
 
     auto serialIter = txt.find("serial");
     if (serialIter == txt.end())
     {
-        qWarning() << "serial missing" << txt;
+        qWarning() << service->host() << "serial missing" << txt;
         return;
     }
     auto serial = *serialIter;
@@ -182,7 +181,7 @@ void DevicesModel::serviceAdded(QZeroConfService service)
     auto manufacturerIter = txt.find("manufacturer");
     if (manufacturerIter == txt.end())
     {
-        qWarning() << "manufacturer missing" << txt;
+        qWarning() << service->host() << "manufacturer missing" << txt;
         return;
     }
     auto manufacturer = *manufacturerIter;
@@ -190,7 +189,7 @@ void DevicesModel::serviceAdded(QZeroConfService service)
     auto deviceTypeIter = txt.find("devicetype");
     if (deviceTypeIter == txt.end())
     {
-        qWarning() << "devicetype missing" << txt;
+        qWarning() << service->host() << "devicetype missing" << txt;
         return;
     }
     auto deviceType = *deviceTypeIter;
@@ -198,7 +197,7 @@ void DevicesModel::serviceAdded(QZeroConfService service)
     auto friendlyNameIter = txt.find("friendly_name");
     if (friendlyNameIter == txt.end())
     {
-        qWarning() << "friendly_name missing" << txt;
+        qWarning() << service->host() << "friendly_name missing" << txt;
         return;
     }
     auto friendlyName = *friendlyNameIter;
@@ -209,6 +208,8 @@ void DevicesModel::serviceAdded(QZeroConfService service)
 
     if (iter == std::end(m_foundDevices))
     {
+        qDebug() << "new device" << service->host() << serial << manufacturer << deviceType << friendlyName;
+
         beginInsertRows({}, m_foundDevices.size(), m_foundDevices.size());
         m_foundDevices.emplace_back(FoundDevice {
             /*.serial{ */ std::move(serial) /*}*/,
@@ -224,6 +225,8 @@ void DevicesModel::serviceAdded(QZeroConfService service)
     }
     else
     {
+        qDebug() << "device already in list" << service->host() << serial << manufacturer << deviceType << friendlyName;
+
         iter->manufacturer = std::move(manufacturer);
         iter->deviceType = std::move(deviceType);
         iter->friendlyName = std::move(friendlyName);
@@ -243,21 +246,19 @@ void DevicesModel::serviceAdded(QZeroConfService service)
 
 void DevicesModel::serviceUpdated(QZeroConfService service)
 {
-    qDebug() << "serviceUpdated()" << service->host();
+    qDebug() << service->host();
 
     // TODO
 }
 
 void DevicesModel::serviceRemoved(QZeroConfService service)
 {
-    qDebug() << "serviceRemoved()" << service->host();
-
     const auto &txt = service->txt();
 
     auto serialIter = txt.find("serial");
     if (serialIter == txt.constEnd())
     {
-        qWarning() << "serial missing" << txt;
+        qWarning() << service->host() << "serial missing" << txt;
         return;
     }
     auto serial = *serialIter;
@@ -268,12 +269,14 @@ void DevicesModel::serviceRemoved(QZeroConfService service)
 
     if (iter == std::end(m_foundDevices))
     {
-        qWarning() << "serial not found!" << serial;
+        qWarning() << service->host() << "serial not found!" << serial;
         return;
     }
 
     if (!iter->saved)
     {
+        qDebug() << "device removed" << service->host() << serial;
+
         const auto row = std::distance(std::begin(m_foundDevices), iter);
         beginRemoveRows({}, row, row);
         m_foundDevices.erase(iter);
@@ -281,6 +284,8 @@ void DevicesModel::serviceRemoved(QZeroConfService service)
     }
     else
     {
+        qDebug() << "device kept" << service->host() << serial;
+
         iter->hostName.clear();
         iter->ip = {};
         const auto index = createIndex(std::distance(std::begin(m_foundDevices), iter), 0);

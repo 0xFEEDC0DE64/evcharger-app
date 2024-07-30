@@ -6,8 +6,12 @@ NavigationPage {
     title: qsTr("Charging Speed")
 
     Text {
-        text: "TODO"
+        text: "current limits TODO"
 
-        Layout.fillHeight: true
+        Layout.fillWidth: true
+    }
+
+    SelectPhaseSwitchModeItem {
+        Layout.fillWidth: true
     }
 }
