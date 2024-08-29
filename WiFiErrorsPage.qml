@@ -16,7 +16,7 @@ BaseNavigationPage {
     ListView {
         id: listView
         Layout.fillWidth: true
-        Layout.fillHeight: trues
+        Layout.fillHeight: true
 
         model: wifiErrorLog.value
         spacing: 5
