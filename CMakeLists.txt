@@ -72,6 +72,7 @@ qt_add_qml_module(evcharger-app
         ConfirmingOnOffSwitch.qml
         ConnectingScreen.qml
         ConnectionPage.qml
+        Constants.qml
         ControllerPage.qml
         ControllerTabPage.qml
         CurrentLevelsPage.qml
@@ -120,6 +121,7 @@ qt_add_qml_module(evcharger-app
         SettingsTabPage.qml
         SetValueHelper.qml
         SimpleNavigationItem.qml
+        StartStopButton.qml
         SwitchLanguagePage.qml
         TimeComponentLabel.qml
         TimePickerDialog.qml
@@ -153,6 +155,8 @@ qt_add_qml_module(evcharger-app
         material-icons/settings.svg
         ui-icons/MaterialIcons-Regular.ttf
 )
+
+set_source_files_properties(Constants.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
 target_link_libraries(evcharger-app PUBLIC
     Qt6::Core

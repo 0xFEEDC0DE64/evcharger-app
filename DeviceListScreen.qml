@@ -5,6 +5,7 @@ import EVChargerApp
 
 BaseNavigationPage {
     id: page
+
     title: qsTr("Device list")
 
     signal deviceSelected(url: string, password: string)

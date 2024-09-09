@@ -76,6 +76,12 @@ AnimatedStackView {
                         Text {
                             Layout.fillWidth: true
 
+                            ApiKeyValueHelper {
+                                id: errApiKeyHelper
+                                deviceConnection: theDeviceConnection
+                                apiKey: "err"
+                            }
+
                             text: {
                                 switch (carApiKeyHelper.value)
                                 {
@@ -84,7 +90,7 @@ AnimatedStackView {
                                 case 2: return qsTr("Car is charging")
                                 case 3: return qsTr("Connecting to your car...")
                                 case 4: return qsTr("Charging completed")
-                                case 5: return qsTr("Unknown error %0").arg(0)
+                                case 5: return qsTr("Unknown error %0").arg(errApiKeyHelper.value)
                                 }
                             }
                             font.pixelSize: 20
@@ -150,12 +156,9 @@ AnimatedStackView {
                     }
                 }
 
-                Button {
+                StartStopButton {
                     Layout.fillWidth: true
-
-                    Material.accent: Material.White
-
-                    text: qsTr("Start")
+                    deviceConnection: theDeviceConnection
                 }
 
                 ApiKeyValueHelper {

@@ -315,124 +315,124 @@
         <translation>Geräte</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="82"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="82"/>
+        <location filename="../ChargerTabPage.qml" line="88"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="88"/>
         <source>Internal error</source>
         <translation>Interner Fehler</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="83"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="83"/>
+        <location filename="../ChargerTabPage.qml" line="89"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="89"/>
         <source>No car connected</source>
         <translation>Kein Auto angeschlossen</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="84"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="84"/>
+        <location filename="../ChargerTabPage.qml" line="90"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="90"/>
         <source>Car is charging</source>
         <translation>Auto wird geladen</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="85"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="85"/>
+        <location filename="../ChargerTabPage.qml" line="91"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="91"/>
         <source>Connecting to your car...</source>
         <translation>Verbinde mit Auto...</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="86"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="86"/>
+        <location filename="../ChargerTabPage.qml" line="92"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="92"/>
         <source>Charging completed</source>
         <translation>Ladevorgang abgeschlossen</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="87"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="87"/>
+        <location filename="../ChargerTabPage.qml" line="93"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="93"/>
         <source>Unknown error %0</source>
         <translation>Unbekannter Fehler %0</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="102"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="102"/>
+        <location filename="../ChargerTabPage.qml" line="108"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="108"/>
         <source>Plug in the cable to start charging your car</source>
         <translation>Stecke das Kabel ein, um dein Auto aufzuladen</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="104"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="104"/>
+        <location filename="../ChargerTabPage.qml" line="110"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="110"/>
         <source>Charger is connecting to your car, it usually takes a few seconds</source>
         <translation>Der Charger stellt die Verbindung zu deinem Auto her, das dauert in der Regel ein paar Sekunden</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="105"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="105"/>
+        <location filename="../ChargerTabPage.qml" line="111"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="111"/>
         <source>Let&apos;s go-e :)</source>
         <translation>Let&apos;s go-e :)</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="180"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="180"/>
+        <location filename="../ChargerTabPage.qml" line="183"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="183"/>
         <source>Price limit</source>
         <translation>Preisgrenze</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="181"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="181"/>
+        <location filename="../ChargerTabPage.qml" line="184"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="184"/>
         <source>%0 ct/kWh</source>
         <translation>%0 ct/kWh</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="189"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="189"/>
+        <location filename="../ChargerTabPage.qml" line="192"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="192"/>
         <source>By %0 with %1</source>
         <translation>Bis %0 mit %1</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="189"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="189"/>
+        <location filename="../ChargerTabPage.qml" line="192"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="192"/>
         <source>%0 km</source>
         <translation>%0 km</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="207"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="207"/>
+        <location filename="../ChargerTabPage.qml" line="210"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="210"/>
         <source>Charging speed</source>
         <translation>Ladegeschwindigkeit</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="208"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="208"/>
+        <location filename="../ChargerTabPage.qml" line="211"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="211"/>
         <source>%0 &amp; %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="209"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="209"/>
+        <location filename="../ChargerTabPage.qml" line="212"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="212"/>
         <source>%0 Ampere</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ChargerTabPage.qml" line="213"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="213"/>
-        <source>Automatic phase selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ChargerTabPage.qml" line="214"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="214"/>
-        <source>1-phase</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ChargerTabPage.qml" line="215"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="215"/>
-        <source>3-phase</source>
-        <translation type="unfinished"></translation>
+        <translation>%0 Ampere</translation>
     </message>
     <message>
         <location filename="../ChargerTabPage.qml" line="216"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="216"/>
+        <source>Automatic phase selection</source>
+        <translation>Automatische Phasenwahl</translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="217"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="217"/>
+        <source>1-phase</source>
+        <translation>1-phasig</translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="218"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="218"/>
+        <source>3-phase</source>
+        <translation>3-phasig</translation>
+    </message>
+    <message>
+        <location filename="../ChargerTabPage.qml" line="219"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="219"/>
         <source>Unknown phase selection (%0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannte Phasen Selektion (%0)</translation>
     </message>
     <message>
         <source>%0 Ampere &amp; %1-phase</source>
@@ -443,14 +443,12 @@
         <translation type="vanished">Stecke das Kabel ein, um dein Auto aufzuladen</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="158"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="158"/>
         <source>Start</source>
-        <translation>Start</translation>
+        <translation type="vanished">Start</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="188"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="188"/>
+        <location filename="../ChargerTabPage.qml" line="191"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="191"/>
         <source>Daily trip</source>
         <translation>Daily trip</translation>
     </message>
@@ -999,62 +997,62 @@
         <translation type="vanished">Cloud Seriennr.</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="8"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="8"/>
+        <location filename="../DeviceListScreen.qml" line="9"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="9"/>
         <source>Device list</source>
         <translation>Geräteliste</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="22"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="22"/>
+        <location filename="../DeviceListScreen.qml" line="23"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="23"/>
         <source>App Settings</source>
         <translation>App Einstellungen</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="69"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="69"/>
+        <location filename="../DeviceListScreen.qml" line="70"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="70"/>
         <source>My devices</source>
         <translation>Meine Geräte</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="69"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="69"/>
+        <location filename="../DeviceListScreen.qml" line="70"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="70"/>
         <source>Found devices</source>
         <translation>Im Netzwerk verfügbare Geräte</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="96"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="96"/>
+        <location filename="../DeviceListScreen.qml" line="97"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="97"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="149"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="149"/>
+        <location filename="../DeviceListScreen.qml" line="150"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="150"/>
         <source>Serial Number %0</source>
         <translation>Seriennummer %0</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="217"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="217"/>
+        <location filename="../DeviceListScreen.qml" line="218"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="218"/>
         <source>Local</source>
         <translation>Lokal</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="236"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="236"/>
+        <location filename="../DeviceListScreen.qml" line="237"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="237"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="242"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="242"/>
+        <location filename="../DeviceListScreen.qml" line="243"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="243"/>
         <source>Solala</source>
         <translation>Solala</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="276"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="276"/>
+        <location filename="../DeviceListScreen.qml" line="277"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="277"/>
         <source>Add or setup device</source>
         <translation>Gerät hinzufügen oder einrichten</translation>
     </message>
@@ -1075,14 +1073,14 @@
         <translation type="vanished">Meine Geräte:</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="163"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="163"/>
+        <location filename="../DeviceListScreen.qml" line="164"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="164"/>
         <source>Manufacturer:</source>
         <translation>Hersteller:</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="175"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="175"/>
+        <location filename="../DeviceListScreen.qml" line="176"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="176"/>
         <source>Device Type:</source>
         <translation>Gerätetyp:</translation>
     </message>
@@ -1091,14 +1089,14 @@
         <translation type="vanished">Anzeigename:</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="187"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="187"/>
+        <location filename="../DeviceListScreen.qml" line="188"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="188"/>
         <source>Host Name:</source>
         <translation>Host Name:</translation>
     </message>
     <message>
-        <location filename="../DeviceListScreen.qml" line="199"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="199"/>
+        <location filename="../DeviceListScreen.qml" line="200"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceListScreen.qml" line="200"/>
         <source>Ip:</source>
         <translation>Ip:</translation>
     </message>
@@ -1118,38 +1116,38 @@
 <context>
     <name>DeviceScreen</name>
     <message>
-        <location filename="../DeviceScreen.qml" line="83"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="83"/>
+        <location filename="../DeviceScreen.qml" line="87"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="87"/>
         <source>Password required</source>
         <translation>Passwort erforderlich</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="106"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="106"/>
+        <location filename="../DeviceScreen.qml" line="110"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="110"/>
         <source>Password:</source>
         <translation>Passwort:</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="116"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="116"/>
+        <location filename="../DeviceScreen.qml" line="120"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="120"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="126"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="126"/>
+        <location filename="../DeviceScreen.qml" line="130"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="130"/>
         <source>Authentication impossible!</source>
         <translation>Authentifizierung unmöglich!</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="135"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="135"/>
+        <location filename="../DeviceScreen.qml" line="139"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="139"/>
         <source>To use this password remotely a password has to be setup first. This can be done over the AccessPoint.</source>
         <translation>Um dieses Gerät aus der Ferne nutzen zu können, müssen Sie erst ein Passwort einrichten. Dies kann über den AccessPoint gemacht werden.</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="156"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="156"/>
+        <location filename="../DeviceScreen.qml" line="160"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="160"/>
         <source>Connection disturbed</source>
         <translation>Verbindung schwer gestört</translation>
     </message>
@@ -2150,25 +2148,25 @@
         <location filename="../SelectPhaseSwitchModeItem.qml" line="25"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="25"/>
         <source>Phase switching</source>
-        <translation type="unfinished"></translation>
+        <translation>Phasen wechseln</translation>
     </message>
     <message>
         <location filename="../SelectPhaseSwitchModeItem.qml" line="42"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="42"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch</translation>
     </message>
     <message>
         <location filename="../SelectPhaseSwitchModeItem.qml" line="49"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="49"/>
         <source>1-Phase</source>
-        <translation type="unfinished"></translation>
+        <translation>1-phasig</translation>
     </message>
     <message>
         <location filename="../SelectPhaseSwitchModeItem.qml" line="56"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/SelectPhaseSwitchModeItem.qml" line="56"/>
         <source>3-Phase</source>
-        <translation type="unfinished"></translation>
+        <translation>3-phasig</translation>
     </message>
 </context>
 <context>
@@ -2462,6 +2460,21 @@
     <message>
         <source>Firmware • Hardware information • Licenses</source>
         <translation type="vanished">Firmware • Hardwareinformationen • Lizenzen</translation>
+    </message>
+</context>
+<context>
+    <name>StartStopButton</name>
+    <message>
+        <location filename="../StartStopButton.qml" line="40"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/StartStopButton.qml" line="40"/>
+        <source>Stop</source>
+        <translation>Stop</translation>
+    </message>
+    <message>
+        <location filename="../StartStopButton.qml" line="40"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/StartStopButton.qml" line="40"/>
+        <source>Start</source>
+        <translation>Start</translation>
     </message>
 </context>
 <context>

@@ -71,8 +71,12 @@ Loader {
             Connections {
                 target: theDeviceConnection
 
-                onShowDisturbed: connectionDisturbed.open()
-                onHideDisturbed: connectionDisturbed.close()
+                function onShowDisturbed() {
+                    connectionDisturbed.open()
+                }
+                function onHideDisturbed() {
+                    connectionDisturbed.close()
+                }
             }
         }
     }

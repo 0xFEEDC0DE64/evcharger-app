@@ -22,6 +22,7 @@ EVChargerApp 1.0 CloudUrlsModel.qml
 EVChargerApp 1.0 ConfirmingOnOffSwitch.qml
 EVChargerApp 1.0 ConnectingScreen.qml
 EVChargerApp 1.0 ConnectionPage.qml
+singleton EVChargerApp 1.0 Constants.qml
 EVChargerApp 1.0 ControllerPage.qml
 EVChargerApp 1.0 ControllerTabPage.qml
 EVChargerApp 1.0 CurrentLevelsPage.qml
@@ -70,6 +71,7 @@ EVChargerApp 1.0 SetPriceLimitPage.qml
 EVChargerApp 1.0 SettingsTabPage.qml
 EVChargerApp 1.0 SetValueHelper.qml
 EVChargerApp 1.0 SimpleNavigationItem.qml
+EVChargerApp 1.0 StartStopButton.qml
 EVChargerApp 1.0 SwitchLanguagePage.qml
 EVChargerApp 1.0 TimeComponentLabel.qml
 EVChargerApp 1.0 TimePickerDialog.qml
