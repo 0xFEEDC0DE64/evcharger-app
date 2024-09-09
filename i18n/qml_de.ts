@@ -1118,38 +1118,38 @@
 <context>
     <name>DeviceScreen</name>
     <message>
-        <location filename="../DeviceScreen.qml" line="76"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="76"/>
+        <location filename="../DeviceScreen.qml" line="83"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="83"/>
         <source>Password required</source>
         <translation>Passwort erforderlich</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="99"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="99"/>
+        <location filename="../DeviceScreen.qml" line="106"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="106"/>
         <source>Password:</source>
         <translation>Passwort:</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="109"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="109"/>
+        <location filename="../DeviceScreen.qml" line="116"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="116"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="119"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="119"/>
+        <location filename="../DeviceScreen.qml" line="126"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="126"/>
         <source>Authentication impossible!</source>
         <translation>Authentifizierung unmöglich!</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="128"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="128"/>
+        <location filename="../DeviceScreen.qml" line="135"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="135"/>
         <source>To use this password remotely a password has to be setup first. This can be done over the AccessPoint.</source>
         <translation>Um dieses Gerät aus der Ferne nutzen zu können, müssen Sie erst ein Passwort einrichten. Dies kann über den AccessPoint gemacht werden.</translation>
     </message>
     <message>
-        <location filename="../DeviceScreen.qml" line="149"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="149"/>
+        <location filename="../DeviceScreen.qml" line="156"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/DeviceScreen.qml" line="156"/>
         <source>Connection disturbed</source>
         <translation>Verbindung schwer gestört</translation>
     </message>

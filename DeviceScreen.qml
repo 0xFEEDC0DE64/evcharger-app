@@ -39,9 +39,6 @@ Loader {
 
         onLogMessage: (message) => collectedMessages.push(message)
 
-        onShowDisturbed: connectionDisturbed.open()
-        onHideDisturbed: connectionDisturbed.close()
-
         onAuthRequired: {
             passwordError.visible = false;
             passwordDialog.open();
@@ -66,7 +63,17 @@ Loader {
         id: mainScreen
 
         MainScreen {
-            onCloseRequested: loader.closeRequested()
+            onCloseRequested: {
+                connectionDisturbed.close()
+                loader.closeRequested()
+            }
+
+            Connections {
+                target: theDeviceConnection
+
+                onShowDisturbed: connectionDisturbed.open()
+                onHideDisturbed: connectionDisturbed.close()
+            }
         }
     }
 
