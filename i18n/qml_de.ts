@@ -305,6 +305,60 @@
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
+    <message>
+        <location filename="../CellularPage.qml" line="61"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="61"/>
+        <source>Show technical details of LTE modem</source>
+        <translation>Technische Informationen des LTE Modems anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="88"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="88"/>
+        <source>Initialization status:</source>
+        <translation>Initialisierungsstatus:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="105"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="105"/>
+        <source>IMEI:</source>
+        <translation>IMEI:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="122"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="122"/>
+        <source>IMSI:</source>
+        <translation>IMSI:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="139"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="139"/>
+        <source>Pin status:</source>
+        <translation>Pin Status:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="156"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="156"/>
+        <source>Operator name:</source>
+        <translation>Netzbetreibername:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="173"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="173"/>
+        <source>Signal quality:</source>
+        <translation>Signalstärke:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="190"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="190"/>
+        <source>Current system mode:</source>
+        <translation>Aktuelle Verbindungsart:</translation>
+    </message>
+    <message>
+        <location filename="../CellularPage.qml" line="207"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/CellularPage.qml" line="207"/>
+        <source>IP Address:</source>
+        <translation>IP Adresse:</translation>
+    </message>
 </context>
 <context>
     <name>ChargerTabPage</name>
