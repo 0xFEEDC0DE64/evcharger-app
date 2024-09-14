@@ -28,6 +28,7 @@ EVChargerApp 1.0 ControllerTabPage.qml
 EVChargerApp 1.0 CurrentLevelsPage.qml
 EVChargerApp 1.0 DailyTripPage.qml
 EVChargerApp 1.0 DateAndTimePage.qml
+EVChargerApp 1.0 DeviceHeaderBar.qml
 EVChargerApp 1.0 DeviceListScreen.qml
 EVChargerApp 1.0 DeviceScreen.qml
 EVChargerApp 1.0 DisplaySettingsPage.qml

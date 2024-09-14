@@ -3,121 +3,128 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import EVChargerApp
 
-Page {
+AnimatedStackView {
+    id: stackView
+
     signal closeRequested()
 
     function backPressed() {
+        if (depth > 1) {
+            pop()
+            return true
+        }
+
         return false
     }
 
-    header: ToolBar {
-        id: toolBar
-
-        background: Rectangle {
-            color: "lightblue"
-        }
-
-        RowLayout {
-            anchors.fill: parent
-
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                ApiKeyValueHelper {
-                    id: friendlyName
-                    deviceConnection: theDeviceConnection
-                    apiKey: "fna"
-                }
-
-                text: friendlyName.value
-                verticalAlignment: Text.AlignVCenter
-            }
-
-            Button {
-                Layout.fillHeight: true
-
-                text: qsTr("Devices")
-                onClicked: closeRequested()
-            }
-        }
-    }
-
-    Flickable {
-        anchors.fill: parent
-
-        ColumnLayout {
+    initialItem: ColumnLayout {
+        DeviceHeaderBar {
             Layout.fillWidth: true
 
-            RowLayout {
-                Layout.fillWidth: true
+            onCloseRequested: stackView.closeRequested()
+        }
 
-                ColumnLayout {
+        Flickable {
+            id: flickable
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            contentHeight: columnLayout.implicitHeight
+            clip: true
+
+            ColumnLayout {
+                id: columnLayout
+                width: flickable.width - 30
+                x: 15
+                spacing: 5
+
+                RowLayout {
                     Layout.fillWidth: true
-                    Layout.fillHeight: true
 
-                    Text {
-                        //Layout.fillWidth: true
-                        width: 100
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
 
-                        text: qsTr("Connected")
-                        font.pixelSize: 20
-                        font.bold: true
-                        wrapMode: Text.Wrap
+                        Text {
+                            Layout.fillWidth: true
+                            width: 100
+
+                            text: qsTr("Connected")
+                            font.pixelSize: 20
+                            font.bold: true
+                            wrapMode: Text.Wrap
+                        }
+                    }
+
+                    Image {
+                        Layout.preferredWidth: parent.width / 3
+                        Layout.preferredHeight: paintedHeight
+
+                        fillMode: Image.PreserveAspectFit
+
+                        source: "images/controller.png"
                     }
                 }
 
-                Image {
-                    Layout.fillHeight: true
-                    // width: 200
-                    // height: 200
-                    Layout.preferredWidth: 100
-                    fillMode: Image.PreserveAspectFit
+                WhiteBox {
+                    GridLayout {
+                        colums: 3
 
-                    source: "images/controller.png"
+                        Pane {
+                            Component.onCompleted: {
+                                background.color = "white"
+                                background.radius = 5
+                            }
+                        }
+                        Pane {
+                            Component.onCompleted: {
+                                background.color = "white"
+                                background.radius = 5
+                            }
+                        }
+                        Pane {
+                            Component.onCompleted: {
+                                background.color = "white"
+                                background.radius = 5
+                            }
+                        }
+                    }
                 }
-            }
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                Text {
+                    Layout.fillWidth: true
 
-                text: "Controller TODO"
-            }
+                    text: "Controller TODO"
+                }
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                Text {
+                    Layout.fillWidth: true
 
-                text: "Controller TODO"
-            }
+                    text: "Controller TODO"
+                }
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                Text {
+                    Layout.fillWidth: true
+<
+                    text: "Controller TODO"
+                }
 
-                text: "Controller TODO"
-            }
+                Text {
+                    Layout.fillWidth: true
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                    text: "Controller TODO"
+                }
 
-                text: "Controller TODO"
-            }
+                Text {
+                    Layout.fillWidth: true
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                    text: "Controller TODO"
+                }
 
-                text: "Controller TODO"
-            }
+                Text {
+                    Layout.fillWidth: true
 
-            Text {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                text: "Controller TODO"
+                    text: "Controller TODO"
+                }
             }
         }
     }

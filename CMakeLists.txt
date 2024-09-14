@@ -78,6 +78,7 @@ qt_add_qml_module(evcharger-app
         CurrentLevelsPage.qml
         DailyTripPage.qml
         DateAndTimePage.qml
+        DeviceHeaderBar.qml
         DeviceListScreen.qml
         DeviceScreen.qml
         DisplaySettingsPage.qml
