@@ -66,25 +66,30 @@ AnimatedStackView {
                 }
 
                 WhiteBox {
-                    GridLayout {
-                        colums: 3
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: gridLayout.implicitHeight + 20
 
-                        Pane {
-                            Component.onCompleted: {
-                                background.color = "white"
-                                background.radius = 5
-                            }
-                        }
-                        Pane {
-                            Component.onCompleted: {
-                                background.color = "white"
-                                background.radius = 5
-                            }
-                        }
-                        Pane {
-                            Component.onCompleted: {
-                                background.color = "white"
-                                background.radius = 5
+                    GridLayout {
+                        id: gridLayout
+                        anchors.fill: parent
+                        columns: 3
+
+                        Repeater {
+                            model: 9
+
+                            Pane {
+                                Layout.fillWidth: true
+                                Layout.preferredHeight: 50
+
+                                Component.onCompleted: {
+                                    background.color = "grey"
+                                    background.radius = 5
+                                }
+
+                                Text {
+                                    anchors.fill: parent
+                                    text: qsTr("Category")
+                                }
                             }
                         }
                     }
@@ -104,7 +109,7 @@ AnimatedStackView {
 
                 Text {
                     Layout.fillWidth: true
-<
+
                     text: "Controller TODO"
                 }
 

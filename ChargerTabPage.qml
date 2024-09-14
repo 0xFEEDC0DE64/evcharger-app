@@ -70,6 +70,22 @@ AnimatedStackView {
                         }
 
                         Text {
+                            ApiKeyValueHelper {
+                                id: chargingDurationInfo
+                                deviceConnection: theDeviceConnection
+                                apiKey: "cdi"
+                            }
+                            ApiKeyValueHelper {
+                                id: powerInfo
+                                deviceConnection: theDeviceConnection
+                                apiKey: "nrg"
+                            }
+                            ApiKeyValueHelper {
+                                id: energyInfo
+                                deviceConnection: theDeviceConnection
+                                apiKey: "wh"
+                            }
+
                             Layout.fillWidth: true
 
                             text: {
@@ -77,13 +93,45 @@ AnimatedStackView {
                                 {
                                 case 0: return null
                                 case 1: return qsTr("Plug in the cable to start charging your car")
-                                case 2: return "TODO duration"
+                                case 2: return qsTr("Duration: %0").arg(getDurationInfo()) + "\n" +
+                                               qsTr("Speed: %0").arg(getChargingSpeed()) + "\n" +
+                                               qsTr("Amount: %0").arg(getChargingAmount())
                                 case 3: return qsTr("Charger is connecting to your car, it usually takes a few seconds")
                                 case 4: return qsTr("Let's go-e :)")
                                 case 5: return null
                                 }
                             }
                             wrapMode: Text.Wrap
+
+                            function getDurationInfo() {
+                                if (!chargingDurationInfo.exists)
+                                    return qsTr("(api key doesnt exist)")
+                                if (typeof chargingDurationInfo.value == null)
+                                    return qsTr("(api key is null)")
+                                if (typeof chargingDurationInfo.value !== 'object')
+                                    return qsTr("(api key is not an object)")
+                                if (!('type' in chargingDurationInfo.value))
+                                    return qsTr("(api key does not contain a type)")
+                                switch (chargingDurationInfo.value.type)
+                                {
+                                case 0: // counter going up, use rbt
+                                    return formatDuration(rebootTime.value - chargingDurationInfo.value.value)
+                                case 1: // counter frozen, absolute duration
+                                    return formatDuration(chargingDurationInfo.value.value)
+                                }
+                                return qsTr("(api key has unknown type %0)").arg(chargingDurationInfo.value.type)
+                            }
+
+                            function getChargingSpeed() {
+                                return qsTr("%0 %1 %2")
+                                    .arg(qsTr("%0 A").arg(Qt.locale().toString(powerInfo.value[4], 'f', 1)))
+                                    .arg(qsTr("%0 A").arg(Qt.locale().toString(powerInfo.value[5], 'f', 1)))
+                                    .arg(qsTr("%0 A").arg(Qt.locale().toString(powerInfo.value[6], 'f', 1)))
+                            }
+
+                            function getChargingAmount() {
+                                return qsTr("%0 kWh").arg(Qt.locale().toString(energyInfo.value / 1000., 'f', 1))
+                            }
                         }
                     }
 
