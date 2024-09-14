@@ -8,6 +8,7 @@ WhiteCheckDelegate {
 
     required property string apiKey
     property alias exists: valueHelper.exists
+    visible: exists
 
     Layout.fillWidth: true
 

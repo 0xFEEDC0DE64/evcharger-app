@@ -5,9 +5,8 @@ import QtQuick.Layouts
 NavigationPage {
     title: qsTr("PV Surplus")
 
-    Text {
-        text: "TODO"
-
-        Layout.fillHeight: true
+    GeneralOnOffSwitch {
+        apiKey: "fup"
+        text: qsTr("Charging with PV surplus")
     }
 }
