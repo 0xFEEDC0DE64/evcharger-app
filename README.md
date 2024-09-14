@@ -12,3 +12,5 @@ This app aims to be functional first and pretty second.
 * If you enter the incorrect password it will tell you and lock up
 * You can also select 06:00 in the scheduler
 * You can also select any color you like in all color pickers
+* Has an actual start / stop button that doesnt interfere with any other settings
+* Has an actual helpful cellular information and settings page
