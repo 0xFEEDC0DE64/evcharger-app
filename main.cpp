@@ -1,4 +1,4 @@
-#include <QGuiApplication>
+#include <QApplication>
 #include <QTranslator>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain("brunner.ninja");
     QCoreApplication::setApplicationName("evcharger-app");
 
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     QTranslator translator;
     if (!translator.load(QLocale(), "qml", "_", ":/EVChargerApp/i18n/"))

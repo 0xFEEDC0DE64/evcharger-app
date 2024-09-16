@@ -24,112 +24,102 @@ AnimatedStackView {
             onCloseRequested: stackView.closeRequested()
         }
 
-        Flickable {
-            id: flickable
+        ScrollableTabPage {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            contentHeight: columnLayout.implicitHeight
-            clip: true
 
-            ColumnLayout {
-                id: columnLayout
-                width: flickable.width - 30
-                x: 15
-                spacing: 5
+            RowLayout {
+                Layout.fillWidth: true
 
-                RowLayout {
+                ColumnLayout {
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
 
-                    ColumnLayout {
+                    Text {
                         Layout.fillWidth: true
-                        Layout.fillHeight: true
+                        width: 100
 
-                        Text {
-                            Layout.fillWidth: true
-                            width: 100
-
-                            text: qsTr("Connected")
-                            font.pixelSize: 20
-                            font.bold: true
-                            wrapMode: Text.Wrap
-                        }
-                    }
-
-                    Image {
-                        Layout.preferredWidth: parent.width / 3
-                        Layout.preferredHeight: paintedHeight
-
-                        fillMode: Image.PreserveAspectFit
-
-                        source: "images/controller.png"
+                        text: qsTr("Connected")
+                        font.pixelSize: 20
+                        font.bold: true
+                        wrapMode: Text.Wrap
                     }
                 }
 
-                WhiteBox {
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: gridLayout.implicitHeight + 20
+                Image {
+                    Layout.preferredWidth: parent.width / 3
+                    Layout.preferredHeight: paintedHeight
 
-                    GridLayout {
-                        id: gridLayout
-                        anchors.fill: parent
-                        columns: 3
+                    fillMode: Image.PreserveAspectFit
 
-                        Repeater {
-                            model: 9
+                    source: "images/controller.png"
+                }
+            }
 
-                            Pane {
-                                Layout.fillWidth: true
-                                Layout.preferredHeight: 50
+            WhiteBox {
+                Layout.fillWidth: true
+                Layout.preferredHeight: gridLayout.implicitHeight + 20
 
-                                Component.onCompleted: {
-                                    background.color = "grey"
-                                    background.radius = 5
-                                }
+                GridLayout {
+                    id: gridLayout
+                    anchors.fill: parent
+                    columns: 3
 
-                                Text {
-                                    anchors.fill: parent
-                                    text: qsTr("Category")
-                                }
+                    Repeater {
+                        model: 9
+
+                        Pane {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 50
+
+                            Component.onCompleted: {
+                                background.color = "grey"
+                                background.radius = 5
+                            }
+
+                            Text {
+                                anchors.fill: parent
+                                text: qsTr("Category")
                             }
                         }
                     }
                 }
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
+            }
 
-                Text {
-                    Layout.fillWidth: true
+            Text {
+                Layout.fillWidth: true
 
-                    text: "Controller TODO"
-                }
+                text: "Controller TODO"
             }
         }
     }

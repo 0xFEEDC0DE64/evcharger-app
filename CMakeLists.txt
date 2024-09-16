@@ -15,7 +15,7 @@ endif(CCACHE_FOUND)
 add_definitions(-DQT_GUI_LIB)
 add_subdirectory(3rdparty)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick WebSockets LinguistTools)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick WebSockets LinguistTools)
 
 qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
 
@@ -114,6 +114,7 @@ qt_add_qml_module(evcharger-app
         RequestStatusText.qml
         SchedulerDayPage.qml
         SchedulerPage.qml
+        ScrollableTabPage.qml
         SecurityPage.qml
         SelectLogicModeItem.qml
         SelectPhaseSwitchModeItem.qml
@@ -162,6 +163,7 @@ set_source_files_properties(Constants.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 target_link_libraries(evcharger-app PUBLIC
     Qt6::Core
     Qt6::Gui
+    Qt6::Widgets
     Qt6::Quick
     Qt6::WebSockets
     qmsgpack
