@@ -28,7 +28,10 @@ AnimatedStackView {
                 qsTr("Flexible energy tariff"),
                 qsTr("PV Surplus")
             ].join(" • ")
-            component: "ChargingConfigurationPage.qml"
+            component: Component {
+                ChargingConfigurationPage {
+                }
+            }
             visible: carApiKeyHelper.exists
         }
         NavigationItem {
@@ -41,7 +44,10 @@ AnimatedStackView {
                 qsTr("Grid"),
                 qsTr("Ground check")
             ].join(" • ")
-            component: "SecurityPage.qml"
+            component: Component {
+                SecurityPage {
+                }
+            }
             visible: carApiKeyHelper.exists
         }
         NavigationItem {
@@ -51,7 +57,10 @@ AnimatedStackView {
                 qsTr("Sensors"),
                 qsTr("Categories")
             ].join(" • ")
-            component: "SensorsConfigurationPage.qml"
+            component: Component {
+                SensorsConfigurationPage {
+                }
+            }
             visible: controllerApiKeyHelper.exists
         }
         NavigationItem {
@@ -103,7 +112,10 @@ AnimatedStackView {
                 mqttApiKeyValueHelper.exists ? qsTr("MQTT") : null,
                 qsTr("API Settings")
             ].filter(Boolean).join(" • ")
-            component: "ConnectionPage.qml"
+            component: Component {
+                ConnectionPage {
+                }
+            }
         }
         NavigationItem {
             ApiKeyValueHelper {
@@ -133,7 +145,10 @@ AnimatedStackView {
                 controllerApiKeyValueHelper.exists ? qsTr("Controller") : null,
                 displayApiKeyValueHelper.exists ? qsTr("Display settings") : null
             ].filter(Boolean).join(" • ")
-            component: "GeneralPage.qml"
+            component: Component {
+                GeneralPage {
+                }
+            }
         }
         NavigationItem {
             iconSource: "material-icons/grid_guides.svg"
@@ -143,7 +158,10 @@ AnimatedStackView {
                 qsTr("Hardware information"),
                 qsTr("Licenses")
             ].join(" • ")
-            component: "AboutPage.qml"
+            component: Component {
+                AboutPage {
+                }
+            }
         }
     }
 }

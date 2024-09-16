@@ -8,7 +8,7 @@ WhiteItemDelegate {
     property alias iconSource: icon.source
     property alias title: titleText.text
     property string description
-    property string component
+    property Component component
 
     Layout.fillWidth: true
 

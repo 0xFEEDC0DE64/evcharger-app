@@ -16,14 +16,14 @@
         <translation>Firmware</translation>
     </message>
     <message>
-        <location filename="../AboutPage.qml" line="15"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/AboutPage.qml" line="15"/>
+        <location filename="../AboutPage.qml" line="18"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/AboutPage.qml" line="18"/>
         <source>Hardware information</source>
         <translation>Hardwareinformationen</translation>
     </message>
     <message>
-        <location filename="../AboutPage.qml" line="20"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/AboutPage.qml" line="20"/>
+        <location filename="../AboutPage.qml" line="26"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/AboutPage.qml" line="26"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
@@ -503,56 +503,56 @@
         <translation>%0 ct/kWh</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="211"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="211"/>
+        <location filename="../ChargerTabPage.qml" line="214"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="214"/>
         <source>By %0 with %1</source>
         <translation>Bis %0 mit %1</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="211"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="211"/>
+        <location filename="../ChargerTabPage.qml" line="214"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="214"/>
         <source>%0 km</source>
         <translation>%0 km</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="229"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="229"/>
+        <location filename="../ChargerTabPage.qml" line="235"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="235"/>
         <source>Charging speed</source>
         <translation>Ladegeschwindigkeit</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="230"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="230"/>
+        <location filename="../ChargerTabPage.qml" line="236"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="236"/>
         <source>%0 &amp; %1</source>
         <translation>%0 &amp; %1</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="231"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="231"/>
+        <location filename="../ChargerTabPage.qml" line="237"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="237"/>
         <source>%0 Ampere</source>
         <translation>%0 Ampere</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="235"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="235"/>
+        <location filename="../ChargerTabPage.qml" line="241"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="241"/>
         <source>Automatic phase selection</source>
         <translation>Automatische Phasenwahl</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="236"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="236"/>
+        <location filename="../ChargerTabPage.qml" line="242"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="242"/>
         <source>1-phase</source>
         <translation>1-phasig</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="237"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="237"/>
+        <location filename="../ChargerTabPage.qml" line="243"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="243"/>
         <source>3-phase</source>
         <translation>3-phasig</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="238"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="238"/>
+        <location filename="../ChargerTabPage.qml" line="244"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="244"/>
         <source>Unknown phase selection (%0)</source>
         <translation>Unbekannte Phasen Selektion (%0)</translation>
     </message>
@@ -569,8 +569,8 @@
         <translation type="vanished">Start</translation>
     </message>
     <message>
-        <location filename="../ChargerTabPage.qml" line="210"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="210"/>
+        <location filename="../ChargerTabPage.qml" line="213"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargerTabPage.qml" line="213"/>
         <source>Daily trip</source>
         <translation>Daily trip</translation>
     </message>
@@ -590,50 +590,50 @@
         <translation>Ladegeschwindigkeit</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="15"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="15"/>
+        <location filename="../ChargingConfigurationPage.qml" line="18"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="18"/>
         <source>kWh Limit</source>
         <translation>kWh Limit</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="20"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="20"/>
+        <location filename="../ChargingConfigurationPage.qml" line="26"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="26"/>
         <source>Daily Trip</source>
         <translation>Daily Trip</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="25"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="25"/>
+        <location filename="../ChargingConfigurationPage.qml" line="34"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="34"/>
         <source>Flexible energy tariff</source>
         <translation>Flexibler Energietarif</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="30"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="30"/>
+        <location filename="../ChargingConfigurationPage.qml" line="42"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="42"/>
         <source>PV Surplus</source>
         <translation>PV-Überschuss</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="35"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="35"/>
+        <location filename="../ChargingConfigurationPage.qml" line="50"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="50"/>
         <source>Load Balancing</source>
         <translation>Lastmanagement</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="40"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="40"/>
+        <location filename="../ChargingConfigurationPage.qml" line="58"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="58"/>
         <source>Scheduler</source>
         <translation>Ladetimer</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="45"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="45"/>
+        <location filename="../ChargingConfigurationPage.qml" line="66"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="66"/>
         <source>Current Levels</source>
         <translation>Strompegel</translation>
     </message>
     <message>
-        <location filename="../ChargingConfigurationPage.qml" line="50"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="50"/>
+        <location filename="../ChargingConfigurationPage.qml" line="74"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ChargingConfigurationPage.qml" line="74"/>
         <source>Car</source>
         <translation>Auto</translation>
     </message>
@@ -794,44 +794,44 @@
         <translation>WLAN</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="18"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="18"/>
+        <location filename="../ConnectionPage.qml" line="21"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="21"/>
         <source>Cellular</source>
         <translation>Mobilfunk</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="25"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="25"/>
+        <location filename="../ConnectionPage.qml" line="31"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="31"/>
         <source>Hotspot</source>
         <translation>Hotspot</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="32"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="32"/>
+        <location filename="../ConnectionPage.qml" line="41"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="41"/>
         <source>Ethernet</source>
         <translation>Ethernet</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="46"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="46"/>
+        <location filename="../ConnectionPage.qml" line="61"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="61"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="39"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="39"/>
+        <location filename="../ConnectionPage.qml" line="51"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="51"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="53"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="53"/>
+        <location filename="../ConnectionPage.qml" line="71"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="71"/>
         <source>MQTT</source>
         <translation>MQTT</translation>
     </message>
     <message>
-        <location filename="../ConnectionPage.qml" line="60"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="60"/>
+        <location filename="../ConnectionPage.qml" line="81"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/ConnectionPage.qml" line="81"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
@@ -1324,39 +1324,39 @@
     </message>
     <message>
         <location filename="../EcoTabPage.qml" line="23"/>
-        <location filename="../EcoTabPage.qml" line="71"/>
+        <location filename="../EcoTabPage.qml" line="77"/>
         <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="23"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="71"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="77"/>
         <source>Flexible energy tariff</source>
         <translation>Flexibler Energietarif</translation>
     </message>
     <message>
-        <location filename="../EcoTabPage.qml" line="29"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="29"/>
+        <location filename="../EcoTabPage.qml" line="32"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="32"/>
         <source>PV Surplus</source>
         <translation>PV-Überschuss</translation>
     </message>
     <message>
-        <location filename="../EcoTabPage.qml" line="50"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="50"/>
+        <location filename="../EcoTabPage.qml" line="56"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="56"/>
         <source>About eco</source>
         <translation>Über Eco</translation>
     </message>
     <message>
-        <location filename="../EcoTabPage.qml" line="79"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="79"/>
+        <location filename="../EcoTabPage.qml" line="85"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="85"/>
         <source>We offer to charge your car during periods of low electricity price, If you have an electricity contract based on flexible energy tariffs.</source>
         <translation>Du kannst dein Auto in Zeiten niedriger Strompreise aufladen, sofern du einen Stromvertrag mit flexiblen Tarifen hast.</translation>
     </message>
     <message>
-        <location filename="../EcoTabPage.qml" line="102"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="102"/>
+        <location filename="../EcoTabPage.qml" line="108"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="108"/>
         <source>PV surplus energy</source>
         <translation>PV-Überschuss</translation>
     </message>
     <message>
-        <location filename="../EcoTabPage.qml" line="110"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="110"/>
+        <location filename="../EcoTabPage.qml" line="116"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/EcoTabPage.qml" line="116"/>
         <source>By connecting a PV system and a controller to your charger, you can charge your EV particularly cheaply and use clean energy at the same time.</source>
         <translation>Wenn du eine PV-Anlage und einen Controller an deinen Charger anschließt, kannst du dein Elektroauto besonders günstig aufladen und gleichzeitig grüne Energie nutzen.</translation>
     </message>
@@ -1511,44 +1511,44 @@
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="15"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="15"/>
+        <location filename="../GeneralPage.qml" line="18"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="18"/>
         <source>Switch Language</source>
         <translation>Sprache ändern</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="20"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="20"/>
+        <location filename="../GeneralPage.qml" line="26"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="26"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="25"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="25"/>
+        <location filename="../GeneralPage.qml" line="34"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="34"/>
         <source>Date and time</source>
         <translation>Datum und Uhrzeit</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="30"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="30"/>
+        <location filename="../GeneralPage.qml" line="42"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="42"/>
         <source>LED</source>
         <translation>LED</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="36"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="36"/>
+        <location filename="../GeneralPage.qml" line="51"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="51"/>
         <source>Controller</source>
         <translation>Controller</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="42"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="42"/>
+        <location filename="../GeneralPage.qml" line="60"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="60"/>
         <source>Display settings</source>
         <translation>Display</translation>
     </message>
     <message>
-        <location filename="../GeneralPage.qml" line="48"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="48"/>
+        <location filename="../GeneralPage.qml" line="69"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/GeneralPage.qml" line="69"/>
         <source>Reboot</source>
         <translation>Neustart</translation>
     </message>
@@ -2118,8 +2118,8 @@
         <translation>Ladetimer Tag</translation>
     </message>
     <message>
-        <location filename="../SchedulerDayPage.qml" line="31"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerDayPage.qml" line="31"/>
+        <location filename="../SchedulerDayPage.qml" line="33"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerDayPage.qml" line="33"/>
         <source>24 Hour</source>
         <translation>24 Stunden</translation>
     </message>
@@ -2181,26 +2181,26 @@
         <translation>Wochentags-Ladetimer erstellen</translation>
     </message>
     <message>
-        <location filename="../SchedulerPage.qml" line="116"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="116"/>
+        <location filename="../SchedulerPage.qml" line="119"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="119"/>
         <source>Saturdays</source>
         <translation>Samstags</translation>
     </message>
     <message>
-        <location filename="../SchedulerPage.qml" line="123"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="123"/>
+        <location filename="../SchedulerPage.qml" line="126"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="126"/>
         <source>Create saturdays schedule</source>
         <translation>Samstags-Ladetimer erstellen</translation>
     </message>
     <message>
-        <location filename="../SchedulerPage.qml" line="130"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="130"/>
+        <location filename="../SchedulerPage.qml" line="136"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="136"/>
         <source>Sundays</source>
         <translation>Sonntags</translation>
     </message>
     <message>
-        <location filename="../SchedulerPage.qml" line="137"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="137"/>
+        <location filename="../SchedulerPage.qml" line="143"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SchedulerPage.qml" line="143"/>
         <source>Create sundays schedule</source>
         <translation>Sonntags-Ladetimer erstellen</translation>
     </message>
@@ -2240,26 +2240,26 @@
         <translation>Kabel</translation>
     </message>
     <message>
-        <location filename="../SecurityPage.qml" line="15"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="15"/>
+        <location filename="../SecurityPage.qml" line="18"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="18"/>
         <source>Access</source>
         <translation>Zugangskontrolle</translation>
     </message>
     <message>
-        <location filename="../SecurityPage.qml" line="20"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="20"/>
+        <location filename="../SecurityPage.qml" line="26"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="26"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../SecurityPage.qml" line="25"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="25"/>
+        <location filename="../SecurityPage.qml" line="34"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="34"/>
         <source>Grid</source>
         <translation>Netz</translation>
     </message>
     <message>
-        <location filename="../SecurityPage.qml" line="30"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="30"/>
+        <location filename="../SecurityPage.qml" line="42"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SecurityPage.qml" line="42"/>
         <source>Ground check</source>
         <translation>Erdungsprüfung</translation>
     </message>
@@ -2419,152 +2419,152 @@
         <translation>PV-Überschuss</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="38"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="38"/>
+        <location filename="../SettingsTabPage.qml" line="41"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="41"/>
         <source>Cable</source>
         <translation>Kabel</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="39"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="39"/>
+        <location filename="../SettingsTabPage.qml" line="42"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="42"/>
         <source>Access</source>
         <translation>Zugangskontrolle</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="40"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="40"/>
+        <location filename="../SettingsTabPage.qml" line="43"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="43"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="41"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="41"/>
+        <location filename="../SettingsTabPage.qml" line="44"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="44"/>
         <source>Grid</source>
         <translation>Netz</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="42"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="42"/>
+        <location filename="../SettingsTabPage.qml" line="45"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="45"/>
         <source>Ground check</source>
         <translation>Erdungsprüfung</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="51"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="51"/>
+        <location filename="../SettingsTabPage.qml" line="57"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="57"/>
         <source>Sensors</source>
         <translation>Sensoren</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="52"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="52"/>
+        <location filename="../SettingsTabPage.qml" line="58"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="58"/>
         <source>Categories</source>
         <translation>Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="97"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="97"/>
+        <location filename="../SettingsTabPage.qml" line="106"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="106"/>
         <source>Wi-Fi</source>
         <translation>WLAN</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="98"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="98"/>
+        <location filename="../SettingsTabPage.qml" line="107"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="107"/>
         <source>Cellular</source>
         <translation>Mobilfunk</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="99"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="99"/>
+        <location filename="../SettingsTabPage.qml" line="108"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="108"/>
         <source>Hotspot</source>
         <translation>Hotspot</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="100"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="100"/>
+        <location filename="../SettingsTabPage.qml" line="109"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="109"/>
         <source>Ethernet</source>
         <translation>Ethernet</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="102"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="102"/>
+        <location filename="../SettingsTabPage.qml" line="111"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="111"/>
         <source>OCPP</source>
         <translation>OCPP</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="101"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="101"/>
+        <location filename="../SettingsTabPage.qml" line="110"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="110"/>
         <source>Cloud</source>
         <translation>Cloud</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="103"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="103"/>
+        <location filename="../SettingsTabPage.qml" line="112"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="112"/>
         <source>MQTT</source>
         <translation>MQTT</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="104"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="104"/>
+        <location filename="../SettingsTabPage.qml" line="113"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="113"/>
         <source>API Settings</source>
         <translation>API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="128"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="128"/>
+        <location filename="../SettingsTabPage.qml" line="140"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="140"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="129"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="129"/>
+        <location filename="../SettingsTabPage.qml" line="141"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="141"/>
         <source>Switch Language</source>
         <translation>Sprache ändern</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="130"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="130"/>
+        <location filename="../SettingsTabPage.qml" line="142"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="142"/>
         <source>Notifications</source>
         <translation>Benachrichtigungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="131"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="131"/>
+        <location filename="../SettingsTabPage.qml" line="143"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="143"/>
         <source>Date and time</source>
         <translation>Datum und Uhrzeit</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="132"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="132"/>
+        <location filename="../SettingsTabPage.qml" line="144"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="144"/>
         <source>LED</source>
         <translation>LED</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="133"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="133"/>
+        <location filename="../SettingsTabPage.qml" line="145"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="145"/>
         <source>Controller</source>
         <translation>Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="134"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="134"/>
+        <location filename="../SettingsTabPage.qml" line="146"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="146"/>
         <source>Display settings</source>
         <translation>Display</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="142"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="142"/>
+        <location filename="../SettingsTabPage.qml" line="157"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="157"/>
         <source>Firmware</source>
         <translation>Firmware</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="143"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="143"/>
+        <location filename="../SettingsTabPage.qml" line="158"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="158"/>
         <source>Hardware information</source>
         <translation>Hardwareinformationen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="144"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="144"/>
+        <location filename="../SettingsTabPage.qml" line="159"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="159"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
@@ -2573,8 +2573,8 @@
         <translation type="vanished">Ladegeschwindigkeit • kWh Limit • Daily Trip • Flexibler Energietraif • PV Überschussladen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="36"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="36"/>
+        <location filename="../SettingsTabPage.qml" line="39"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="39"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
@@ -2583,8 +2583,8 @@
         <translation type="vanished">Kabel • Zugangskontrolle • Passwort • Netz • Erdungsprüfung</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="49"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="49"/>
+        <location filename="../SettingsTabPage.qml" line="55"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="55"/>
         <source>Sensors Configuration</source>
         <translation>Sensorkonfiguration</translation>
     </message>
@@ -2593,8 +2593,8 @@
         <translation type="vanished">Sensoren • Kategorien</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="95"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="95"/>
+        <location filename="../SettingsTabPage.qml" line="104"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="104"/>
         <source>Connection</source>
         <translation>Verbindung</translation>
     </message>
@@ -2603,8 +2603,8 @@
         <translation type="vanished">WLAN • Hotspot • OCPP • API Einstellungen</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="126"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="126"/>
+        <location filename="../SettingsTabPage.qml" line="138"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="138"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -2613,8 +2613,8 @@
         <translation type="vanished">Name • Sprache ändern • Benachrichtigungen • Datum und Uhrzeit • LED • Controller</translation>
     </message>
     <message>
-        <location filename="../SettingsTabPage.qml" line="140"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="140"/>
+        <location filename="../SettingsTabPage.qml" line="155"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/SettingsTabPage.qml" line="155"/>
         <source>About</source>
         <translation>Über</translation>
     </message>

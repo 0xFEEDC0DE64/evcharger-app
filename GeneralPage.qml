@@ -8,44 +8,68 @@ NavigationPage {
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Name")
-        component: "NamePage.qml"
+        component: Component {
+            NamePage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Switch Language")
-        component: "SwitchLanguagePage.qml"
+        component: Component {
+            SwitchLanguagePage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Notifications")
-        component: "NotificationsPage.qml"
+        component: Component {
+            NotificationsPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Date and time")
-        component: "DateAndTimePage.qml"
+        component: Component {
+            DateAndTimePage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("LED")
-        component: "LedPage.qml"
+        component: Component {
+            LedPage {
+            }
+        }
         visible: ledApiKeyValueHelper.exists
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Controller")
-        component: "ControllerPage.qml"
+        component: Component {
+            ControllerPage {
+            }
+        }
         visible: controllerApiKeyValueHelper.exists
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Display settings")
-        component: "DisplaySettingsPage.qml"
+        component: Component {
+            DisplaySettingsPage {
+            }
+        }
         visible: displayApiKeyValueHelper.exists
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Reboot")
-        component: "RebootPage.qml"
+        component: Component {
+            RebootPage {
+            }
+        }
     }
 }

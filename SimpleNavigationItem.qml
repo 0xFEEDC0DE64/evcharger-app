@@ -6,7 +6,7 @@ WhiteItemDelegate {
     id: navigationItem
 
     property color color
-    property string component
+    property Component component
     property var componentArgs: undefined
 
     Layout.fillWidth: true
@@ -15,5 +15,5 @@ WhiteItemDelegate {
         contentItem.children[0].color = navigationItem.color
     }
 
-    onClicked: stackView.push(navigationItem.component, navigationItem.componentArgs)
+    onClicked: stackView.push(navigationItem.component)
 }

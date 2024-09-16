@@ -8,26 +8,41 @@ NavigationPage {
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Cable")
-        component: "CablePage.qml"
+        component: Component {
+            CablePage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Access")
-        component: "AccessPage.qml"
+        component: Component {
+            AccessPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Password")
-        component: "PasswordPage.qml"
+        component: Component {
+            PasswordPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Grid")
-        component: "GridPage.qml"
+        component: Component {
+            GridPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Ground check")
-        component: "GroundCheckPage.qml"
+        component: Component {
+            GroundCheckPage {
+            }
+        }
     }
 }

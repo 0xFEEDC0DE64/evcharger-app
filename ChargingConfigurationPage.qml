@@ -8,46 +8,73 @@ NavigationPage {
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Charging Speed")
-        component: "ChargingSpeedPage.qml"
+        component: Component {
+            ChargingSpeedPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("kWh Limit")
-        component: "KwhLimitPage.qml"
+        component: Component {
+            KwhLimitPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Daily Trip")
-        component: "DailyTripPage.qml"
+        component: Component {
+            DailyTripPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Flexible energy tariff")
-        component: "FlexibleEnergyTariffPage.qml"
+        component: Component {
+            FlexibleEnergyTariffPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("PV Surplus")
-        component: "PvSurplusPage.qml"
+        component: Component {
+            PvSurplusPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Load Balancing")
-        component: "LoadBalancingPage.qml"
+        component: Component {
+            LoadBalancingPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Scheduler")
-        component: "SchedulerPage.qml"
+        component: Component {
+            SchedulerPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Current Levels")
-        component: "CurrentLevelsPage.qml"
+        component: Component {
+            CurrentLevelsPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Car")
-        component: "CarPage.qml"
+        component: Component {
+            CarPage {
+            }
+        }
     }
 }

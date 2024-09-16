@@ -5,6 +5,8 @@ import QtQuick.Layouts
 NavigationPage {
     title: qsTr("Scheduler day")
 
+    property int day
+
     TimeComponentLabel {
         id: openDialogLabel
         width: parent.width - 80

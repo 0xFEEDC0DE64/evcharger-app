@@ -108,8 +108,11 @@ NavigationPage {
     SimpleNavigationItem {
         text: qsTr("Create workdays schedule")
         color: "blue"
-        component: "SchedulerDayPage.qml"
-        componentArgs: { day: 0 }
+        component: Component {
+            SchedulerDayPage {
+                day: 0
+            }
+        }
     }
 
     Text {
@@ -122,8 +125,11 @@ NavigationPage {
     SimpleNavigationItem {
         text: qsTr("Create saturdays schedule")
         color: "blue"
-        component: "SchedulerDayPage.qml"
-        componentArgs: { day: 1 }
+        component: Component {
+            SchedulerDayPage {
+                day: 1
+            }
+        }
     }
 
     Text {
@@ -136,7 +142,10 @@ NavigationPage {
     SimpleNavigationItem {
         text: qsTr("Create sundays schedule")
         color: "blue"
-        component: "SchedulerDayPage.qml"
-        componentArgs: { day: 2 }
+        component: Component {
+            SchedulerDayPage {
+                day: 2
+            }
+        }
     }
 }

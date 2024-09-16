@@ -201,7 +201,10 @@ AnimatedStackView {
                     iconSource: "material-icons/grid_guides.svg"
                     title: qsTr("Price limit")
                     description: qsTr("%0 ct/kWh").arg(Qt.locale().toString(priceLimitHelper.value, 'f', 1))
-                    component: "SetPriceLimitPage.qml"
+                    component: Component {
+                        SetPriceLimitPage {
+                        }
+                    }
                 }
 
                 NavigationItem {
@@ -209,7 +212,10 @@ AnimatedStackView {
                     iconSource: "material-icons/grid_guides.svg"
                     title: qsTr("Daily trip")
                     description: qsTr("By %0 with %1").arg("08:00").arg(qsTr("%0 km").arg(100))
-                    component: "DailyTripPage.qml"
+                    component: Component {
+                        DailyTripPage {
+                        }
+                    }
                 }
 
                 ApiKeyValueHelper {
@@ -238,7 +244,10 @@ AnimatedStackView {
                             case 3: return qsTr("Unknown phase selection (%0)").arg(phaseSwitchMode.value);
                             }
                         })())
-                    component: "ChargingSpeedPage.qml"
+                    component: Component {
+                        ChargingSpeedPage {
+                        }
+                    }
                 }
             }
         }

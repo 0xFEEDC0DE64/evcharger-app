@@ -27,6 +27,9 @@ NavigationPage {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Price limit")
         description: qsTr("%0 ct/kWh").arg(Qt.locale().toString(priceLimitHelper.value, 'f', 1))
-        component: "SetPriceLimitPage.qml"
+        component: Component {
+            SetPriceLimitPage {
+            }
+        }
     }
 }

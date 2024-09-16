@@ -8,16 +8,25 @@ NavigationPage {
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Firmware")
-        component: "FirmwarePage.qml"
+        component: Component {
+            FirmwarePage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Hardware information")
-        component: "HardwareInformationPage.qml"
+        component: Component {
+            HardwareInformationPage {
+            }
+        }
     }
     NavigationItem {
         iconSource: "material-icons/grid_guides.svg"
         title: qsTr("Licenses")
-        component: "LicensesPage.qml"
+        component: Component {
+            LicensesPage {
+            }
+        }
     }
 }

@@ -21,13 +21,19 @@ AnimatedStackView {
         NavigationItem {
             iconSource: "material-icons/grid_guides.svg"
             title: qsTr("Flexible energy tariff") // TODO show On Off
-            component: "FlexibleEnergyTariffPage.qml"
+            component: Component {
+                FlexibleEnergyTariffPage {
+                }
+            }
         }
 
         NavigationItem {
             iconSource: "material-icons/grid_guides.svg"
             title: qsTr("PV Surplus") // TODO show On Off
-            component: "PvSurplusPage.qml"
+            component: Component {
+                PvSurplusPage {
+                }
+            }
         }
 
         WhiteBox {
