@@ -25,14 +25,10 @@ Item {
                 onClicked: stackView.pop()
             }
 
-            Text {
+            TitleText {
                 Layout.fillWidth: true
 
                 id: titleText
-
-                font.pixelSize: 30
-                font.bold: true
-                wrapMode: Text.Wrap
             }
         }
     }

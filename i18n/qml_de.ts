@@ -858,10 +858,14 @@
         <translation>Verbunden</translation>
     </message>
     <message>
-        <location filename="../qml/ControllerTabPage.qml" line="82"/>
-        <location filename="../build/Desktop-Debug/EVChargerApp/qml/ControllerTabPage.qml" line="82"/>
+        <location filename="../qml/ControllerTabPage.qml" line="107"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/qml/ControllerTabPage.qml" line="107"/>
+        <source>%0W</source>
+        <translation>%0W</translation>
+    </message>
+    <message>
         <source>Category</source>
-        <translation>Kategorie</translation>
+        <translation type="vanished">Kategorie</translation>
     </message>
 </context>
 <context>
@@ -1629,6 +1633,21 @@
         <location filename="../build/Desktop-Debug/EVChargerApp/qml/HotspotPage.qml" line="38"/>
         <source>Channel</source>
         <translation>Kanal</translation>
+    </message>
+</context>
+<context>
+    <name>InformationsTabPage</name>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="15"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/qml/InformationsTabPage.qml" line="15"/>
+        <source>Informations</source>
+        <translation>Informationen</translation>
+    </message>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="48"/>
+        <location filename="../build/Desktop-Debug/EVChargerApp/qml/InformationsTabPage.qml" line="48"/>
+        <source>Download informations</source>
+        <translation>Informationen herunterladen</translation>
     </message>
 </context>
 <context>

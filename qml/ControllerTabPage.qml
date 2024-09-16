@@ -65,21 +65,47 @@ AnimatedStackView {
                     anchors.fill: parent
                     columns: 3
 
+                    ApiKeyValueHelper {
+                        id: categoryNames
+                        deviceConnection: theDeviceConnection
+                        apiKey: "ccn"
+                    }
+
+                    ApiKeyValueHelper {
+                        id: categoryPowers
+                        deviceConnection: theDeviceConnection
+                        apiKey: "ccp"
+                    }
+
                     Repeater {
-                        model: 9
+                        model: categoryNames.value
 
                         Pane {
+                            property var power: categoryPowers.value[index]
+                            visible: power !== null
+
                             Layout.fillWidth: true
-                            Layout.preferredHeight: 50
+                            Layout.preferredWidth: gridLayout.width / 3
+                            Layout.preferredHeight: 75
 
                             Component.onCompleted: {
                                 background.color = "grey"
                                 background.radius = 5
                             }
 
-                            Text {
+                            ColumnLayout {
+                                id: columnLayout
                                 anchors.fill: parent
-                                text: qsTr("Category")
+
+                                Text {
+                                    Layout.fillWidth: true
+                                    text: modelData
+                                }
+
+                                Text {
+                                    Layout.fillWidth: true
+                                    text: power !== null ? qsTr("%0W").arg(power) : ""
+                                }
                             }
                         }
                     }

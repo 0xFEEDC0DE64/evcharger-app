@@ -20,9 +20,9 @@ NavigationPage {
         }
     }
 
-    Button {
+    OpenLinkButton {
         text: qsTr("API documentation")
-        onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/mqtt-en.md"))
+        url: qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/mqtt-en.md")
     }
 
     WhiteBox {

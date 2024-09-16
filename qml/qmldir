@@ -58,6 +58,7 @@ EVChargerApp 1.0 NavigationItem.qml
 EVChargerApp 1.0 NavigationPage.qml
 EVChargerApp 1.0 NotificationsPage.qml
 EVChargerApp 1.0 OcppPage.qml
+EVChargerApp 1.0 OpenLinkButton.qml
 EVChargerApp 1.0 PasswordPage.qml
 EVChargerApp 1.0 PvSurplusPage.qml
 EVChargerApp 1.0 RebootPage.qml
@@ -79,6 +80,7 @@ EVChargerApp 1.0 TimeComponentLabel.qml
 EVChargerApp 1.0 TimePickerDialog.qml
 EVChargerApp 1.0 TimePickerLabel.qml
 EVChargerApp 1.0 TimePicker.qml
+EVChargerApp 1.0 TitleText.qml
 EVChargerApp 1.0 VerticalTabButton.qml
 EVChargerApp 1.0 WhiteBox.qml
 EVChargerApp 1.0 WhiteCheckDelegate.qml

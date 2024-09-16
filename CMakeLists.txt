@@ -113,6 +113,7 @@ qt_add_qml_module(evcharger-app
         qml/NavigationPage.qml
         qml/NotificationsPage.qml
         qml/OcppPage.qml
+        qml/OpenLinkButton.qml
         qml/PasswordPage.qml
         qml/PvSurplusPage.qml
         qml/RebootPage.qml
@@ -134,6 +135,7 @@ qt_add_qml_module(evcharger-app
         qml/TimePickerDialog.qml
         qml/TimePickerLabel.qml
         qml/TimePicker.qml
+        qml/TitleText.qml
         qml/VerticalTabButton.qml
         qml/WhiteBox.qml
         qml/WhiteCheckDelegate.qml
@@ -159,6 +161,7 @@ qt_add_qml_module(evcharger-app
         qml/images/geminiFix.png
         qml/material-icons/add.svg
         qml/material-icons/grid_guides.svg
+        qml/material-icons/open_in_new.svg
         qml/material-icons/settings.svg
         qml/ui-icons/MaterialIcons-Regular.ttf
 )

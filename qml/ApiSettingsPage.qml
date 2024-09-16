@@ -19,9 +19,9 @@ NavigationPage {
                 text: qsTr("Allow access to local HTTP-Api v2")
             }
 
-            Button {
+            OpenLinkButton {
                 text: qsTr("API documentation")
-                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/http-en.md"))
+                url: qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/http-en.md")
             }
 
             RowLayout {
@@ -115,9 +115,9 @@ NavigationPage {
                 text: qsTr("API key: %0").arg(cloudApiKey.value)
             }
 
-            Button {
+            OpenLinkButton {
                 text: qsTr("API documentation")
-                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/cloudapi-en.md"))
+                url: qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/cloudapi-en.md")
             }
         }
     }
@@ -148,9 +148,9 @@ NavigationPage {
                 text: qsTr("API key: %0").arg(gridApiKey.value)
             }
 
-            Button {
+            OpenLinkButton {
                 text: qsTr("API documentation")
-                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/gridapi-en.md"))
+                url: qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/gridapi-en.md")
             }
         }
     }
@@ -168,9 +168,9 @@ NavigationPage {
                 text: qsTr("Allow access to legacy HTTP-Api v1")
             }
 
-            Button {
+            OpenLinkButton {
                 text: qsTr("API documentation")
-                onClicked: Qt.openUrlExternally(qsTr("https://github.com/goecharger/go-eCharger-API-v1/blob/master/go-eCharger%20API%20v1%20EN.md"))
+                url: qsTr("https://github.com/goecharger/go-eCharger-API-v1/blob/master/go-eCharger%20API%20v1%20EN.md")
             }
         }
     }

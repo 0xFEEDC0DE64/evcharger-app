@@ -2,12 +2,17 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtCharts
+import EVChargerApp
 
 ScrollableTabPage {
     id: page
 
     function backPressed() {
         return false
+    }
+
+    TitleText {
+        text: qsTr("Informations")
     }
 
     Repeater {
@@ -30,5 +35,17 @@ ScrollableTabPage {
                 XYPoint { x: 4.1; y: 3.3 }
             }
         }
+    }
+
+    OpenLinkButton {
+        ApiKeyValueHelper {
+            id: downloadsLink
+            deviceConnection: theDeviceConnection
+            apiKey: "dll"
+        }
+
+        visible: downloadsLink.exists
+        text: qsTr("Download informations")
+        url: downloadsLink.value
     }
 }
