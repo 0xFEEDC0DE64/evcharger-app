@@ -17,6 +17,7 @@ EVChargerApp 1.0 CenteredDialog.qml
 EVChargerApp 1.0 ChargerTabPage.qml
 EVChargerApp 1.0 ChargingConfigurationPage.qml
 EVChargerApp 1.0 ChargingSpeedPage.qml
+EVChargerApp 1.0 CloudApiQrCodePage.qml
 EVChargerApp 1.0 CloudPage.qml
 EVChargerApp 1.0 CloudUrlsModel.qml
 EVChargerApp 1.0 ConfirmingOnOffSwitch.qml
@@ -61,6 +62,7 @@ EVChargerApp 1.0 OcppPage.qml
 EVChargerApp 1.0 OpenLinkButton.qml
 EVChargerApp 1.0 PasswordPage.qml
 EVChargerApp 1.0 PvSurplusPage.qml
+EVChargerApp 1.0 QrCode.qml
 EVChargerApp 1.0 RebootPage.qml
 EVChargerApp 1.0 RequestStatusText.qml
 EVChargerApp 1.0 SchedulerDayPage.qml

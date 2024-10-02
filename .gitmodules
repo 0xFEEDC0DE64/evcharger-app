@@ -4,3 +4,6 @@
 [submodule "3rdparty/QtZeroConf"]
 	path = 3rdparty/QtZeroConf
 	url = ../../0xFEEDC0DE64/QtZeroConf.git
+[submodule "3rdparty/qrcode-svg"]
+	path = 3rdparty/qrcode-svg
+	url = ../../papnkukn/qrcode-svg.git

@@ -119,6 +119,17 @@ NavigationPage {
                 text: qsTr("API documentation")
                 url: qsTr("https://github.com/goecharger/go-eCharger-API-v2/blob/main/cloudapi-en.md")
             }
+
+            Button {
+                text: qsTr("3rdparty integrations (QR-Code)")
+                onClicked: stackView.push(cloudApiQrCodePage)
+
+                Component {
+                    id: cloudApiQrCodePage
+                    CloudApiQrCodePage {
+                    }
+                }
+            }
         }
     }
 

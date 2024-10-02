@@ -72,6 +72,7 @@ qt_add_qml_module(evcharger-app
         qml/ChargerTabPage.qml
         qml/ChargingConfigurationPage.qml
         qml/ChargingSpeedPage.qml
+        qml/CloudApiQrCodePage.qml
         qml/CloudPage.qml
         qml/CloudUrlsModel.qml
         qml/ConfirmingOnOffSwitch.qml
@@ -116,6 +117,7 @@ qt_add_qml_module(evcharger-app
         qml/OpenLinkButton.qml
         qml/PasswordPage.qml
         qml/PvSurplusPage.qml
+        qml/QrCode.qml
         qml/RebootPage.qml
         qml/RequestStatusText.qml
         qml/SchedulerDayPage.qml
@@ -159,6 +161,7 @@ qt_add_qml_module(evcharger-app
         qml/images/wattpilot.png
         qml/images/phoenix.png
         qml/images/geminiFix.png
+        qml/js/qrcode.min.js
         qml/material-icons/add.svg
         qml/material-icons/grid_guides.svg
         qml/material-icons/open_in_new.svg
