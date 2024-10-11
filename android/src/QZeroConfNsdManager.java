@@ -1,1 +1,0 @@
-../../3rdparty/QtZeroConf/QZeroConfNsdManager.java

@@ -308,6 +308,91 @@
     </message>
 </context>
 <context>
+    <name>ChargerConnection</name>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="79"/>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>Unknown</source>
+        <translation type="unfinished">Unbekannt</translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="80"/>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="81"/>
+        <source>Offline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>Idle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <source>Updating</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <source>Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <source>Succeeded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <source>NotReady</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="220"/>
+        <source>Verifying</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="233"/>
+        <source>%0 %1%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="235"/>
+        <source>%0 %1/?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="237"/>
+        <source>%0 ?/%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>Charging</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>WaitCar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargerconnection.cpp" line="311"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ChargerTabPage</name>
     <message>
         <source>Devices</source>
@@ -489,6 +574,99 @@
     </message>
 </context>
 <context>
+    <name>ChargersModel</name>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="264"/>
+        <source>Serial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="265"/>
+        <source>WS Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="266"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="267"/>
+        <source>Variant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="268"/>
+        <source>IsGo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="269"/>
+        <source>IsAustralien</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="270"/>
+        <source>ResetCard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="271"/>
+        <source>ConnectedWifi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="272"/>
+        <source>Project</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="273"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="274"/>
+        <source>IDF Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="275"/>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="276"/>
+        <source>Reboots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="277"/>
+        <source>Uptime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="278"/>
+        <source>Current Partition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="279"/>
+        <source>Car state</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="280"/>
+        <source>Energy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="281"/>
+        <source>Livedata</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ChargingConfigurationPage</name>
     <message>
         <location filename="../qml/ChargingConfigurationPage.qml" line="6"/>
@@ -562,7 +740,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/CloudApiQrCodePage.qml" line="36"/>
+        <location filename="../qml/CloudApiQrCodePage.qml" line="35"/>
         <source>Open integrations page</source>
         <translation>Integrationsseite öffnen</translation>
     </message>
@@ -783,212 +961,212 @@
 <context>
     <name>DeviceConnection</name>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="68"/>
+        <location filename="../deviceconnection.cpp" line="68"/>
         <source>Connecting to %0</source>
         <translation>Verbinde zu %0</translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="115"/>
+        <location filename="../deviceconnection.cpp" line="115"/>
         <source>Received something that is not a json object!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="123"/>
+        <location filename="../deviceconnection.cpp" line="123"/>
         <source>Received something that does not contain a type!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="130"/>
+        <location filename="../deviceconnection.cpp" line="130"/>
         <source>Received something with a non-string type!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="144"/>
+        <location filename="../deviceconnection.cpp" line="144"/>
         <source>Received hello without serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="151"/>
+        <location filename="../deviceconnection.cpp" line="151"/>
         <source>Received hello with a non-string serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="163"/>
+        <location filename="../deviceconnection.cpp" line="163"/>
         <source>Received hello with a non-bool secured!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="176"/>
+        <location filename="../deviceconnection.cpp" line="176"/>
         <source>Received hello without manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="183"/>
+        <location filename="../deviceconnection.cpp" line="183"/>
         <source>Received hello with a non-string manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="212"/>
+        <location filename="../deviceconnection.cpp" line="212"/>
         <source>Received hello without friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="219"/>
+        <location filename="../deviceconnection.cpp" line="219"/>
         <source>Received hello with a non-string friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="194"/>
+        <location filename="../deviceconnection.cpp" line="194"/>
         <source>Received hello without devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="78"/>
+        <location filename="../deviceconnection.cpp" line="78"/>
         <source>Could not parse solalaweb certificate!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="89"/>
+        <location filename="../deviceconnection.cpp" line="89"/>
         <source>Could not parse solalaweb key!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="201"/>
+        <location filename="../deviceconnection.cpp" line="201"/>
         <source>Received hello with a non-string devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="240"/>
+        <location filename="../deviceconnection.cpp" line="240"/>
         <source>Received authRequired without token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="247"/>
+        <location filename="../deviceconnection.cpp" line="247"/>
         <source>Received authRequired with a non-string token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="258"/>
+        <location filename="../deviceconnection.cpp" line="258"/>
         <source>Received authRequired without token2!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="265"/>
+        <location filename="../deviceconnection.cpp" line="265"/>
         <source>Received authRequired with a non-string token2!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="290"/>
+        <location filename="../deviceconnection.cpp" line="290"/>
         <source>Received fullStatus with a non-bool partial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="300"/>
+        <location filename="../deviceconnection.cpp" line="300"/>
         <source>Received fullStatus without a status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="307"/>
+        <location filename="../deviceconnection.cpp" line="307"/>
         <source>Received fullStatus with a non-object status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="315"/>
+        <location filename="../deviceconnection.cpp" line="315"/>
         <source>Received partial fullStatus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="315"/>
+        <location filename="../deviceconnection.cpp" line="315"/>
         <source>Received last fullStatus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="327"/>
+        <location filename="../deviceconnection.cpp" line="327"/>
         <source>Received deltaStatus without a status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="334"/>
+        <location filename="../deviceconnection.cpp" line="334"/>
         <source>Received deltaStatus with a non-object status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="372"/>
+        <location filename="../deviceconnection.cpp" line="372"/>
         <source>Received message type %0 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="380"/>
+        <location filename="../deviceconnection.cpp" line="380"/>
         <source>Received message with a non-string requestId!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="433"/>
+        <location filename="../deviceconnection.cpp" line="433"/>
         <source>Sending %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="467"/>
+        <location filename="../deviceconnection.cpp" line="467"/>
         <source>Connected!</source>
         <translation>Verbunden!</translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="473"/>
+        <location filename="../deviceconnection.cpp" line="473"/>
         <source>Disconnected!</source>
         <translation>Verbindung verloren!</translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="477"/>
+        <location filename="../deviceconnection.cpp" line="477"/>
         <source>Reconnecting to %0</source>
         <translation>Verbinde wieder zu %0</translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="486"/>
+        <location filename="../deviceconnection.cpp" line="486"/>
         <source>state changed: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="495"/>
+        <location filename="../deviceconnection.cpp" line="495"/>
         <source>could not parse received json: %0 at offset %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="512"/>
+        <location filename="../deviceconnection.cpp" line="512"/>
         <source>unknown binary message type %0 received</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="520"/>
+        <location filename="../deviceconnection.cpp" line="520"/>
         <source>error occured: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="526"/>
+        <location filename="../deviceconnection.cpp" line="526"/>
         <source>ssl peer verify error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="532"/>
+        <location filename="../deviceconnection.cpp" line="532"/>
         <source>ssl errors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="543"/>
+        <location filename="../deviceconnection.cpp" line="543"/>
         <source>ssl alert sent level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="549"/>
+        <location filename="../deviceconnection.cpp" line="549"/>
         <source>ssl alert received level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="555"/>
+        <location filename="../deviceconnection.cpp" line="555"/>
         <source>ssl handshake interrupted on error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/deviceconnection.cpp" line="602"/>
+        <location filename="../deviceconnection.cpp" line="602"/>
         <source>unknown response type %0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1158,8 +1336,8 @@
 <context>
     <name>DevicesModel</name>
     <message>
-        <location filename="../src/devicesmodel.cpp" line="62"/>
-        <location filename="../src/devicesmodel.cpp" line="87"/>
+        <location filename="../devicesmodel.cpp" line="62"/>
+        <location filename="../devicesmodel.cpp" line="87"/>
         <source>Device %0</source>
         <translation>Gerät %0</translation>
     </message>
@@ -1450,6 +1628,128 @@
     </message>
 </context>
 <context>
+    <name>ImportCertificateDialog</name>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="14"/>
+        <source>Import Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="22"/>
+        <source>Supports Ssl:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="29"/>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="43"/>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="57"/>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="36"/>
+        <source>Ssl Library Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="50"/>
+        <source>Ssl Library Build Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="64"/>
+        <source>Ssl Backend:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="77"/>
+        <source>Automatic Import:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="87"/>
+        <source>Load p12 file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="94"/>
+        <source>Private Key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="111"/>
+        <source>Private Cert:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.ui" line="130"/>
+        <source>Warning: Your private key and cert will be stored on this machine, but can later be erased from the main window.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="26"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="26"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="51"/>
+        <source>Select certificate...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="58"/>
+        <source>Could not open file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="63"/>
+        <source>Please enter password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="63"/>
+        <source>Certificate password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="77"/>
+        <source>Failed to load openssl legacy provider!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="82"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="88"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="94"/>
+        <source>Failed processing certificate!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="82"/>
+        <source>Possible reasons: openssl has a problem, the file is corrupt/invalid or the password is incorrect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="88"/>
+        <source>The key seems to be invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="94"/>
+        <source>The cert seems to be invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="149"/>
+        <source>Could not change active backend</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InformationsTabPage</name>
     <message>
         <location filename="../qml/InformationsTabPage.qml" line="15"/>
@@ -1539,6 +1839,104 @@
         <location filename="../qml/MainScreen.qml" line="154"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.ui" line="14"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.ui" line="23"/>
+        <source>Connect All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.ui" line="30"/>
+        <source>Disconnect All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.ui" line="37"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.ui" line="44"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="46"/>
+        <source>Serial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="55"/>
+        <source>Not yet implemented!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="60"/>
+        <source>%0 selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="82"/>
+        <source>Set update url...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="83"/>
+        <source>Start update...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="84"/>
+        <source>Reboot...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="85"/>
+        <source>Set chargectrl override...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="86"/>
+        <source>Set abitrary api key...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="90"/>
+        <source>Enter update url...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="90"/>
+        <source>Update url:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="106"/>
+        <source>Select update release...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="108"/>
+        <source>Update release</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
+        <source>Are you sure?</source>
+        <translation type="unfinished">Sind Sie sicher?</translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
+        <source>Do you really want to reboot selected devices?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1856,6 +2254,52 @@
     </message>
 </context>
 <context>
+    <name>RequestDialog</name>
+    <message>
+        <location filename="../../flotten-updater/requestdialog.ui" line="14"/>
+        <source>Pending requests...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RequestModel</name>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="94"/>
+        <source>Pending</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="95"/>
+        <source>Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="96"/>
+        <source>Succeeded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="125"/>
+        <source>Serial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="126"/>
+        <source>RequestId</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="127"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/requestmodel.cpp" line="128"/>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SavedDevicesModel</name>
     <message>
         <source>Device %0</source>
@@ -2055,7 +2499,7 @@
 <context>
     <name>SendMessageHelper</name>
     <message>
-        <location filename="../src/sendmessagehelper.cpp" line="42"/>
+        <location filename="../sendmessagehelper.cpp" line="42"/>
         <source>No device connection set!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2066,6 +2510,54 @@
         <location filename="../qml/SensorsConfigurationPage.qml" line="6"/>
         <source>Sensors Configuration</source>
         <translation>Sensorkonfiguration</translation>
+    </message>
+</context>
+<context>
+    <name>SetArbitraryApiKeyDialog</name>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.ui" line="22"/>
+        <source>ApiKey:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.ui" line="32"/>
+        <source>Value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.ui" line="48"/>
+        <source>Sudo:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.ui" line="58"/>
+        <source>Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.cpp" line="40"/>
+        <source>Could not parse JSON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.cpp" line="46"/>
+        <source>Unexpected not array!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.cpp" line="54"/>
+        <source>Unexpected array length!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/setarbitraryapikeydialog.cpp" line="54"/>
+        <source>Unexpected array length: %0!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2538,6 +3030,21 @@
         <location filename="../qml/WiFiScanPage.qml" line="112"/>
         <source>BSSID:</source>
         <translation>BSSID:</translation>
+    </message>
+</context>
+<context>
+    <name>main</name>
+    <message>
+        <location filename="../../flotten-updater/main.cpp" line="53"/>
+        <location filename="../../flotten-updater/main.cpp" line="54"/>
+        <source>Could not parse private key!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/main.cpp" line="61"/>
+        <location filename="../../flotten-updater/main.cpp" line="62"/>
+        <source>Could not parse private cert!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

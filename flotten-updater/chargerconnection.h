@@ -1,0 +1,126 @@
+#pragma once
+
+#include <QObject>
+#include <QWebSocket>
+#include <QBrush>
+#include <QVariantMap>
+
+class QSslKey;
+class QSslCertificate;
+class QJsonObject;
+
+class ChargerConnection : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit ChargerConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent = nullptr);
+    explicit ChargerConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent = nullptr);
+
+    void start();
+    void stop();
+
+    const QString &serial() const { return m_serial; }
+
+    QString wsStatusText() const;
+    QBrush wsStatusBackground() const;
+
+    QString statusText() const;
+    QBrush statusBackground() const;
+
+    QString variantText() const;
+    QBrush variantBackground() const;
+
+    QString isGoText() const;
+    QBrush isGoBackground() const;
+
+    QString isAustralienText() const;
+    QBrush isAustralienBackground() const;
+
+    QString resetCardText() const;
+    QBrush resetCardBackground() const;
+
+    QString connectedWifiText() const;
+
+    QString projectText() const;
+
+    QString versionText() const;
+
+    QString idfVersionText() const;
+
+    QString updateText() const;
+    QBrush updateBackground() const;
+
+    std::optional<qulonglong> uptime() const;
+    QString uptimeText() const;
+
+    QString currentPartition() const;
+
+    std::optional<int> reboots() const;
+    QString rebootsText() const;
+
+    QString carStateText() const;
+
+    std::optional<double> energy() const;
+    QString energyText() const;
+
+    QString livedataText() const;
+
+    void sendMessage(const QJsonDocument &doc);
+    void sendMessage(const QJsonObject &obj);
+    void sendMessage(const QString &msg);
+
+signals:
+    void responseReceived(const QString &requestId, const QJsonObject &msg);
+
+    void wsStatusChanged();
+    void statusChanged();
+    void variantChanged();
+    void isGoChanged();
+    void isAustralienChanged();
+    void resetCardChanged();
+    void connectedWifiChanged();
+    void projectChanged();
+    void versionChanged();
+    void idfVersionChanged();
+    void updateChanged();
+    void uptimeChanged();
+    void currentPartitionChanged();
+    void rebootsChanged();
+    void carStateChanged();
+    void energyChanged();
+    void livedataChanged();
+
+private:
+    void init();
+    void maintainStatus(const QJsonObject &msg, bool forceChange);
+
+private slots:
+    void connected();
+    void disconnected();
+    void stateChanged(QAbstractSocket::SocketState state);
+    void textMessageReceived(const QString &message);
+    void binaryMessageReceived(const QByteArray &message);
+    void error(QAbstractSocket::SocketError error);
+    void peerVerifyError(const QSslError &error);
+    void sslErrors(const QList<QSslError> &errors);
+    void alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description);
+    void handshakeInterruptedOnError(const QSslError &error);
+
+private:
+    const QString m_serial;
+    const QSslKey &m_key;
+    const QSslCertificate &m_cert;
+
+    enum Status {
+        Unknown,
+        Ok,
+        Offline
+    };
+    Status m_status{Status::Unknown};
+
+    QWebSocket m_websocket;
+
+    QVariantMap m_fullStatus;
+    bool m_receivedDelta{false};
+};

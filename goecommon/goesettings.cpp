@@ -1,11 +1,8 @@
-#include "appsettings.h"
-
-#include <QFile>
-#include <QQmlFile>
+#include "goesettings.h"
 
 #include <algorithm>
 
-std::vector<SavedDevice> AppSettings::getSavedDevices()
+std::vector<SavedDevice> GoeSettings::getSavedDevices()
 {
     std::vector<SavedDevice> savedDevices;
 
@@ -26,7 +23,7 @@ std::vector<SavedDevice> AppSettings::getSavedDevices()
     return savedDevices;
 }
 
-void AppSettings::saveSavedDevices(const std::vector<SavedDevice> &savedDevices)
+void GoeSettings::saveSavedDevices(const std::vector<SavedDevice> &savedDevices)
 {
     beginWriteArray("devices");
     for (qsizetype i = 0; i < savedDevices.size(); ++i) {
@@ -40,7 +37,7 @@ void AppSettings::saveSavedDevices(const std::vector<SavedDevice> &savedDevices)
     endArray();
 }
 
-void AppSettings::refreshSavedDevice(SavedDevice &&savedDevice)
+void GoeSettings::refreshSavedDevice(SavedDevice &&savedDevice)
 {
     auto savedDevices = getSavedDevices();
 
@@ -58,7 +55,7 @@ void AppSettings::refreshSavedDevice(SavedDevice &&savedDevice)
     saveSavedDevices(savedDevices);
 }
 
-void AppSettings::removeSavedDevice(const QString &serial)
+void GoeSettings::removeSavedDevice(const QString &serial)
 {
     auto savedDevices = getSavedDevices();
 
@@ -72,7 +69,7 @@ void AppSettings::removeSavedDevice(const QString &serial)
     saveSavedDevices(savedDevices);
 }
 
-int AppSettings::numberOfAppInstances() const
+int GoeSettings::numberOfAppInstances() const
 {
     if (m_numberOfAppInstances)
         return *m_numberOfAppInstances;
@@ -85,7 +82,7 @@ int AppSettings::numberOfAppInstances() const
     return numberOfAppInstances;
 }
 
-void AppSettings::setNumberOfAppInstances(int numberOfAppInstances)
+void GoeSettings::setNumberOfAppInstances(int numberOfAppInstances)
 {
     if (numberOfAppInstances < 1)
         return;
@@ -94,7 +91,7 @@ void AppSettings::setNumberOfAppInstances(int numberOfAppInstances)
     emit numberOfAppInstancesChanged(numberOfAppInstances);
 }
 
-QString AppSettings::solalawebKey() const
+QString GoeSettings::solalawebKey() const
 {
     if (m_solalawebKey)
         return *m_solalawebKey;
@@ -104,28 +101,14 @@ QString AppSettings::solalawebKey() const
     return solalawebKey;
 }
 
-void AppSettings::setSolalawebKey(const QString &solalawebKey)
+void GoeSettings::setSolalawebKey(const QString &solalawebKey)
 {
     setValue("solalawebKey", solalawebKey);
     m_solalawebKey = solalawebKey;
     emit solalawebKeyChanged(solalawebKey);
 }
 
-bool AppSettings::loadSolalawebKey(const QString &url)
-{
-    QFile file{QQmlFile::urlToLocalFileOrQrc(url)};
-    if (!file.open(QFile::ReadOnly))
-    {
-        qWarning() << "Could not open file:" << file.errorString();
-        return false;
-    }
-
-    setSolalawebKey(file.readAll());
-
-    return true;
-}
-
-QString AppSettings::solalawebCert() const
+QString GoeSettings::solalawebCert() const
 {
     if (m_solalawebCert)
         return *m_solalawebCert;
@@ -135,28 +118,14 @@ QString AppSettings::solalawebCert() const
     return solalawebCert;
 }
 
-void AppSettings::setSolalawebCert(const QString &solalawebCert)
+void GoeSettings::setSolalawebCert(const QString &solalawebCert)
 {
     setValue("solalawebCert", solalawebCert);
     m_solalawebCert = solalawebCert;
     emit solalawebCertChanged(solalawebCert);
 }
 
-bool AppSettings::loadSolalawebCert(const QString &url)
-{
-    QFile file{QQmlFile::urlToLocalFileOrQrc(url)};
-    if (!file.open(QFile::ReadOnly))
-    {
-        qWarning() << "Could not open file:" << file.errorString();
-        return false;
-    }
-
-    setSolalawebCert(file.readAll());
-
-    return true;
-}
-
-bool AppSettings::showSolalaweb() const
+bool GoeSettings::showSolalaweb() const
 {
     if (m_showSolalaweb)
         return *m_showSolalaweb;
@@ -166,7 +135,7 @@ bool AppSettings::showSolalaweb() const
     return showSolalaweb;
 }
 
-void AppSettings::setShowSolalaweb(bool showSolalaweb)
+void GoeSettings::setShowSolalaweb(bool showSolalaweb)
 {
     setValue("showSolalaweb", showSolalaweb);
     m_showSolalaweb = showSolalaweb;
