@@ -22,13 +22,20 @@ add_executable(flotten-updater
     setarbitraryapikeydialog.ui
 )
 
+find_package(OpenSSL)
+if (OpenSSL_Found)
+    target_compile_definitions(flotten-updater HAS_OPENSSL)
+    target_link_libraries(flotten-updater PUBLIC
+        OpenSSL::SSL
+        OpenSSL::Crypto
+    )
+endif()
+
 target_link_libraries(flotten-updater PUBLIC
     Qt6::Core
     Qt6::Gui
     Qt6::Widgets
     Qt6::WebSockets
-    ssl
-    crypto
     goecommon
 )
 

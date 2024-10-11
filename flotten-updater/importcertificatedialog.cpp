@@ -7,11 +7,15 @@
 #include <QInputDialog>
 #include <QSslSocket>
 
+#ifdef HAS_OPENSSL
 #include <openssl/provider.h>
+#endif
 
+#ifdef HAS_OPENSSL
 namespace {
 OSSL_PROVIDER *legacy{};
 }
+#endif
 
 ImportCertificateDialog::ImportCertificateDialog(QWidget *parent) :
     QDialog{parent},
@@ -70,12 +74,14 @@ void ImportCertificateDialog::loadP12File()
     QSslCertificate cert;
     QList<QSslCertificate> certChain;
 
+#ifdef HAS_OPENSSL
     if (QSslSocket::activeBackend() == "openssl" && !legacy)
     {
         legacy = OSSL_PROVIDER_load(NULL, "legacy");
         if (!legacy)
             QMessageBox::warning(this, tr("Failed to load openssl legacy provider!"), tr("Failed to load openssl legacy provider!"));
     }
+#endif
 
     if (!QSslCertificate::importPkcs12(&file, &key, &cert, &certChain, password))
     {
