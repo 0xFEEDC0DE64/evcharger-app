@@ -15,10 +15,6 @@ endif(CCACHE_FOUND)
 add_definitions(-DQT_GUI_LIB)
 add_subdirectory(3rdparty)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick WebSockets LinguistTools)
-
-qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
-
 add_subdirectory(evcharger-app)
 if (NOT ANDROID)
 add_subdirectory(flotten-updater)

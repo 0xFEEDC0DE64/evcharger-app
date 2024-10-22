@@ -2,10 +2,12 @@
 
 #include <QDebug>
 #include <QBrush>
+#include <QJsonDocument>
 
 #include <algorithm>
 
 #include "chargerconnection.h"
+#include "flottenupdatersettings.h"
 
 namespace {
 enum {
@@ -31,10 +33,13 @@ enum {
 };
 }
 
-ChargersModel::ChargersModel(const QSslKey &key, const QSslCertificate &cert, QObject *parent) :
+ChargersModel::ChargersModel(FlottenUpdaterSettings &settings, const QSslKey &key,
+                             const QSslCertificate &cert, QObject *parent) :
     QAbstractTableModel{parent},
+    m_settings{settings},
     m_key{key},
-    m_cert{cert}
+    m_cert{cert},
+    m_customColumns{settings.customColumns()}
 {
     constexpr const char *serials[] {
         "096850", "10000003",
@@ -49,6 +54,7 @@ ChargersModel::ChargersModel(const QSslKey &key, const QSslCertificate &cert, QO
         "000043", "000044", "000047", "000050", "900001", "900103", "900104", "900105", "900107", "900108", "900113", "900117", "900118", "900123", "900126", "900127",
         "91028339", "91028457", "91028482", "91028368", "91028336", "91028374", "91028371", "91028452", "91028481", "91028455", "91028334", "91028456", "91028351", "91028367", "91028346", "91028459", "91028366", "91028335", "91028483", "91028372", "91028337", "91028338",
         "91008954", "91008978", "91008282", "91009008", "91008953", "91009000", "91009024", "91048840", "91048873", "91045590", "91045593", "91045586", "91048874", "91048879", "91048882", "91048878", "91048860", "91048865", "91048853", "91048864", "91048867", "91021261", "91021260", "91021379", "91021135", "91021266", "91021259", "91021374", "91021381", "91021258", "91021275", "91021380", "91021382", "91021377", "91021240", "91021371", "91021376", "91021255", "91021378", "91021383", "91021354", "91021195", "91021370", "91021278", "91021234", "91021256", "91021257", "91021360", "91021248", "91021363", "91021270", "91021267", "91021239", "91021193", "91021268", "91028339", "91028457", "91028482", "91028368", "91036167", "91028374", "91028371", "91028452", "91028481", "91028455", "91028334", "91028456", "91028351", "91028367", "91028346", "91028459", "91028366", "91028335", "91028483", "91028372", "91028337", "91028338",
+        "91100000", "91100001", "91100002", "91100003", "91100004", "91100005", "91100006", "91100007", "91100008", "91100009", "91100010", "91100011", "91100012", "91100013", "91100014", "91100015", "91100016", "91100017", "91100018", "91100019", "91100020", "91100021", "91100022", "91100023", "91100024", "91100025", "91100026", "91100027", "91100028", "91100029", "91100030", "91100031"
     };
     for (const auto &serial : serials)
     {
@@ -68,7 +74,7 @@ int ChargersModel::rowCount(const QModelIndex &parent) const
 
 int ChargersModel::columnCount(const QModelIndex &parent) const
 {
-    return NumberOfColumns;
+    return NumberOfColumns + m_customColumns.size();
 }
 
 QVariant ChargersModel::data(const QModelIndex &index, int role) const
@@ -248,6 +254,22 @@ QVariant ChargersModel::data(const QModelIndex &index, int role) const
         }
         return {};
     }
+
+    if (index.column() >= NumberOfColumns && index.column() - NumberOfColumns < m_customColumns.size())
+        switch (role)
+        {
+        case Qt::DisplayRole:
+        {
+            auto variant = charger.getApiKey(m_customColumns.at(index.column() - NumberOfColumns));
+            auto str = variant.toString();
+            if (str.isEmpty())
+                str = QJsonDocument::fromVariant(variant).toJson(QJsonDocument::Compact);
+            return str;
+        }
+        case Qt::EditRole:
+            return charger.getApiKey(m_customColumns.at(index.column() - NumberOfColumns));
+        }
+
     return {};
 }
 
@@ -280,8 +302,14 @@ QVariant ChargersModel::headerData(int section, Qt::Orientation orientation, int
         case ColumnEnergy: return tr("Energy");
         case ColumnLivedata: return tr("Livedata");
         }
+
+        if (section >= NumberOfColumns && section - NumberOfColumns < m_customColumns.size())
+            return m_customColumns[section - NumberOfColumns];
+
         return {};
     }
+
+    return {};
 }
 
 void ChargersModel::addClient(const QString &serial)
@@ -310,6 +338,30 @@ std::shared_ptr<const ChargerConnection> ChargersModel::getCharger(QModelIndex i
 {
     Q_ASSERT(!index.parent().isValid());
     return m_chargers.at(index.row());
+}
+
+void ChargersModel::addCustomColumn(const QString &apiKey)
+{
+    beginInsertColumns({}, NumberOfColumns + m_customColumns.size(), NumberOfColumns + m_customColumns.size());
+    m_customColumns.push_back(apiKey);
+    endInsertColumns();
+    m_settings.setCustomColumns(m_customColumns);
+}
+
+bool ChargersModel::customColumnRemovable(int section)
+{
+    return section >= NumberOfColumns && section - NumberOfColumns < m_customColumns.size();
+}
+
+void ChargersModel::removeCustomColumn(int section)
+{
+    if (section < NumberOfColumns || section - NumberOfColumns >= m_customColumns.size())
+        return;
+
+    beginRemoveColumns({}, section, section);
+    m_customColumns.erase(std::next(std::begin(m_customColumns), section - NumberOfColumns));
+    endRemoveColumns();
+    m_settings.setCustomColumns(m_customColumns);
 }
 
 void ChargersModel::connectAll()
@@ -409,6 +461,13 @@ void ChargersModel::livedataChanged()
     columnChanged(ColumnLivedata, {Qt::DisplayRole, Qt::EditRole});
 }
 
+void ChargersModel::apiKeyChanged(const QString &apiKey)
+{
+    for (auto iter = std::cbegin(m_customColumns); iter != std::cend(m_customColumns); iter++)
+        if (*iter == apiKey)
+            columnChanged(NumberOfColumns + std::distance(std::cbegin(m_customColumns), iter), {Qt::DisplayRole, Qt::EditRole});
+}
+
 void ChargersModel::columnChanged(int column, const QList<int> &roles)
 {
     auto charger = qobject_cast<ChargerConnection*>(sender());
@@ -430,5 +489,5 @@ void ChargersModel::columnChanged(int column, const QList<int> &roles)
     auto row = std::distance(std::cbegin(m_chargers), iter);
 
     auto index = createIndex(row, column);
-    dataChanged(index, index, roles);
+    emit dataChanged(index, index, roles);
 }

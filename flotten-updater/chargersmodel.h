@@ -8,6 +8,7 @@
 class QSslKey;
 class QSslCertificate;
 
+class FlottenUpdaterSettings;
 class ChargerConnection;
 
 class ChargersModel : public QAbstractTableModel
@@ -15,7 +16,8 @@ class ChargersModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit ChargersModel(const QSslKey &key, const QSslCertificate &cert, QObject *parent = nullptr);
+    explicit ChargersModel(FlottenUpdaterSettings &settings, const QSslKey &key,
+                           const QSslCertificate &cert, QObject *parent = nullptr);
     ~ChargersModel() override;
 
     int rowCount(const QModelIndex &parent) const override;
@@ -27,6 +29,10 @@ public:
 
     std::shared_ptr<ChargerConnection> getCharger(QModelIndex index);
     std::shared_ptr<const ChargerConnection> getCharger(QModelIndex index) const;
+
+    void addCustomColumn(const QString &apiKey);
+    bool customColumnRemovable(int section);
+    void removeCustomColumn(int section);
 
 public slots:
     void connectAll();
@@ -49,11 +55,15 @@ public slots:
     void carStateChanged();
     void energyChanged();
     void livedataChanged();
+    void apiKeyChanged(const QString &apiKey);
 
 private:
+    FlottenUpdaterSettings &m_settings;
     const QSslKey &m_key;
     const QSslCertificate &m_cert;
     void columnChanged(int column, const QList<int> &roles = QList<int>());
 
     std::vector<std::shared_ptr<ChargerConnection>> m_chargers;
+
+    QStringList m_customColumns;
 };

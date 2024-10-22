@@ -14,4 +14,7 @@ public:
 
     QByteArray privateCert() const;
     void setPrivateCert(const QByteArray &cert);
+
+    QStringList customColumns() const;
+    void setCustomColumns(const QStringList &customColumns);
 };

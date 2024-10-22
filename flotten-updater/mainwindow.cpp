@@ -21,7 +21,7 @@ MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
     QMainWindow{parent},
     m_ui{std::make_unique<Ui::MainWindow>()},
     m_settings{settings},
-    m_model{std::make_unique<ChargersModel>(key, cert, this)},
+    m_model{std::make_unique<ChargersModel>(settings, key, cert, this)},
     m_proxyModel{std::make_unique<QSortFilterProxyModel>(this)}
 {
     m_ui->setupUi(this);
@@ -35,6 +35,8 @@ MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
     connect(m_ui->pushButtonAdd, &QAbstractButton::pressed, this, &MainWindow::doAdd);
     connect(m_ui->pushButtonRemove, &QAbstractButton::pressed, this, &MainWindow::doRemove);
     connect(m_ui->treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::selectionChanged);
+    m_ui->treeView->header()->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(m_ui->treeView->header(), &QTreeView::customContextMenuRequested, this, &MainWindow::headerContextMenuRequested);
     connect(m_ui->treeView, &QTreeView::customContextMenuRequested, this, &MainWindow::contextMenuRequested);
 }
 
@@ -58,6 +60,37 @@ void MainWindow::doRemove()
 void MainWindow::selectionChanged()
 {
     m_ui->statusbar->showMessage(tr("%0 selected").arg(m_ui->treeView->selectionModel()->selectedRows().count()));
+}
+
+void MainWindow::headerContextMenuRequested(const QPoint &pos)
+{
+    QMenu menu;
+
+    auto addColumnAction = menu.addAction(tr("Add new column..."));
+
+    QAction *removeColumnAction{};
+    auto header = m_ui->treeView->header();
+    const auto section = header->logicalIndexAt(pos);
+    if (section >= 0)
+    {
+        removeColumnAction = menu.addAction(tr("Remove column %0").arg(header->model()->headerData(section, Qt::Horizontal).toString()));
+        if (!m_model->customColumnRemovable(section))
+            removeColumnAction->setEnabled(false);
+    }
+
+    if (auto selectedAction = menu.exec(header->mapToGlobal(pos)); selectedAction == addColumnAction)
+    {
+        bool ok{};
+        auto apiKey = QInputDialog::getText(this, tr("Enter api key"), tr("Api key:"), QLineEdit::Normal, {}, &ok);
+        if (!ok)
+            return;
+
+        m_model->addCustomColumn(apiKey);
+    }
+    else if (removeColumnAction && selectedAction == removeColumnAction)
+    {
+        m_model->removeCustomColumn(section);
+    }
 }
 
 void MainWindow::contextMenuRequested(const QPoint &pos)
@@ -84,6 +117,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
     auto actionReboot = menu.addAction(tr("Reboot..."));
     auto actionSetChargectrlOverride = menu.addAction(tr("Set chargectrl override..."));
     auto actionSetAbitraryApiKey = menu.addAction(tr("Set abitrary api key..."));
+    auto actionOpenApps = menu.addAction(tr("Open app(s)..."));
     if (const auto selected = menu.exec(m_ui->treeView->viewport()->mapToGlobal(pos)); selected == actionSetUpdateUrl)
     {
         bool ok{};
@@ -185,5 +219,9 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
                 msg["sudo"] = true;
             RequestDialog{std::move(msg), std::move(chargers), this}.exec();
         }
+    }
+    else if (selected == actionOpenApps)
+    {
+
     }
 }

@@ -576,92 +576,92 @@
 <context>
     <name>ChargersModel</name>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="264"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="286"/>
         <source>Serial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="265"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="287"/>
         <source>WS Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="266"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="288"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="267"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="289"/>
         <source>Variant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="268"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="290"/>
         <source>IsGo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="269"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="291"/>
         <source>IsAustralien</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="270"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="292"/>
         <source>ResetCard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="271"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="293"/>
         <source>ConnectedWifi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="272"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="294"/>
         <source>Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="273"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="295"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="274"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="296"/>
         <source>IDF Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="275"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="297"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="276"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="298"/>
         <source>Reboots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="277"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="299"/>
         <source>Uptime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="278"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="300"/>
         <source>Current Partition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="279"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="301"/>
         <source>Car state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="280"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="302"/>
         <source>Energy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/chargersmodel.cpp" line="281"/>
+        <location filename="../../flotten-updater/chargersmodel.cpp" line="303"/>
         <source>Livedata</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1687,64 +1687,64 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="26"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="30"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="26"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="30"/>
         <source>No</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="51"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="55"/>
         <source>Select certificate...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="58"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="62"/>
         <source>Could not open file!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="63"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="67"/>
         <source>Please enter password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="63"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="67"/>
         <source>Certificate password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="77"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="82"/>
         <source>Failed to load openssl legacy provider!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="82"/>
         <location filename="../../flotten-updater/importcertificatedialog.cpp" line="88"/>
         <location filename="../../flotten-updater/importcertificatedialog.cpp" line="94"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="100"/>
         <source>Failed processing certificate!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="82"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="88"/>
         <source>Possible reasons: openssl has a problem, the file is corrupt/invalid or the password is incorrect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="88"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="94"/>
         <source>The key seems to be invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="94"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="100"/>
         <source>The cert seems to be invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="149"/>
+        <location filename="../../flotten-updater/importcertificatedialog.cpp" line="155"/>
         <source>Could not change active backend</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1869,72 +1869,97 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="46"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="48"/>
         <source>Serial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="55"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="57"/>
         <source>Not yet implemented!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="60"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="62"/>
         <source>%0 selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="82"/>
-        <source>Set update url...</source>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="69"/>
+        <source>Add new column...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="83"/>
-        <source>Start update...</source>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="76"/>
+        <source>Remove column %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../flotten-updater/mainwindow.cpp" line="84"/>
+        <source>Enter api key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="84"/>
+        <source>Api key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="115"/>
+        <source>Set update url...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="116"/>
+        <source>Start update...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="117"/>
         <source>Reboot...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="85"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="118"/>
         <source>Set chargectrl override...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="86"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="119"/>
         <source>Set abitrary api key...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="90"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="120"/>
+        <source>Open app(s)...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="124"/>
         <source>Enter update url...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="90"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="124"/>
         <source>Update url:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="106"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="140"/>
         <source>Select update release...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="108"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="142"/>
         <source>Update release</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="159"/>
         <source>Are you sure?</source>
         <translation type="unfinished">Sind Sie sicher?</translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="159"/>
         <source>Do you really want to reboot selected devices?</source>
         <translation type="unfinished"></translation>
     </message>

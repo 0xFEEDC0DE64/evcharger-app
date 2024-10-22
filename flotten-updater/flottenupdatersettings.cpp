@@ -19,3 +19,13 @@ void FlottenUpdaterSettings::setPrivateCert(const QByteArray &cert)
 {
     setValue("privateCert", cert);
 }
+
+QStringList FlottenUpdaterSettings::customColumns() const
+{
+    return value("customColumns").toStringList();
+}
+
+void FlottenUpdaterSettings::setCustomColumns(const QStringList &customColumns)
+{
+    setValue("customColumns", customColumns);
+}

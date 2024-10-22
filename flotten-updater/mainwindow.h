@@ -25,6 +25,7 @@ private slots:
     void doAdd();
     void doRemove();
     void selectionChanged();
+    void headerContextMenuRequested(const QPoint &pos);
     void contextMenuRequested(const QPoint &pos);
 
 private:

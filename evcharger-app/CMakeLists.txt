@@ -1,3 +1,7 @@
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick WebSockets LinguistTools)
+
+qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
+
 qt_add_executable(evcharger-app WIN32 MACOSX_BUNDLE
     appsettings.cpp
     appsettings.h

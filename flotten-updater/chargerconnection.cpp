@@ -346,6 +346,11 @@ QString ChargerConnection::livedataText() const
     return {};
 }
 
+QVariant ChargerConnection::getApiKey(const QString &apiKey) const
+{
+    return m_fullStatus.value(apiKey);
+}
+
 void ChargerConnection::sendMessage(const QJsonDocument &doc)
 {
     sendMessage(QString::fromUtf8(doc.toJson()));
@@ -384,6 +389,7 @@ void ChargerConnection::init()
         connect(this, &ChargerConnection::carStateChanged, model, &ChargersModel::carStateChanged);
         connect(this, &ChargerConnection::energyChanged, model, &ChargersModel::energyChanged);
         connect(this, &ChargerConnection::livedataChanged, model, &ChargersModel::livedataChanged);
+        connect(this, &ChargerConnection::apiKeyChanged, model, &ChargersModel::apiKeyChanged);
     }
     else
         qWarning() << "unexpected parent";
@@ -396,7 +402,7 @@ void ChargerConnection::init()
             auto caCerts = QSslCertificate::fromPath(":/goe-root-ca.pem");
             if (caCerts.empty())
                 qFatal("could not parse root ca");
-            for (const auto &caCert : qAsConst(caCerts))
+            for (const auto &caCert : std::as_const(caCerts))
                 qDebug() << caCert.issuerDisplayName();
             sslConfig.setCaCertificates(std::move(caCerts));
         }
@@ -411,7 +417,7 @@ void ChargerConnection::init()
     connect(&m_websocket, &QWebSocket::stateChanged, this, &ChargerConnection::stateChanged);
     connect(&m_websocket, &QWebSocket::textMessageReceived, this, &ChargerConnection::textMessageReceived);
     connect(&m_websocket, &QWebSocket::binaryMessageReceived, this, &ChargerConnection::binaryMessageReceived);
-    connect(&m_websocket, qOverload<QAbstractSocket::SocketError>(&QWebSocket::error), this, &ChargerConnection::error);
+    connect(&m_websocket, &QWebSocket::errorOccurred, this, &ChargerConnection::errorOccurred);
     connect(&m_websocket, &QWebSocket::peerVerifyError, this, &ChargerConnection::peerVerifyError);
     connect(&m_websocket, &QWebSocket::sslErrors, this, &ChargerConnection::sslErrors);
     connect(&m_websocket, &QWebSocket::alertReceived, this, &ChargerConnection::alertReceived);
@@ -465,6 +471,8 @@ void ChargerConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
             energyChanged = true;
         else if (iter.key() == "nrg")
             livedataChanged = true;
+
+        emit apiKeyChanged(iter.key());
     }
 
     if (variantChanged)
@@ -611,7 +619,7 @@ void ChargerConnection::binaryMessageReceived(const QByteArray &message)
     qDebug() << "called" << message;
 }
 
-void ChargerConnection::error(QAbstractSocket::SocketError error)
+void ChargerConnection::errorOccurred(QAbstractSocket::SocketError error)
 {
     qDebug() << "called" << QMetaEnum::fromType<QAbstractSocket::SocketError>().valueToKey(error) << m_websocket.errorString();
 }

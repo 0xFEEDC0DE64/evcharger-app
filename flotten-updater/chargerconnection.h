@@ -66,6 +66,8 @@ public:
 
     QString livedataText() const;
 
+    QVariant getApiKey(const QString &apiKey) const;
+
     void sendMessage(const QJsonDocument &doc);
     void sendMessage(const QJsonObject &obj);
     void sendMessage(const QString &msg);
@@ -90,6 +92,7 @@ signals:
     void carStateChanged();
     void energyChanged();
     void livedataChanged();
+    void apiKeyChanged(const QString &apiKey);
 
 private:
     void init();
@@ -101,7 +104,7 @@ private slots:
     void stateChanged(QAbstractSocket::SocketState state);
     void textMessageReceived(const QString &message);
     void binaryMessageReceived(const QByteArray &message);
-    void error(QAbstractSocket::SocketError error);
+    void errorOccurred(QAbstractSocket::SocketError error);
     void peerVerifyError(const QSslError &error);
     void sslErrors(const QList<QSslError> &errors);
     void alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description);
