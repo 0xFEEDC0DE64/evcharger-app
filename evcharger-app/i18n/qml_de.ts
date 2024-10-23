@@ -1423,27 +1423,27 @@
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../qml/FirmwarePage.qml" line="121"/>
+        <location filename="../qml/FirmwarePage.qml" line="114"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../qml/FirmwarePage.qml" line="146"/>
+        <location filename="../qml/FirmwarePage.qml" line="120"/>
         <source>Switch partition</source>
         <translation>Partition tauschen</translation>
     </message>
     <message>
-        <location filename="../qml/FirmwarePage.qml" line="167"/>
+        <location filename="../qml/FirmwarePage.qml" line="129"/>
         <source>Update status:</source>
         <translation>Update status:</translation>
     </message>
     <message>
-        <location filename="../qml/FirmwarePage.qml" line="195"/>
+        <location filename="../qml/FirmwarePage.qml" line="157"/>
         <source>Update progress:</source>
         <translation>Update Fortschritt:</translation>
     </message>
     <message>
-        <location filename="../qml/FirmwarePage.qml" line="226"/>
+        <location filename="../qml/FirmwarePage.qml" line="188"/>
         <source>Update message:</source>
         <translation>Update Meldung:</translation>
     </message>
@@ -1930,37 +1930,52 @@
     </message>
     <message>
         <location filename="../../flotten-updater/mainwindow.cpp" line="120"/>
+        <source>Reset nvs key...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="121"/>
         <source>Open app(s)...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="124"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
         <source>Enter update url...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="124"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="125"/>
         <source>Update url:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="140"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="141"/>
         <source>Select update release...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="142"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="143"/>
         <source>Update release</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="159"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="160"/>
         <source>Are you sure?</source>
         <translation type="unfinished">Sind Sie sicher?</translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="159"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="160"/>
         <source>Do you really want to reboot selected devices?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="227"/>
+        <source>Please input nvs key to be reset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="227"/>
+        <source>Nvs key</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2924,27 +2939,46 @@
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="../qml/WiFiPage.qml" line="58"/>
-        <source>(%0) Wi-Fi Scan</source>
-        <translation>(%0) Wi-Fi Scan</translation>
+        <location filename="../qml/WiFiPage.qml" line="51"/>
+        <source>Scan-Status:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/WiFiPage.qml" line="77"/>
+        <location filename="../qml/WiFiPage.qml" line="76"/>
+        <source>Scan-Age:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/WiFiPage.qml" line="95"/>
+        <source>Trigger scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/WiFiPage.qml" line="106"/>
+        <source>(%0) Scan Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(%0) Wi-Fi Scan</source>
+        <translation type="vanished">(%0) Wi-Fi Scan</translation>
+    </message>
+    <message>
+        <location filename="../qml/WiFiPage.qml" line="126"/>
         <source>(%0) Wi-Fi Errors</source>
         <translation>(%0) WLAN Probleme</translation>
     </message>
     <message>
-        <location filename="../qml/WiFiPage.qml" line="90"/>
+        <location filename="../qml/WiFiPage.qml" line="139"/>
         <source>Min RSSI</source>
         <translation>Min RSSI</translation>
     </message>
     <message>
-        <location filename="../qml/WiFiPage.qml" line="101"/>
+        <location filename="../qml/WiFiPage.qml" line="150"/>
         <source>Pmf capable</source>
         <translation>Pmf fähig</translation>
     </message>
     <message>
-        <location filename="../qml/WiFiPage.qml" line="106"/>
+        <location filename="../qml/WiFiPage.qml" line="155"/>
         <source>Pmf required</source>
         <translation>Pmf erforderlich</translation>
     </message>

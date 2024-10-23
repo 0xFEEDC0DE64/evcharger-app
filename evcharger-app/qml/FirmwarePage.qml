@@ -109,54 +109,16 @@ NavigationPage {
                 }
             }
 
-            RowLayout {
+            SendMessageButton {
                 Layout.fillWidth: true
-
-                SendMessageHelper {
-                    id: abortFirmwareUpdate
-                    deviceConnection: theDeviceConnection
-                }
-
-                Button {
-                    text: qsTr("Abort")
-
-                    onClicked: abortFirmwareUpdate.sendMessage({
-                        type: "abortFwUpdate"
-                    })
-                }
-
-                BusyIndicator {
-                    visible: abortFirmwareUpdate.pending
-                }
-
-                RequestStatusText {
-                    request: abortFirmwareUpdate
-                }
+                text: qsTr("Abort")
+                messageType: "abortFwUpdate"
             }
 
-            RowLayout {
+            SendMessageButton {
                 Layout.fillWidth: true
-
-                SendMessageHelper {
-                    id: switchAppPartition
-                    deviceConnection: theDeviceConnection
-                }
-
-                Button {
-                    text: qsTr("Switch partition")
-
-                    onClicked: switchAppPartition.sendMessage({
-                        type: "switchAppPartition"
-                    })
-                }
-
-                BusyIndicator {
-                    visible: switchAppPartition.pending
-                }
-
-                RequestStatusText {
-                    request: switchAppPartition
-                }
+                text: qsTr("Switch partition")
+                messageType: "switchAppPartition"
             }
 
             GridLayout {

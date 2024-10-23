@@ -71,6 +71,7 @@ EVChargerApp 1.0 ScrollableTabPage.qml
 EVChargerApp 1.0 SecurityPage.qml
 EVChargerApp 1.0 SelectLogicModeItem.qml
 EVChargerApp 1.0 SelectPhaseSwitchModeItem.qml
+EVChargerApp 1.0 SendMessageButton.qml
 EVChargerApp 1.0 SensorsConfigurationPage.qml
 EVChargerApp 1.0 SetPriceLimitPage.qml
 EVChargerApp 1.0 SettingsTabPage.qml

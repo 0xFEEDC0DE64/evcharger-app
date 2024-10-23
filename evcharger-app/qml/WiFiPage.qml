@@ -46,23 +46,72 @@ NavigationPage {
                 }
             }
         }
-    }
 
-    Button {
-        ApiKeyValueHelper {
-            id: wifiScanResult
-            deviceConnection: theDeviceConnection
-            apiKey: "scan"
+        Text {
+            text: qsTr("Scan-Status:")
         }
 
-        text: qsTr("(%0) Wi-Fi Scan").arg(wifiScanResult.value == null ? 0 : wifiScanResult.value.length)
-        onClicked: stackView.push(wiFiScanPageComponent, {wifiScanResult} )
-        enabled: wifiScanResult.value != null
+        Text {
+            Layout.fillWidth: true
 
-        Component {
-            id: wiFiScanPageComponent
+            ApiKeyValueHelper {
+                id: scanStatus
+                deviceConnection: theDeviceConnection
+                apiKey: "scas"
+            }
 
-            WiFiScanPage {
+            text: {
+                switch (scanStatus.value)
+                {
+                case 0: return "None"
+                case 1: return "Scanning"
+                case 2: return "Finished"
+                case 3: return "Failed"
+                default: return scanStatus.value
+                }
+            }
+        }
+
+        Text {
+            text: qsTr("Scan-Age:")
+        }
+
+        Text {
+            Layout.fillWidth: true
+
+            ApiKeyValueHelper {
+                id: scanAgeStatus
+                deviceConnection: theDeviceConnection
+                apiKey: "scaa"
+            }
+
+            text: scanAgeStatus.value != null ? formatDuration(scanAgeStatus.value - rebootTime.value) : null
+        }
+    }
+
+    RowLayout {
+        SendMessageButton {
+            Layout.fillWidth: true
+            text: qsTr("Trigger scan")
+            messageType: "wifiScan"
+        }
+
+        Button {
+            ApiKeyValueHelper {
+                id: wifiScanResult
+                deviceConnection: theDeviceConnection
+                apiKey: "scan"
+            }
+
+            text: qsTr("(%0) Scan Result").arg(wifiScanResult.value == null ? 0 : wifiScanResult.value.length)
+            onClicked: stackView.push(wiFiScanPageComponent, {wifiScanResult} )
+            enabled: wifiScanResult.value != null
+
+            Component {
+                id: wiFiScanPageComponent
+
+                WiFiScanPage {
+                }
             }
         }
     }

@@ -103,6 +103,7 @@ qt_add_qml_module(evcharger-app
         qml/SecurityPage.qml
         qml/SelectLogicModeItem.qml
         qml/SelectPhaseSwitchModeItem.qml
+        qml/SendMessageButton.qml
         qml/SensorsConfigurationPage.qml
         qml/SetPriceLimitPage.qml
         qml/SettingsTabPage.qml
