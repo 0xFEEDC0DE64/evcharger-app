@@ -117,6 +117,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
     auto actionReboot = menu.addAction(tr("Reboot..."));
     auto actionSetChargectrlOverride = menu.addAction(tr("Set chargectrl override..."));
     auto actionSetAbitraryApiKey = menu.addAction(tr("Set abitrary api key..."));
+    auto resetNvsKey = menu.addAction(tr("Reset nvs key..."));
     auto actionOpenApps = menu.addAction(tr("Open app(s)..."));
     if (const auto selected = menu.exec(m_ui->treeView->viewport()->mapToGlobal(pos)); selected == actionSetUpdateUrl)
     {
@@ -219,6 +220,20 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
                 msg["sudo"] = true;
             RequestDialog{std::move(msg), std::move(chargers), this}.exec();
         }
+    }
+    else if (selected == resetNvsKey)
+    {
+        bool ok{};
+        auto nvsKey = QInputDialog::getText(this, tr("Please input nvs key to be reset"), tr("Nvs key"), QLineEdit::Normal, {}, &ok);
+        if (!ok)
+            return;
+
+        QJsonObject msg {
+            { "type", "nvsReset" },
+            { "key", nvsKey },
+            { "sudo", true }
+        };
+        RequestDialog{std::move(msg), std::move(chargers), this}.exec();
     }
     else if (selected == actionOpenApps)
     {
