@@ -16,3 +16,5 @@ target_link_libraries(goecommon
 target_include_directories(goecommon PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+install(TARGETS goecommon)
