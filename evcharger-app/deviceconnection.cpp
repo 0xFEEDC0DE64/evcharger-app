@@ -133,7 +133,9 @@ void DeviceConnection::messageReceived(const QVariant &variant)
 
     const auto &type = typeVariant.toString();
     qDebug() << type;
-    bool omitLog{};
+
+    if (type != "fullStatus" && type != "deltaStatus")
+        emit logMessage(tr("Received message type %0 %1").arg(type).arg(QJsonDocument::fromVariant(variant).toJson()));
 
     if (type == "hello")
     {
@@ -276,8 +278,6 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     }
     else if (type == "fullStatus")
     {
-        omitLog = true;
-
         emit hideDisturbed();
 
         bool partial{};
@@ -319,8 +319,6 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     }
     else if (type == "deltaStatus")
     {
-        omitLog = true;
-
         auto iter = map.find("status");
         if (iter == std::cend(map))
         {
@@ -365,11 +363,6 @@ void DeviceConnection::messageReceived(const QVariant &variant)
     else if (type == "offline")
     {
         emit showDisturbed();
-    }
-
-    if (!omitLog)
-    {
-        emit logMessage(tr("Received message type %0 %1").arg(type).arg(QJsonDocument::fromVariant(variant).toJson()));
     }
 
     if (auto iter = map.find("requestId"); iter != std::cend(map))

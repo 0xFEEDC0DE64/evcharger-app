@@ -981,42 +981,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="144"/>
+        <location filename="../deviceconnection.cpp" line="146"/>
         <source>Received hello without serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="151"/>
+        <location filename="../deviceconnection.cpp" line="153"/>
         <source>Received hello with a non-string serial!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="163"/>
+        <location filename="../deviceconnection.cpp" line="165"/>
         <source>Received hello with a non-bool secured!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="176"/>
+        <location filename="../deviceconnection.cpp" line="178"/>
         <source>Received hello without manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="183"/>
+        <location filename="../deviceconnection.cpp" line="185"/>
         <source>Received hello with a non-string manufacturer!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="212"/>
+        <location filename="../deviceconnection.cpp" line="214"/>
         <source>Received hello without friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="219"/>
+        <location filename="../deviceconnection.cpp" line="221"/>
         <source>Received hello with a non-string friendly_name!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="194"/>
+        <location filename="../deviceconnection.cpp" line="196"/>
         <source>Received hello without devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1031,27 +1031,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="201"/>
+        <location filename="../deviceconnection.cpp" line="203"/>
         <source>Received hello with a non-string devicetype!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="240"/>
+        <location filename="../deviceconnection.cpp" line="242"/>
         <source>Received authRequired without token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="247"/>
+        <location filename="../deviceconnection.cpp" line="249"/>
         <source>Received authRequired with a non-string token1!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="258"/>
+        <location filename="../deviceconnection.cpp" line="260"/>
         <source>Received authRequired without token2!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="265"/>
+        <location filename="../deviceconnection.cpp" line="267"/>
         <source>Received authRequired with a non-string token2!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1081,92 +1081,92 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="327"/>
+        <location filename="../deviceconnection.cpp" line="325"/>
         <source>Received deltaStatus without a status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="334"/>
+        <location filename="../deviceconnection.cpp" line="332"/>
         <source>Received deltaStatus with a non-object status!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="372"/>
+        <location filename="../deviceconnection.cpp" line="138"/>
         <source>Received message type %0 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="380"/>
+        <location filename="../deviceconnection.cpp" line="373"/>
         <source>Received message with a non-string requestId!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="433"/>
+        <location filename="../deviceconnection.cpp" line="426"/>
         <source>Sending %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="467"/>
+        <location filename="../deviceconnection.cpp" line="460"/>
         <source>Connected!</source>
         <translation>Verbunden!</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="473"/>
+        <location filename="../deviceconnection.cpp" line="466"/>
         <source>Disconnected!</source>
         <translation>Verbindung verloren!</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="477"/>
+        <location filename="../deviceconnection.cpp" line="470"/>
         <source>Reconnecting to %0</source>
         <translation>Verbinde wieder zu %0</translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="486"/>
+        <location filename="../deviceconnection.cpp" line="479"/>
         <source>state changed: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="495"/>
+        <location filename="../deviceconnection.cpp" line="488"/>
         <source>could not parse received json: %0 at offset %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="512"/>
+        <location filename="../deviceconnection.cpp" line="505"/>
         <source>unknown binary message type %0 received</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="520"/>
+        <location filename="../deviceconnection.cpp" line="513"/>
         <source>error occured: %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="526"/>
+        <location filename="../deviceconnection.cpp" line="519"/>
         <source>ssl peer verify error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="532"/>
+        <location filename="../deviceconnection.cpp" line="525"/>
         <source>ssl errors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="543"/>
+        <location filename="../deviceconnection.cpp" line="536"/>
         <source>ssl alert sent level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="549"/>
+        <location filename="../deviceconnection.cpp" line="542"/>
         <source>ssl alert received level=%0 type=%1 description=%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="555"/>
+        <location filename="../deviceconnection.cpp" line="548"/>
         <source>ssl handshake interrupted on error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../deviceconnection.cpp" line="602"/>
+        <location filename="../deviceconnection.cpp" line="595"/>
         <source>unknown response type %0</source>
         <translation type="unfinished"></translation>
     </message>
