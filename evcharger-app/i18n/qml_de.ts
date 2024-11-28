@@ -1757,7 +1757,27 @@
         <translation>Informationen</translation>
     </message>
     <message>
-        <location filename="../qml/InformationsTabPage.qml" line="48"/>
+        <location filename="../qml/InformationsTabPage.qml" line="20"/>
+        <source>Idle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="41"/>
+        <source>HEADERS_RECEIVED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="43"/>
+        <source>LOADING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="56"/>
+        <source>Request started...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/InformationsTabPage.qml" line="101"/>
         <source>Download informations</source>
         <translation>Informationen herunterladen</translation>
     </message>
