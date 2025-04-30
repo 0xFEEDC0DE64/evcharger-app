@@ -17,4 +17,7 @@ public:
 
     QStringList customColumns() const;
     void setCustomColumns(const QStringList &customColumns);
+
+    QStringList serials() const;
+    void setSerials(const QStringList &serials);
 };

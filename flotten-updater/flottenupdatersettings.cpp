@@ -29,3 +29,13 @@ void FlottenUpdaterSettings::setCustomColumns(const QStringList &customColumns)
 {
     setValue("customColumns", customColumns);
 }
+
+QStringList FlottenUpdaterSettings::serials() const
+{
+    return value("serials").toStringList();
+}
+
+void FlottenUpdaterSettings::setSerials(const QStringList &serials)
+{
+    setValue("serials", serials);
+}

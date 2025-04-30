@@ -37,6 +37,8 @@ public:
     bool customColumnRemovable(int section);
     void removeCustomColumn(int section);
 
+    QStringList serials() const;
+
 public slots:
     void connectAll();
     void disconnectAll();

@@ -50,8 +50,8 @@ void MainWindow::doAdd()
     const auto serial = QInputDialog::getText(this, tr("Serial"), tr("Serial"), QLineEdit::Normal, {}, &ok);
     if (!ok)
         return;
-
     m_model->addClient(serial);
+    m_settings.setSerials(m_model->serials());
 }
 
 void MainWindow::doRemove()
@@ -267,7 +267,7 @@ void MainWindow::removeRows(QModelIndexList &&indexes)
         ) != QMessageBox::Yes)
         return;
 
-    int failed{};
+    int succeeded{}, failed{};
 
     std::sort(indexes.begin(), indexes.end(),
               [](const QModelIndex &a, const QModelIndex &b) {
@@ -275,11 +275,16 @@ void MainWindow::removeRows(QModelIndexList &&indexes)
               });
 
     for (const QModelIndex &index : std::as_const(indexes))
-        if (!m_model->removeRows(index.row(), 1, index.parent()))
+        if (m_model->removeRows(index.row(), 1, index.parent()))
+            succeeded++;
+        else
         {
             failed++;
             qWarning() << "removing row" << index.row() << "failed";
         }
+
+    if (succeeded > 0)
+        m_settings.setSerials(m_model->serials());
 
     if (failed > 0)
         QMessageBox::warning(this, tr("Error while removing!"), tr("%0 rows could not be removed!").arg(failed));
