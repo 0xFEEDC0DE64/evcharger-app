@@ -9,13 +9,13 @@ class QSslKey;
 class QSslCertificate;
 class QJsonObject;
 
-class ChargerConnection : public QObject
+class DevicesConnection : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit ChargerConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent = nullptr);
-    explicit ChargerConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent = nullptr);
+    explicit DevicesConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent = nullptr);
+    explicit DevicesConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent = nullptr);
 
     void start();
     void stop();

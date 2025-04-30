@@ -45,6 +45,13 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAddRange">
+        <property name="text">
+         <string>Add range</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
@@ -59,6 +66,9 @@
        <bool>false</bool>
       </property>
       <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="animated">
        <bool>true</bool>
       </property>
      </widget>

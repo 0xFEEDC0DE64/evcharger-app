@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <utility>
 
-#include "chargerconnection.h"
+#include "deviceconnection.h"
 
 namespace {
 enum {
@@ -21,24 +21,24 @@ enum {
 QString getRandomString();
 }
 
-RequestModel::RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<ChargerConnection>> &&chargers, QObject *parent) :
+RequestModel::RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<DevicesConnection>> &&devices, QObject *parent) :
     QAbstractTableModel{parent}
 {
-    m_requests.reserve(chargers.size());
+    m_requests.reserve(devices.size());
 
-    for (auto &charger : chargers)
+    for (auto &device : devices)
     {
         Request request {
-            .charger = std::move(charger),
+            .device = std::move(device),
             .requestId = getRandomString()
         };
 
-        connect(request.charger.get(), &ChargerConnection::responseReceived, this, &RequestModel::responseReceived);
+        connect(request.device.get(), &DevicesConnection::responseReceived, this, &RequestModel::responseReceived);
 
         {
             QJsonObject msg2 = msg;
             msg2["requestId"] = request.requestId;
-            request.charger->sendMessage(msg2);
+            request.device->sendMessage(msg2);
         }
 
         m_requests.emplace_back(std::move(request));
@@ -74,7 +74,7 @@ QVariant RequestModel::data(const QModelIndex &index, int role) const
         {
         case Qt::DisplayRole:
         case Qt::EditRole:
-            return request.charger->serial();
+            return request.device->serial();
         }
         return {};
     case ColumnRequestId:

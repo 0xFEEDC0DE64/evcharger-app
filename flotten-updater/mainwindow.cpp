@@ -10,9 +10,10 @@
 #include <QJsonArray>
 
 #include <algorithm>
+#include <utility>
 
 #include "flottenupdatersettings.h"
-#include "chargersmodel.h"
+#include "devicesmodel.h"
 #include "requestdialog.h"
 #include "setarbitraryapikeydialog.h"
 
@@ -21,7 +22,7 @@ MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
     QMainWindow{parent},
     m_ui{std::make_unique<Ui::MainWindow>()},
     m_settings{settings},
-    m_model{std::make_unique<ChargersModel>(settings, key, cert, this)},
+    m_model{std::make_unique<DevicesModel>(settings, key, cert, this)},
     m_proxyModel{std::make_unique<QSortFilterProxyModel>(this)}
 {
     m_ui->setupUi(this);
@@ -30,14 +31,15 @@ MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
     m_proxyModel->setSortRole(Qt::EditRole);
     m_ui->treeView->setModel(m_proxyModel.get());
 
-    connect(m_ui->pushButtonConnectAll, &QAbstractButton::pressed, m_model.get(), &ChargersModel::connectAll);
-    connect(m_ui->pushButtonDisconnectAll, &QAbstractButton::pressed, m_model.get(), &ChargersModel::disconnectAll);
+    connect(m_ui->pushButtonConnectAll, &QAbstractButton::pressed, m_model.get(), &DevicesModel::connectAll);
+    connect(m_ui->pushButtonDisconnectAll, &QAbstractButton::pressed, m_model.get(), &DevicesModel::disconnectAll);
     connect(m_ui->pushButtonAdd, &QAbstractButton::pressed, this, &MainWindow::doAdd);
     connect(m_ui->pushButtonRemove, &QAbstractButton::pressed, this, &MainWindow::doRemove);
     connect(m_ui->treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::selectionChanged);
     m_ui->treeView->header()->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(m_ui->treeView->header(), &QTreeView::customContextMenuRequested, this, &MainWindow::headerContextMenuRequested);
     connect(m_ui->treeView, &QTreeView::customContextMenuRequested, this, &MainWindow::contextMenuRequested);
+    selectionChanged();
 }
 
 MainWindow::~MainWindow() = default;
@@ -54,11 +56,21 @@ void MainWindow::doAdd()
 
 void MainWindow::doRemove()
 {
-    QMessageBox::warning(this, tr("Not yet implemented!"), tr("Not yet implemented!"));
+    auto selectedRows = m_ui->treeView->selectionModel()->selectedRows();
+    if (selectedRows.isEmpty())
+        return;
+
+    // map proxied indices to those from the model
+    std::transform(std::begin(selectedRows), std::end(selectedRows), std::begin(selectedRows),
+                   [&](const QModelIndex &index){ return m_proxyModel->mapToSource(index); });
+
+    removeRows(std::move(selectedRows));
 }
 
 void MainWindow::selectionChanged()
 {
+    auto count = m_ui->treeView->selectionModel()->selectedRows().count();
+    m_ui->pushButtonRemove->setEnabled(count > 0);
     m_ui->statusbar->showMessage(tr("%0 selected").arg(m_ui->treeView->selectionModel()->selectedRows().count()));
 }
 
@@ -103,13 +115,13 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
     std::transform(std::begin(selectedRows), std::end(selectedRows), std::begin(selectedRows),
                    [&](const QModelIndex &index){ return m_proxyModel->mapToSource(index); });
 
-    // get all the chargers for selected indices
-    std::vector<std::shared_ptr<ChargerConnection>> chargers;
-    chargers.reserve(selectedRows.size());
-    std::transform(std::begin(selectedRows), std::end(selectedRows), std::back_inserter(chargers),
-                   [&](const QModelIndex &index){ auto charger = m_model->getCharger(index); Q_ASSERT(charger); return charger; });
+    // get all the devices for selected indices
+    std::vector<std::shared_ptr<DevicesConnection>> devices;
+    devices.reserve(selectedRows.size());
+    std::transform(std::begin(selectedRows), std::end(selectedRows), std::back_inserter(devices),
+                   [&](const QModelIndex &index){ auto device = m_model->getDevice(index); Q_ASSERT(device); return device; });
 
-    Q_ASSERT(std::all_of(std::begin(chargers), std::end(chargers), [](const auto &charger)->bool{ return charger.get(); }));
+    Q_ASSERT(std::all_of(std::begin(devices), std::end(devices), [](const auto &device)->bool{ return device.get(); }));
 
     QMenu menu;
     auto actionSetUpdateUrl = menu.addAction(tr("Set update url..."));
@@ -119,6 +131,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
     auto actionSetAbitraryApiKey = menu.addAction(tr("Set abitrary api key..."));
     auto resetNvsKey = menu.addAction(tr("Reset nvs key..."));
     auto actionOpenApps = menu.addAction(tr("Open app(s)..."));
+    auto actionRemove = menu.addAction(tr("Remove..."));
     if (const auto selected = menu.exec(m_ui->treeView->viewport()->mapToGlobal(pos)); selected == actionSetUpdateUrl)
     {
         bool ok{};
@@ -131,7 +144,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
             { "value", url },
             { "sudo", true }
         };
-        RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+        RequestDialog{std::move(msg), std::move(devices), this}.exec();
     }
     else if (selected == actionStartUpdate)
     {
@@ -153,7 +166,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
             { "value", branch },
             { "sudo", true }
         };
-        RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+        RequestDialog{std::move(msg), std::move(devices), this}.exec();
     }
     else if (selected == actionReboot)
     {
@@ -165,7 +178,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
                 { "value", 1 },
                 { "sudo", true }
             };
-            RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+            RequestDialog{std::move(msg), std::move(devices), this}.exec();
         }
     }
     else if (selected == actionSetChargectrlOverride)
@@ -204,7 +217,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
             } },
             { "sudo", true }
         };
-        RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+        RequestDialog{std::move(msg), std::move(devices), this}.exec();
     }
     else if (selected == actionSetAbitraryApiKey)
     {
@@ -218,7 +231,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
             };
             if (dialog.sudo())
                 msg["sudo"] = true;
-            RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+            RequestDialog{std::move(msg), std::move(devices), this}.exec();
         }
     }
     else if (selected == resetNvsKey)
@@ -233,10 +246,41 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
             { "key", nvsKey },
             { "sudo", true }
         };
-        RequestDialog{std::move(msg), std::move(chargers), this}.exec();
+        RequestDialog{std::move(msg), std::move(devices), this}.exec();
     }
     else if (selected == actionOpenApps)
     {
 
     }
+    else if (selected == actionRemove)
+    {
+        removeRows(std::move(selectedRows));
+    }
+}
+
+void MainWindow::removeRows(QModelIndexList &&indexes)
+{
+    if (QMessageBox::question(
+            this,
+            tr("Confirm deletion of devices"),
+            tr("Do you really want to remove %0 devices?").arg(indexes.count())
+        ) != QMessageBox::Yes)
+        return;
+
+    int failed{};
+
+    std::sort(indexes.begin(), indexes.end(),
+              [](const QModelIndex &a, const QModelIndex &b) {
+                  return a.row() > b.row();
+              });
+
+    for (const QModelIndex &index : std::as_const(indexes))
+        if (!m_model->removeRows(index.row(), 1, index.parent()))
+        {
+            failed++;
+            qWarning() << "removing row" << index.row() << "failed";
+        }
+
+    if (failed > 0)
+        QMessageBox::warning(this, tr("Error while removing!"), tr("%0 rows could not be removed!").arg(failed));
 }

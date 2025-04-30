@@ -1,4 +1,4 @@
-#include "chargerconnection.h"
+#include "deviceconnection.h"
 
 #include <QSslConfiguration>
 #include <QSslCertificate>
@@ -13,7 +13,7 @@
 
 #include <utility>
 
-#include "chargersmodel.h"
+#include "devicesmodel.h"
 
 namespace {
 const constexpr QColor red{255, 150, 150};
@@ -24,7 +24,7 @@ const constexpr QColor blue{150, 150, 255};
 const constexpr QColor magenta{255, 150, 255};
 }
 
-ChargerConnection::ChargerConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent) :
+DevicesConnection::DevicesConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent) :
     QObject{parent},
     m_serial(std::move(serial)),
     m_key{key},
@@ -33,7 +33,7 @@ ChargerConnection::ChargerConnection(const QSslKey &key, const QSslCertificate &
     init();
 }
 
-ChargerConnection::ChargerConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent) :
+DevicesConnection::DevicesConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent) :
     QObject{parent},
     m_serial(serial),
     m_key{key},
@@ -42,24 +42,24 @@ ChargerConnection::ChargerConnection(const QSslKey &key, const QSslCertificate &
     init();
 }
 
-void ChargerConnection::start()
+void DevicesConnection::start()
 {
     const QUrl url{QString("wss://solalaweb.com/%0").arg(m_serial)};
     qDebug() << url;
     m_websocket.open(url);
 }
 
-void ChargerConnection::stop()
+void DevicesConnection::stop()
 {
     m_websocket.close();
 }
 
-QString ChargerConnection::wsStatusText() const
+QString DevicesConnection::wsStatusText() const
 {
     return QMetaEnum::fromType<QAbstractSocket::SocketState>().valueToKey(m_websocket.state());
 }
 
-QBrush ChargerConnection::wsStatusBackground() const
+QBrush DevicesConnection::wsStatusBackground() const
 {
     switch (m_websocket.state())
     {
@@ -72,7 +72,7 @@ QBrush ChargerConnection::wsStatusBackground() const
     return {};
 }
 
-QString ChargerConnection::statusText() const
+QString DevicesConnection::statusText() const
 {
     switch (m_status)
     {
@@ -84,7 +84,7 @@ QString ChargerConnection::statusText() const
     return QString::number(std::to_underlying(m_status));
 }
 
-QBrush ChargerConnection::statusBackground() const
+QBrush DevicesConnection::statusBackground() const
 {
     switch (m_status)
     {
@@ -95,7 +95,7 @@ QBrush ChargerConnection::statusBackground() const
     return {};
 }
 
-QString ChargerConnection::variantText() const
+QString DevicesConnection::variantText() const
 {
     if (!m_fullStatus.contains("var"))
         return {};
@@ -103,7 +103,7 @@ QString ChargerConnection::variantText() const
     return m_fullStatus.value("var").toString();
 }
 
-QBrush ChargerConnection::variantBackground() const
+QBrush DevicesConnection::variantBackground() const
 {
     if (!m_fullStatus.contains("var"))
         return {};
@@ -116,7 +116,7 @@ QBrush ChargerConnection::variantBackground() const
     return red;
 }
 
-QString ChargerConnection::isGoText() const
+QString DevicesConnection::isGoText() const
 {
     if (!m_fullStatus.contains("isgo"))
         return {};
@@ -124,7 +124,7 @@ QString ChargerConnection::isGoText() const
     return m_fullStatus.value("isgo").toBool() ? "yes" : "no";
 }
 
-QBrush ChargerConnection::isGoBackground() const
+QBrush DevicesConnection::isGoBackground() const
 {
     if (!m_fullStatus.contains("isgo"))
         return {};
@@ -132,7 +132,7 @@ QBrush ChargerConnection::isGoBackground() const
     return m_fullStatus.value("isgo").toBool() ? blue : yellow;
 }
 
-QString ChargerConnection::isAustralienText() const
+QString DevicesConnection::isAustralienText() const
 {
     if (!m_fullStatus.contains("aus"))
         return {};
@@ -140,7 +140,7 @@ QString ChargerConnection::isAustralienText() const
     return m_fullStatus.value("aus").toBool() ? "yes" : "no";
 }
 
-QBrush ChargerConnection::isAustralienBackground() const
+QBrush DevicesConnection::isAustralienBackground() const
 {
     if (!m_fullStatus.contains("aus"))
         return {};
@@ -148,7 +148,7 @@ QBrush ChargerConnection::isAustralienBackground() const
     return m_fullStatus.value("aus").toBool() ? yellow : blue;
 }
 
-QString ChargerConnection::resetCardText() const
+QString DevicesConnection::resetCardText() const
 {
     if (!m_fullStatus.contains("frci"))
         return {};
@@ -156,7 +156,7 @@ QString ChargerConnection::resetCardText() const
     return m_fullStatus.value("frci").toBool() ? "yes" : "no";
 }
 
-QBrush ChargerConnection::resetCardBackground() const
+QBrush DevicesConnection::resetCardBackground() const
 {
     if (!m_fullStatus.contains("frci"))
         return {};
@@ -164,7 +164,7 @@ QBrush ChargerConnection::resetCardBackground() const
     return m_fullStatus.value("frci").toBool() ? green : red;
 }
 
-QString ChargerConnection::connectedWifiText() const
+QString DevicesConnection::connectedWifiText() const
 {
     if (!m_fullStatus.contains("ccw"))
         return {};
@@ -176,7 +176,7 @@ QString ChargerConnection::connectedWifiText() const
     return apd.value("ssid").toString();
 }
 
-QString ChargerConnection::projectText() const
+QString DevicesConnection::projectText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -188,7 +188,7 @@ QString ChargerConnection::projectText() const
     return apd.value("project_name").toString();
 }
 
-QString ChargerConnection::versionText() const
+QString DevicesConnection::versionText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -200,7 +200,7 @@ QString ChargerConnection::versionText() const
     return apd.value("version").toString();
 }
 
-QString ChargerConnection::idfVersionText() const
+QString DevicesConnection::idfVersionText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -212,7 +212,7 @@ QString ChargerConnection::idfVersionText() const
     return apd.value("idf_ver").toString();
 }
 
-QString ChargerConnection::updateText() const
+QString DevicesConnection::updateText() const
 {
     if (!m_fullStatus.contains("ocs"))
         return {};
@@ -241,7 +241,7 @@ QString ChargerConnection::updateText() const
     return QString::number(ocs);
 }
 
-QBrush ChargerConnection::updateBackground() const
+QBrush DevicesConnection::updateBackground() const
 {
     if (!m_fullStatus.contains("ocs"))
         return {};
@@ -259,7 +259,7 @@ QBrush ChargerConnection::updateBackground() const
     return {};
 }
 
-std::optional<qulonglong> ChargerConnection::uptime() const
+std::optional<qulonglong> DevicesConnection::uptime() const
 {
     if (!m_fullStatus.contains("rbt"))
         return {};
@@ -267,7 +267,7 @@ std::optional<qulonglong> ChargerConnection::uptime() const
     return m_fullStatus.value("rbt").toULongLong();
 }
 
-QString ChargerConnection::uptimeText() const
+QString DevicesConnection::uptimeText() const
 {
     if (!m_fullStatus.contains("rbt"))
         return {};
@@ -275,7 +275,7 @@ QString ChargerConnection::uptimeText() const
     return QString::number(m_fullStatus.value("rbt").toULongLong());
 }
 
-QString ChargerConnection::currentPartition() const
+QString DevicesConnection::currentPartition() const
 {
     if (!m_fullStatus.contains("otap"))
         return {};
@@ -287,7 +287,7 @@ QString ChargerConnection::currentPartition() const
     return otap.value("label").toString();
 }
 
-std::optional<int> ChargerConnection::reboots() const
+std::optional<int> DevicesConnection::reboots() const
 {
     if (!m_fullStatus.contains("rbc"))
         return {};
@@ -295,7 +295,7 @@ std::optional<int> ChargerConnection::reboots() const
     return m_fullStatus.value("rbc").toInt();
 }
 
-QString ChargerConnection::rebootsText() const
+QString DevicesConnection::rebootsText() const
 {
     if (!m_fullStatus.contains("rbc"))
         return {};
@@ -303,7 +303,7 @@ QString ChargerConnection::rebootsText() const
     return QString::number(m_fullStatus.value("rbc").toInt());
 }
 
-QString ChargerConnection::carStateText() const
+QString DevicesConnection::carStateText() const
 {
     if (!m_fullStatus.contains("car"))
         return {};
@@ -315,7 +315,7 @@ QString ChargerConnection::carStateText() const
     return QString::number(car);
 }
 
-std::optional<double> ChargerConnection::energy() const
+std::optional<double> DevicesConnection::energy() const
 {
     if (!m_fullStatus.contains("eto"))
         return {};
@@ -323,7 +323,7 @@ std::optional<double> ChargerConnection::energy() const
     return m_fullStatus.value("eto").toDouble();
 }
 
-QString ChargerConnection::energyText() const
+QString DevicesConnection::energyText() const
 {
     if (!m_fullStatus.contains("eto"))
         return {};
@@ -331,7 +331,7 @@ QString ChargerConnection::energyText() const
     return QString("%0kWh").arg(m_fullStatus.value("eto").toDouble() / 1000.);
 }
 
-QString ChargerConnection::livedataText() const
+QString DevicesConnection::livedataText() const
 {
     if (!m_fullStatus.contains("nrg"))
         return {};
@@ -346,50 +346,50 @@ QString ChargerConnection::livedataText() const
     return {};
 }
 
-QVariant ChargerConnection::getApiKey(const QString &apiKey) const
+QVariant DevicesConnection::getApiKey(const QString &apiKey) const
 {
     return m_fullStatus.value(apiKey);
 }
 
-void ChargerConnection::sendMessage(const QJsonDocument &doc)
+void DevicesConnection::sendMessage(const QJsonDocument &doc)
 {
     sendMessage(QString::fromUtf8(doc.toJson()));
 }
 
-void ChargerConnection::sendMessage(const QJsonObject &obj)
+void DevicesConnection::sendMessage(const QJsonObject &obj)
 {
     sendMessage(QJsonDocument{obj});
 }
 
-void ChargerConnection::sendMessage(const QString &msg)
+void DevicesConnection::sendMessage(const QString &msg)
 {
     qDebug() << msg << m_websocket.errorString();
     if (const auto written = m_websocket.sendTextMessage(msg); written != msg.size())
         qCritical() << "sending message failed" << written << "(expected:" << msg.size() << ')';
 }
 
-void ChargerConnection::init()
+void DevicesConnection::init()
 {
-    if (auto model = qobject_cast<ChargersModel*>(parent()))
+    if (auto model = qobject_cast<DevicesModel*>(parent()))
     {
-        connect(this, &ChargerConnection::wsStatusChanged, model, &ChargersModel::wsStatusChanged);
-        connect(this, &ChargerConnection::statusChanged, model, &ChargersModel::statusChanged);
-        connect(this, &ChargerConnection::variantChanged, model, &ChargersModel::variantChanged);
-        connect(this, &ChargerConnection::isGoChanged, model, &ChargersModel::isGoChanged);
-        connect(this, &ChargerConnection::isAustralienChanged, model, &ChargersModel::isAustralienChanged);
-        connect(this, &ChargerConnection::resetCardChanged, model, &ChargersModel::resetCardChanged);
-        connect(this, &ChargerConnection::connectedWifiChanged, model, &ChargersModel::connectedWifiChanged);
-        connect(this, &ChargerConnection::projectChanged, model, &ChargersModel::projectChanged);
-        connect(this, &ChargerConnection::versionChanged, model, &ChargersModel::versionChanged);
-        connect(this, &ChargerConnection::idfVersionChanged, model, &ChargersModel::idfVersionChanged);
-        connect(this, &ChargerConnection::updateChanged, model, &ChargersModel::updateChanged);
-        connect(this, &ChargerConnection::uptimeChanged, model, &ChargersModel::uptimeChanged);
-        connect(this, &ChargerConnection::currentPartitionChanged, model, &ChargersModel::currentPartitionChanged);
-        connect(this, &ChargerConnection::rebootsChanged, model, &ChargersModel::rebootsChanged);
-        connect(this, &ChargerConnection::carStateChanged, model, &ChargersModel::carStateChanged);
-        connect(this, &ChargerConnection::energyChanged, model, &ChargersModel::energyChanged);
-        connect(this, &ChargerConnection::livedataChanged, model, &ChargersModel::livedataChanged);
-        connect(this, &ChargerConnection::apiKeyChanged, model, &ChargersModel::apiKeyChanged);
+        connect(this, &DevicesConnection::wsStatusChanged, model, &DevicesModel::wsStatusChanged);
+        connect(this, &DevicesConnection::statusChanged, model, &DevicesModel::statusChanged);
+        connect(this, &DevicesConnection::variantChanged, model, &DevicesModel::variantChanged);
+        connect(this, &DevicesConnection::isGoChanged, model, &DevicesModel::isGoChanged);
+        connect(this, &DevicesConnection::isAustralienChanged, model, &DevicesModel::isAustralienChanged);
+        connect(this, &DevicesConnection::resetCardChanged, model, &DevicesModel::resetCardChanged);
+        connect(this, &DevicesConnection::connectedWifiChanged, model, &DevicesModel::connectedWifiChanged);
+        connect(this, &DevicesConnection::projectChanged, model, &DevicesModel::projectChanged);
+        connect(this, &DevicesConnection::versionChanged, model, &DevicesModel::versionChanged);
+        connect(this, &DevicesConnection::idfVersionChanged, model, &DevicesModel::idfVersionChanged);
+        connect(this, &DevicesConnection::updateChanged, model, &DevicesModel::updateChanged);
+        connect(this, &DevicesConnection::uptimeChanged, model, &DevicesModel::uptimeChanged);
+        connect(this, &DevicesConnection::currentPartitionChanged, model, &DevicesModel::currentPartitionChanged);
+        connect(this, &DevicesConnection::rebootsChanged, model, &DevicesModel::rebootsChanged);
+        connect(this, &DevicesConnection::carStateChanged, model, &DevicesModel::carStateChanged);
+        connect(this, &DevicesConnection::energyChanged, model, &DevicesModel::energyChanged);
+        connect(this, &DevicesConnection::livedataChanged, model, &DevicesModel::livedataChanged);
+        connect(this, &DevicesConnection::apiKeyChanged, model, &DevicesModel::apiKeyChanged);
     }
     else
         qWarning() << "unexpected parent";
@@ -412,19 +412,19 @@ void ChargerConnection::init()
         m_websocket.ignoreSslErrors();
     }
 
-    connect(&m_websocket, &QWebSocket::connected, this, &ChargerConnection::connected);
-    connect(&m_websocket, &QWebSocket::disconnected, this, &ChargerConnection::disconnected);
-    connect(&m_websocket, &QWebSocket::stateChanged, this, &ChargerConnection::stateChanged);
-    connect(&m_websocket, &QWebSocket::textMessageReceived, this, &ChargerConnection::textMessageReceived);
-    connect(&m_websocket, &QWebSocket::binaryMessageReceived, this, &ChargerConnection::binaryMessageReceived);
-    connect(&m_websocket, &QWebSocket::errorOccurred, this, &ChargerConnection::errorOccurred);
-    connect(&m_websocket, &QWebSocket::peerVerifyError, this, &ChargerConnection::peerVerifyError);
-    connect(&m_websocket, &QWebSocket::sslErrors, this, &ChargerConnection::sslErrors);
-    connect(&m_websocket, &QWebSocket::alertReceived, this, &ChargerConnection::alertReceived);
-    connect(&m_websocket, &QWebSocket::handshakeInterruptedOnError, this, &ChargerConnection::handshakeInterruptedOnError);
+    connect(&m_websocket, &QWebSocket::connected, this, &DevicesConnection::connected);
+    connect(&m_websocket, &QWebSocket::disconnected, this, &DevicesConnection::disconnected);
+    connect(&m_websocket, &QWebSocket::stateChanged, this, &DevicesConnection::stateChanged);
+    connect(&m_websocket, &QWebSocket::textMessageReceived, this, &DevicesConnection::textMessageReceived);
+    connect(&m_websocket, &QWebSocket::binaryMessageReceived, this, &DevicesConnection::binaryMessageReceived);
+    connect(&m_websocket, &QWebSocket::errorOccurred, this, &DevicesConnection::errorOccurred);
+    connect(&m_websocket, &QWebSocket::peerVerifyError, this, &DevicesConnection::peerVerifyError);
+    connect(&m_websocket, &QWebSocket::sslErrors, this, &DevicesConnection::sslErrors);
+    connect(&m_websocket, &QWebSocket::alertReceived, this, &DevicesConnection::alertReceived);
+    connect(&m_websocket, &QWebSocket::handshakeInterruptedOnError, this, &DevicesConnection::handshakeInterruptedOnError);
 }
 
-void ChargerConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
+void DevicesConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
 {
     bool variantChanged{forceChange};
     bool isGoChanged{forceChange};
@@ -507,17 +507,17 @@ void ChargerConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
         emit this->livedataChanged();
 }
 
-void ChargerConnection::connected()
+void DevicesConnection::connected()
 {
     qDebug() << "called";
 }
 
-void ChargerConnection::disconnected()
+void DevicesConnection::disconnected()
 {
     qDebug() << "called";
 }
 
-void ChargerConnection::stateChanged(QAbstractSocket::SocketState state)
+void DevicesConnection::stateChanged(QAbstractSocket::SocketState state)
 {
 //    qDebug() << "called" << state;
 
@@ -533,7 +533,7 @@ void ChargerConnection::stateChanged(QAbstractSocket::SocketState state)
     emit wsStatusChanged();
 }
 
-void ChargerConnection::textMessageReceived(const QString &message)
+void DevicesConnection::textMessageReceived(const QString &message)
 {
 //    qDebug() << "called" << message;
 
@@ -614,32 +614,32 @@ void ChargerConnection::textMessageReceived(const QString &message)
         qWarning() << "unknown message type" << msgObj;
 }
 
-void ChargerConnection::binaryMessageReceived(const QByteArray &message)
+void DevicesConnection::binaryMessageReceived(const QByteArray &message)
 {
     qDebug() << "called" << message;
 }
 
-void ChargerConnection::errorOccurred(QAbstractSocket::SocketError error)
+void DevicesConnection::errorOccurred(QAbstractSocket::SocketError error)
 {
     qDebug() << "called" << QMetaEnum::fromType<QAbstractSocket::SocketError>().valueToKey(error) << m_websocket.errorString();
 }
 
-void ChargerConnection::peerVerifyError(const QSslError &error)
+void DevicesConnection::peerVerifyError(const QSslError &error)
 {
     qDebug() << "called" << error;
 }
 
-void ChargerConnection::sslErrors(const QList<QSslError> &errors)
+void DevicesConnection::sslErrors(const QList<QSslError> &errors)
 {
     qDebug() << "called" << errors;
 }
 
-void ChargerConnection::alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
+void DevicesConnection::alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
 {
     qDebug() << "called" << std::to_underlying(level) << std::to_underlying(type) << description;
 }
 
-void ChargerConnection::handshakeInterruptedOnError(const QSslError &error)
+void DevicesConnection::handshakeInterruptedOnError(const QSslError &error)
 {
     qDebug() << "called" << error;
 }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QAbstractItemModel>
 
 #include <memory>
 
@@ -8,7 +9,7 @@ namespace Ui { class MainWindow; }
 class QSslKey;
 class QSslCertificate;
 class QItemSelection;
-class ChargersModel;
+class DevicesModel;
 class QSortFilterProxyModel;
 class FlottenUpdaterSettings;
 
@@ -29,8 +30,10 @@ private slots:
     void contextMenuRequested(const QPoint &pos);
 
 private:
+    void removeRows(QModelIndexList &&indexes);
+
     const std::unique_ptr<Ui::MainWindow> m_ui;
     FlottenUpdaterSettings &m_settings;
-    const std::unique_ptr<ChargersModel> m_model;
+    const std::unique_ptr<DevicesModel> m_model;
     const std::unique_ptr<QSortFilterProxyModel> m_proxyModel;
 };
