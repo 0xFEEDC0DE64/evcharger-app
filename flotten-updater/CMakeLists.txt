@@ -3,6 +3,9 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick WebSockets LinguistT
 qt_standard_project_setup(REQUIRES 6.6 I18N_TRANSLATED_LANGUAGES de)
 
 qt_add_executable(flotten-updater WIN32 MACOSX_BUNDLE
+    addserialsrangedialog.h
+    addserialsrangedialog.cpp
+    addserialsrangedialog.ui
     deviceconnection.cpp
     deviceconnection.h
     devicesmodel.cpp

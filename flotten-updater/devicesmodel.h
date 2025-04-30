@@ -28,7 +28,7 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     bool removeRows(int row, int count, const QModelIndex &parent) override;
 
-    void addClient(const QString &serial);
+    bool addClient(const QString &serial);
 
     std::shared_ptr<DevicesConnection> getDevice(QModelIndex index);
     std::shared_ptr<const DevicesConnection> getDevice(QModelIndex index) const;

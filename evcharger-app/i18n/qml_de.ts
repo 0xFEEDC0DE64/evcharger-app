@@ -81,6 +81,39 @@
     </message>
 </context>
 <context>
+    <name>AddSerialsRangeDialog</name>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.ui" line="14"/>
+        <source>Add serials range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.ui" line="22"/>
+        <source>From:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.ui" line="29"/>
+        <source>To:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.ui" line="36"/>
+        <source>Count:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.cpp" line="45"/>
+        <source>???</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/addserialsrangedialog.cpp" line="51"/>
+        <source>%0 serials</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ApiSettingsPage</name>
     <message>
         <location filename="../qml/ApiSettingsPage.qml" line="7"/>
@@ -1257,92 +1290,92 @@
 <context>
     <name>DevicesModel</name>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="291"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="272"/>
         <source>Serial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="292"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="273"/>
         <source>WS Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="293"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="274"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="294"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="275"/>
         <source>Variant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="295"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="276"/>
         <source>IsGo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="296"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="277"/>
         <source>IsAustralien</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="297"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="278"/>
         <source>ResetCard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="298"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="279"/>
         <source>ConnectedWifi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="299"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="280"/>
         <source>Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="300"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="281"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="301"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="282"/>
         <source>IDF Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="302"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="283"/>
         <source>Update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="303"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="284"/>
         <source>Reboots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="304"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="285"/>
         <source>Uptime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="305"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="286"/>
         <source>Current Partition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="306"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="287"/>
         <source>Car state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="307"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="288"/>
         <source>Energy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/devicesmodel.cpp" line="308"/>
+        <location filename="../../flotten-updater/devicesmodel.cpp" line="289"/>
         <source>Livedata</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1905,132 +1938,147 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="50"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="52"/>
         <source>Serial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="74"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="58"/>
+        <source>Error while adding serial!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="97"/>
+        <source>Error while adding!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="97"/>
+        <source>%0 rows could not be adding!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="104"/>
         <source>%0 selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="81"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="111"/>
         <source>Add new column...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="88"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="118"/>
         <source>Remove column %0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="96"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="126"/>
         <source>Enter api key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="96"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="126"/>
         <source>Api key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="127"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="157"/>
         <source>Set update url...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="128"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="158"/>
         <source>Start update...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="129"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="159"/>
         <source>Reboot...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="130"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="160"/>
         <source>Set chargectrl override...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="131"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="161"/>
         <source>Set abitrary api key...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="132"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="162"/>
         <source>Reset nvs key...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="133"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="163"/>
         <source>Open app(s)...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="134"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="164"/>
         <source>Remove...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="138"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="168"/>
         <source>Enter update url...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="138"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="168"/>
         <source>Update url:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="154"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="184"/>
         <source>Select update release...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="156"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="186"/>
         <source>Update release</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="173"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="203"/>
         <source>Are you sure?</source>
         <translation type="unfinished">Sind Sie sicher?</translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="173"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="203"/>
         <source>Do you really want to reboot selected devices?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="240"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="270"/>
         <source>Please input nvs key to be reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="240"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="270"/>
         <source>Nvs key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="265"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="295"/>
         <source>Confirm deletion of devices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="266"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="296"/>
         <source>Do you really want to remove %0 devices?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="285"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="320"/>
         <source>Error while removing!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../flotten-updater/mainwindow.cpp" line="285"/>
+        <location filename="../../flotten-updater/mainwindow.cpp" line="320"/>
         <source>%0 rows could not be removed!</source>
         <translation type="unfinished"></translation>
     </message>

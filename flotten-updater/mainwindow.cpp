@@ -16,6 +16,7 @@
 #include "devicesmodel.h"
 #include "requestdialog.h"
 #include "setarbitraryapikeydialog.h"
+#include "addserialsrangedialog.h"
 
 MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
                        const QSslCertificate &cert, QWidget *parent) :
@@ -35,6 +36,7 @@ MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
     connect(m_ui->pushButtonDisconnectAll, &QAbstractButton::pressed, m_model.get(), &DevicesModel::disconnectAll);
     connect(m_ui->pushButtonAdd, &QAbstractButton::pressed, this, &MainWindow::doAdd);
     connect(m_ui->pushButtonRemove, &QAbstractButton::pressed, this, &MainWindow::doRemove);
+    connect(m_ui->pushButtonAddRange, &QAbstractButton::pressed, this, &MainWindow::doAddRange);
     connect(m_ui->treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::selectionChanged);
     m_ui->treeView->header()->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(m_ui->treeView->header(), &QTreeView::customContextMenuRequested, this, &MainWindow::headerContextMenuRequested);
@@ -50,8 +52,10 @@ void MainWindow::doAdd()
     const auto serial = QInputDialog::getText(this, tr("Serial"), tr("Serial"), QLineEdit::Normal, {}, &ok);
     if (!ok)
         return;
-    m_model->addClient(serial);
-    m_settings.setSerials(m_model->serials());
+    if (m_model->addClient(serial))
+        m_settings.setSerials(m_model->serials());
+    else
+        QMessageBox::warning(this, tr("Error while adding serial!"), tr("Error while adding serial!"));
 }
 
 void MainWindow::doRemove()
@@ -65,6 +69,32 @@ void MainWindow::doRemove()
                    [&](const QModelIndex &index){ return m_proxyModel->mapToSource(index); });
 
     removeRows(std::move(selectedRows));
+}
+
+void MainWindow::doAddRange()
+{
+    AddSerialsRangeDialog dialog{this};
+    if (dialog.exec() != QDialog::Accepted)
+        return;
+
+    int succeeded{}, failed{};
+
+    for (auto serial = dialog.from(); serial <= dialog.to(); serial++)
+    {
+        if (m_model->addClient(QString::number(serial)))
+            succeeded++;
+        else
+        {
+            qWarning() << "adding serial" << serial << "failed";
+            failed++;
+        }
+    }
+
+    if (succeeded > 0)
+        m_settings.setSerials(m_model->serials());
+
+    if (failed > 0)
+        QMessageBox::warning(this, tr("Error while adding!"), tr("%0 rows could not be adding!").arg(failed));
 }
 
 void MainWindow::selectionChanged()

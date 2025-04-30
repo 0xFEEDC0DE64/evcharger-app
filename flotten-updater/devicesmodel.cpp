@@ -321,8 +321,15 @@ bool DevicesModel::removeRows(int row, int count, const QModelIndex &parent)
     return true;
 }
 
-void DevicesModel::addClient(const QString &serial)
+bool DevicesModel::addClient(const QString &serial)
 {
+    if (std::any_of(std::cbegin(m_devices), std::cend(m_devices),
+                    [&](const auto &device){ return device->serial() == serial; }))
+    {
+        qWarning() << "duplicate serial";
+        return false;
+    }
+
     beginInsertRows({}, m_devices.size(), m_devices.size());
 
     auto clientPtr = std::make_shared<DevicesConnection>(m_key, m_cert, serial, this);
@@ -332,6 +339,8 @@ void DevicesModel::addClient(const QString &serial)
     endInsertRows();
 
     client->start();
+
+    return true;
 }
 
 std::shared_ptr<DevicesConnection> DevicesModel::getDevice(QModelIndex index)
