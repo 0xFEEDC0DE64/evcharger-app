@@ -160,6 +160,11 @@ NavigationPage {
         text: qsTr("Skip server cert verification")
     }
 
+    GeneralOnOffSwitch {
+        apiKey: "ocppt"
+        text: qsTr("Accept time from backend")
+    }
+
     // TODO clientKey
 
     // TODO clientCert

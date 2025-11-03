@@ -1203,7 +1203,7 @@
     </message>
 </context>
 <context>
-    <name>DevicesConnection</name>
+    <name>DeviceConnection</name>
     <message>
         <location filename="../../flotten-updater/deviceconnection.cpp" line="79"/>
         <location filename="../../flotten-updater/deviceconnection.cpp" line="311"/>

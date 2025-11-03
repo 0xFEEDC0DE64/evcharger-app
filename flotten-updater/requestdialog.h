@@ -5,7 +5,7 @@
 #include <memory>
 
 class QJsonObject;
-class DevicesConnection;
+class DeviceConnection;
 class RequestModel;
 
 namespace Ui { class RequestDialog; }
@@ -15,7 +15,7 @@ class RequestDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit RequestDialog(QJsonObject &&msg, std::vector<std::shared_ptr<DevicesConnection>> &&devices, QWidget *parent = nullptr);
+    explicit RequestDialog(QJsonObject &&msg, std::vector<std::shared_ptr<DeviceConnection>> &&devices, QWidget *parent = nullptr);
     ~RequestDialog();
 
 private:

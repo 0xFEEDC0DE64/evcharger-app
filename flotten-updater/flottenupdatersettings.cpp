@@ -1,23 +1,23 @@
 #include "flottenupdatersettings.h"
 
-QByteArray FlottenUpdaterSettings::privateKey() const
+QByteArray FlottenUpdaterSettings::username() const
 {
-    return value("privateKey").toByteArray();
+    return value("username").toByteArray();
 }
 
-void FlottenUpdaterSettings::setPrivateKey(const QByteArray &key)
+void FlottenUpdaterSettings::setUsername(const QByteArray &username)
 {
-    setValue("privateKey", key);
+    setValue("username", username);
 }
 
-QByteArray FlottenUpdaterSettings::privateCert() const
+QByteArray FlottenUpdaterSettings::password() const
 {
-    return value("privateCert").toByteArray();
+    return value("password").toByteArray();
 }
 
-void FlottenUpdaterSettings::setPrivateCert(const QByteArray &cert)
+void FlottenUpdaterSettings::setPassword(const QByteArray &password)
 {
-    setValue("privateCert", cert);
+    setValue("password", password);
 }
 
 QStringList FlottenUpdaterSettings::customColumns() const

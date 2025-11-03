@@ -9,11 +9,11 @@ class FlottenUpdaterSettings : public QSettings
 public:
     using QSettings::QSettings;
 
-    QByteArray privateKey() const;
-    void setPrivateKey(const QByteArray &key);
+    QByteArray username() const;
+    void setUsername(const QByteArray &key);
 
-    QByteArray privateCert() const;
-    void setPrivateCert(const QByteArray &cert);
+    QByteArray password() const;
+    void setPassword(const QByteArray &cert);
 
     QStringList customColumns() const;
     void setCustomColumns(const QStringList &customColumns);

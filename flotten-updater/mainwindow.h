@@ -18,8 +18,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
-                        const QSslCertificate &cert, QWidget *parent = nullptr);
+    explicit MainWindow(FlottenUpdaterSettings &settings, const QByteArray &username,
+                        const QByteArray &password, QWidget *parent = nullptr);
     ~MainWindow() override;
 
 private slots:

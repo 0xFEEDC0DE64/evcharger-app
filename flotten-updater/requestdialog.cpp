@@ -7,7 +7,7 @@
 #include "deviceconnection.h"
 #include "requestmodel.h"
 
-RequestDialog::RequestDialog(QJsonObject &&msg, std::vector<std::shared_ptr<DevicesConnection>> &&devices, QWidget *parent) :
+RequestDialog::RequestDialog(QJsonObject &&msg, std::vector<std::shared_ptr<DeviceConnection>> &&devices, QWidget *parent) :
     QDialog{parent},
     m_ui{std::make_unique<Ui::RequestDialog>()},
     m_model{std::make_unique<RequestModel>(std::move(msg), std::move(devices), this)}

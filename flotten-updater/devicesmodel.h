@@ -9,7 +9,7 @@ class QSslKey;
 class QSslCertificate;
 
 class FlottenUpdaterSettings;
-class DevicesConnection;
+class DeviceConnection;
 
 class DevicesModel : public QAbstractTableModel
 {
@@ -18,8 +18,8 @@ class DevicesModel : public QAbstractTableModel
     using base = QAbstractTableModel;
 
 public:
-    explicit DevicesModel(FlottenUpdaterSettings &settings, const QSslKey &key,
-                           const QSslCertificate &cert, QObject *parent = nullptr);
+    explicit DevicesModel(FlottenUpdaterSettings &settings, const QByteArray &username,
+                           const QByteArray &password, QObject *parent = nullptr);
     ~DevicesModel() override;
 
     int rowCount(const QModelIndex &parent) const override;
@@ -30,8 +30,8 @@ public:
 
     bool addClient(const QString &serial);
 
-    std::shared_ptr<DevicesConnection> getDevice(QModelIndex index);
-    std::shared_ptr<const DevicesConnection> getDevice(QModelIndex index) const;
+    std::shared_ptr<DeviceConnection> getDevice(QModelIndex index);
+    std::shared_ptr<const DeviceConnection> getDevice(QModelIndex index) const;
 
     void addCustomColumn(const QString &apiKey);
     bool customColumnRemovable(int section);
@@ -64,11 +64,11 @@ public slots:
 
 private:
     FlottenUpdaterSettings &m_settings;
-    const QSslKey &m_key;
-    const QSslCertificate &m_cert;
+    const QByteArray m_username;
+    const QByteArray m_password;
     void columnChanged(int column, const QList<int> &roles = QList<int>());
 
-    std::vector<std::shared_ptr<DevicesConnection>> m_devices;
+    std::vector<std::shared_ptr<DeviceConnection>> m_devices;
 
     QStringList m_customColumns;
 };

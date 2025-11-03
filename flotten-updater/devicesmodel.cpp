@@ -34,12 +34,12 @@ enum {
 };
 }
 
-DevicesModel::DevicesModel(FlottenUpdaterSettings &settings, const QSslKey &key,
-                             const QSslCertificate &cert, QObject *parent) :
+DevicesModel::DevicesModel(FlottenUpdaterSettings &settings, const QByteArray &username,
+                             const QByteArray &password, QObject *parent) :
     QAbstractTableModel{parent},
     m_settings{settings},
-    m_key{key},
-    m_cert{cert},
+    m_username{username},
+    m_password{password},
     m_customColumns{settings.customColumns()}
 {
     for (const auto &serial : m_settings.serials())
@@ -47,7 +47,7 @@ DevicesModel::DevicesModel(FlottenUpdaterSettings &settings, const QSslKey &key,
         if (std::none_of(std::cbegin(m_devices), std::cend(m_devices), [&serial](auto &ptr){
             return ptr->serial() == serial;
         }))
-        m_devices.emplace_back(std::make_shared<DevicesConnection>(m_key, m_cert, serial, this));
+        m_devices.emplace_back(std::make_shared<DeviceConnection>(m_username, m_password, serial, this));
     }
 }
 
@@ -71,7 +71,7 @@ QVariant DevicesModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    const DevicesConnection &device = **std::next(std::begin(m_devices), index.row());
+    const DeviceConnection &device = **std::next(std::begin(m_devices), index.row());
 
     switch (index.column())
     {
@@ -332,7 +332,7 @@ bool DevicesModel::addClient(const QString &serial)
 
     beginInsertRows({}, m_devices.size(), m_devices.size());
 
-    auto clientPtr = std::make_shared<DevicesConnection>(m_key, m_cert, serial, this);
+    auto clientPtr = std::make_shared<DeviceConnection>(m_username, m_password, serial, this);
     auto client = clientPtr.get();
     m_devices.emplace_back(std::move(clientPtr));
 
@@ -343,7 +343,7 @@ bool DevicesModel::addClient(const QString &serial)
     return true;
 }
 
-std::shared_ptr<DevicesConnection> DevicesModel::getDevice(QModelIndex index)
+std::shared_ptr<DeviceConnection> DevicesModel::getDevice(QModelIndex index)
 {
     Q_ASSERT(!index.parent().isValid());
     Q_ASSERT(index.row() >= 0 && index.row() < m_devices.size());
@@ -352,7 +352,7 @@ std::shared_ptr<DevicesConnection> DevicesModel::getDevice(QModelIndex index)
     return device;
 }
 
-std::shared_ptr<const DevicesConnection> DevicesModel::getDevice(QModelIndex index) const
+std::shared_ptr<const DeviceConnection> DevicesModel::getDevice(QModelIndex index) const
 {
     Q_ASSERT(!index.parent().isValid());
     return m_devices.at(index.row());
@@ -500,14 +500,14 @@ void DevicesModel::apiKeyChanged(const QString &apiKey)
 
 void DevicesModel::columnChanged(int column, const QList<int> &roles)
 {
-    auto device = qobject_cast<DevicesConnection*>(sender());
+    auto device = qobject_cast<DeviceConnection*>(sender());
     if (!device)
     {
         qWarning() << "unknown sender" << sender();
         return;
     }
 
-    auto iter = std::find_if(std::cbegin(m_devices), std::cend(m_devices), [&device](const std::shared_ptr<DevicesConnection> &ptr){ return device == ptr.get(); });
+    auto iter = std::find_if(std::cbegin(m_devices), std::cend(m_devices), [&device](const std::shared_ptr<DeviceConnection> &ptr){ return device == ptr.get(); });
     if (iter == std::cend(m_devices))
     {
         qWarning() << "unknown sender" << device;

@@ -24,42 +24,44 @@ const constexpr QColor blue{150, 150, 255};
 const constexpr QColor magenta{255, 150, 255};
 }
 
-DevicesConnection::DevicesConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent) :
+DeviceConnection::DeviceConnection(const QByteArray &username, const QByteArray &password, QString &&serial, QObject *parent) :
     QObject{parent},
     m_serial(std::move(serial)),
-    m_key{key},
-    m_cert{cert}
+    m_username{username},
+    m_password{password}
 {
     init();
 }
 
-DevicesConnection::DevicesConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent) :
+DeviceConnection::DeviceConnection(const QByteArray &username, const QByteArray &password, const QString &serial, QObject *parent) :
     QObject{parent},
     m_serial(serial),
-    m_key{key},
-    m_cert{cert}
+    m_username{username},
+    m_password{password}
 {
     init();
 }
 
-void DevicesConnection::start()
+void DeviceConnection::start()
 {
-    const QUrl url{QString("wss://solalaweb.com/%0").arg(m_serial)};
-    qDebug() << url;
-    m_websocket.open(url);
+    QNetworkRequest request{QString("wss://solalaweb.com/%0").arg(m_serial)};
+    QString credentials = m_username + ':' + m_password;
+    QString base64 = credentials.toUtf8().toBase64();
+    request.setRawHeader("Authorization", "Basic " + base64.toUtf8());
+    m_websocket.open(request);
 }
 
-void DevicesConnection::stop()
+void DeviceConnection::stop()
 {
     m_websocket.close();
 }
 
-QString DevicesConnection::wsStatusText() const
+QString DeviceConnection::wsStatusText() const
 {
     return QMetaEnum::fromType<QAbstractSocket::SocketState>().valueToKey(m_websocket.state());
 }
 
-QBrush DevicesConnection::wsStatusBackground() const
+QBrush DeviceConnection::wsStatusBackground() const
 {
     switch (m_websocket.state())
     {
@@ -72,7 +74,7 @@ QBrush DevicesConnection::wsStatusBackground() const
     return {};
 }
 
-QString DevicesConnection::statusText() const
+QString DeviceConnection::statusText() const
 {
     switch (m_status)
     {
@@ -84,7 +86,7 @@ QString DevicesConnection::statusText() const
     return QString::number(std::to_underlying(m_status));
 }
 
-QBrush DevicesConnection::statusBackground() const
+QBrush DeviceConnection::statusBackground() const
 {
     switch (m_status)
     {
@@ -95,7 +97,7 @@ QBrush DevicesConnection::statusBackground() const
     return {};
 }
 
-QString DevicesConnection::variantText() const
+QString DeviceConnection::variantText() const
 {
     if (!m_fullStatus.contains("var"))
         return {};
@@ -103,7 +105,7 @@ QString DevicesConnection::variantText() const
     return m_fullStatus.value("var").toString();
 }
 
-QBrush DevicesConnection::variantBackground() const
+QBrush DeviceConnection::variantBackground() const
 {
     if (!m_fullStatus.contains("var"))
         return {};
@@ -116,7 +118,7 @@ QBrush DevicesConnection::variantBackground() const
     return red;
 }
 
-QString DevicesConnection::isGoText() const
+QString DeviceConnection::isGoText() const
 {
     if (!m_fullStatus.contains("isgo"))
         return {};
@@ -124,7 +126,7 @@ QString DevicesConnection::isGoText() const
     return m_fullStatus.value("isgo").toBool() ? "yes" : "no";
 }
 
-QBrush DevicesConnection::isGoBackground() const
+QBrush DeviceConnection::isGoBackground() const
 {
     if (!m_fullStatus.contains("isgo"))
         return {};
@@ -132,7 +134,7 @@ QBrush DevicesConnection::isGoBackground() const
     return m_fullStatus.value("isgo").toBool() ? blue : yellow;
 }
 
-QString DevicesConnection::isAustralienText() const
+QString DeviceConnection::isAustralienText() const
 {
     if (!m_fullStatus.contains("aus"))
         return {};
@@ -140,7 +142,7 @@ QString DevicesConnection::isAustralienText() const
     return m_fullStatus.value("aus").toBool() ? "yes" : "no";
 }
 
-QBrush DevicesConnection::isAustralienBackground() const
+QBrush DeviceConnection::isAustralienBackground() const
 {
     if (!m_fullStatus.contains("aus"))
         return {};
@@ -148,7 +150,7 @@ QBrush DevicesConnection::isAustralienBackground() const
     return m_fullStatus.value("aus").toBool() ? yellow : blue;
 }
 
-QString DevicesConnection::resetCardText() const
+QString DeviceConnection::resetCardText() const
 {
     if (!m_fullStatus.contains("frci"))
         return {};
@@ -156,7 +158,7 @@ QString DevicesConnection::resetCardText() const
     return m_fullStatus.value("frci").toBool() ? "yes" : "no";
 }
 
-QBrush DevicesConnection::resetCardBackground() const
+QBrush DeviceConnection::resetCardBackground() const
 {
     if (!m_fullStatus.contains("frci"))
         return {};
@@ -164,7 +166,7 @@ QBrush DevicesConnection::resetCardBackground() const
     return m_fullStatus.value("frci").toBool() ? green : red;
 }
 
-QString DevicesConnection::connectedWifiText() const
+QString DeviceConnection::connectedWifiText() const
 {
     if (!m_fullStatus.contains("ccw"))
         return {};
@@ -176,7 +178,7 @@ QString DevicesConnection::connectedWifiText() const
     return apd.value("ssid").toString();
 }
 
-QString DevicesConnection::projectText() const
+QString DeviceConnection::projectText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -188,7 +190,7 @@ QString DevicesConnection::projectText() const
     return apd.value("project_name").toString();
 }
 
-QString DevicesConnection::versionText() const
+QString DeviceConnection::versionText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -200,7 +202,7 @@ QString DevicesConnection::versionText() const
     return apd.value("version").toString();
 }
 
-QString DevicesConnection::idfVersionText() const
+QString DeviceConnection::idfVersionText() const
 {
     if (!m_fullStatus.contains("apd"))
         return {};
@@ -212,7 +214,7 @@ QString DevicesConnection::idfVersionText() const
     return apd.value("idf_ver").toString();
 }
 
-QString DevicesConnection::updateText() const
+QString DeviceConnection::updateText() const
 {
     if (!m_fullStatus.contains("ocs"))
         return {};
@@ -241,7 +243,7 @@ QString DevicesConnection::updateText() const
     return QString::number(ocs);
 }
 
-QBrush DevicesConnection::updateBackground() const
+QBrush DeviceConnection::updateBackground() const
 {
     if (!m_fullStatus.contains("ocs"))
         return {};
@@ -259,7 +261,7 @@ QBrush DevicesConnection::updateBackground() const
     return {};
 }
 
-std::optional<qulonglong> DevicesConnection::uptime() const
+std::optional<qulonglong> DeviceConnection::uptime() const
 {
     if (!m_fullStatus.contains("rbt"))
         return {};
@@ -267,7 +269,7 @@ std::optional<qulonglong> DevicesConnection::uptime() const
     return m_fullStatus.value("rbt").toULongLong();
 }
 
-QString DevicesConnection::uptimeText() const
+QString DeviceConnection::uptimeText() const
 {
     if (!m_fullStatus.contains("rbt"))
         return {};
@@ -275,7 +277,7 @@ QString DevicesConnection::uptimeText() const
     return QString::number(m_fullStatus.value("rbt").toULongLong());
 }
 
-QString DevicesConnection::currentPartition() const
+QString DeviceConnection::currentPartition() const
 {
     if (!m_fullStatus.contains("otap"))
         return {};
@@ -287,7 +289,7 @@ QString DevicesConnection::currentPartition() const
     return otap.value("label").toString();
 }
 
-std::optional<int> DevicesConnection::reboots() const
+std::optional<int> DeviceConnection::reboots() const
 {
     if (!m_fullStatus.contains("rbc"))
         return {};
@@ -295,7 +297,7 @@ std::optional<int> DevicesConnection::reboots() const
     return m_fullStatus.value("rbc").toInt();
 }
 
-QString DevicesConnection::rebootsText() const
+QString DeviceConnection::rebootsText() const
 {
     if (!m_fullStatus.contains("rbc"))
         return {};
@@ -303,7 +305,7 @@ QString DevicesConnection::rebootsText() const
     return QString::number(m_fullStatus.value("rbc").toInt());
 }
 
-QString DevicesConnection::carStateText() const
+QString DeviceConnection::carStateText() const
 {
     if (!m_fullStatus.contains("car"))
         return {};
@@ -315,7 +317,7 @@ QString DevicesConnection::carStateText() const
     return QString::number(car);
 }
 
-std::optional<double> DevicesConnection::energy() const
+std::optional<double> DeviceConnection::energy() const
 {
     if (!m_fullStatus.contains("eto"))
         return {};
@@ -323,7 +325,7 @@ std::optional<double> DevicesConnection::energy() const
     return m_fullStatus.value("eto").toDouble();
 }
 
-QString DevicesConnection::energyText() const
+QString DeviceConnection::energyText() const
 {
     if (!m_fullStatus.contains("eto"))
         return {};
@@ -331,7 +333,7 @@ QString DevicesConnection::energyText() const
     return QString("%0kWh").arg(m_fullStatus.value("eto").toDouble() / 1000.);
 }
 
-QString DevicesConnection::livedataText() const
+QString DeviceConnection::livedataText() const
 {
     if (!m_fullStatus.contains("nrg"))
         return {};
@@ -346,85 +348,94 @@ QString DevicesConnection::livedataText() const
     return {};
 }
 
-QVariant DevicesConnection::getApiKey(const QString &apiKey) const
+QVariant DeviceConnection::getApiKey(const QString &apiKey) const
 {
     return m_fullStatus.value(apiKey);
 }
 
-void DevicesConnection::sendMessage(const QJsonDocument &doc)
+void DeviceConnection::sendMessage(const QJsonDocument &doc)
 {
     sendMessage(QString::fromUtf8(doc.toJson()));
 }
 
-void DevicesConnection::sendMessage(const QJsonObject &obj)
+void DeviceConnection::sendMessage(const QJsonObject &obj)
 {
     sendMessage(QJsonDocument{obj});
 }
 
-void DevicesConnection::sendMessage(const QString &msg)
+void DeviceConnection::sendMessage(const QString &msg)
 {
     qDebug() << msg << m_websocket.errorString();
     if (const auto written = m_websocket.sendTextMessage(msg); written != msg.size())
         qCritical() << "sending message failed" << written << "(expected:" << msg.size() << ')';
 }
 
-void DevicesConnection::init()
+QString DeviceConnection::errorString() const
+{
+    return m_websocket.errorString();
+}
+
+void DeviceConnection::init()
 {
     if (auto model = qobject_cast<DevicesModel*>(parent()))
     {
-        connect(this, &DevicesConnection::wsStatusChanged, model, &DevicesModel::wsStatusChanged);
-        connect(this, &DevicesConnection::statusChanged, model, &DevicesModel::statusChanged);
-        connect(this, &DevicesConnection::variantChanged, model, &DevicesModel::variantChanged);
-        connect(this, &DevicesConnection::isGoChanged, model, &DevicesModel::isGoChanged);
-        connect(this, &DevicesConnection::isAustralienChanged, model, &DevicesModel::isAustralienChanged);
-        connect(this, &DevicesConnection::resetCardChanged, model, &DevicesModel::resetCardChanged);
-        connect(this, &DevicesConnection::connectedWifiChanged, model, &DevicesModel::connectedWifiChanged);
-        connect(this, &DevicesConnection::projectChanged, model, &DevicesModel::projectChanged);
-        connect(this, &DevicesConnection::versionChanged, model, &DevicesModel::versionChanged);
-        connect(this, &DevicesConnection::idfVersionChanged, model, &DevicesModel::idfVersionChanged);
-        connect(this, &DevicesConnection::updateChanged, model, &DevicesModel::updateChanged);
-        connect(this, &DevicesConnection::uptimeChanged, model, &DevicesModel::uptimeChanged);
-        connect(this, &DevicesConnection::currentPartitionChanged, model, &DevicesModel::currentPartitionChanged);
-        connect(this, &DevicesConnection::rebootsChanged, model, &DevicesModel::rebootsChanged);
-        connect(this, &DevicesConnection::carStateChanged, model, &DevicesModel::carStateChanged);
-        connect(this, &DevicesConnection::energyChanged, model, &DevicesModel::energyChanged);
-        connect(this, &DevicesConnection::livedataChanged, model, &DevicesModel::livedataChanged);
-        connect(this, &DevicesConnection::apiKeyChanged, model, &DevicesModel::apiKeyChanged);
+        connect(this, &DeviceConnection::wsStatusChanged, model, &DevicesModel::wsStatusChanged);
+        connect(this, &DeviceConnection::statusChanged, model, &DevicesModel::statusChanged);
+        connect(this, &DeviceConnection::variantChanged, model, &DevicesModel::variantChanged);
+        connect(this, &DeviceConnection::isGoChanged, model, &DevicesModel::isGoChanged);
+        connect(this, &DeviceConnection::isAustralienChanged, model, &DevicesModel::isAustralienChanged);
+        connect(this, &DeviceConnection::resetCardChanged, model, &DevicesModel::resetCardChanged);
+        connect(this, &DeviceConnection::connectedWifiChanged, model, &DevicesModel::connectedWifiChanged);
+        connect(this, &DeviceConnection::projectChanged, model, &DevicesModel::projectChanged);
+        connect(this, &DeviceConnection::versionChanged, model, &DevicesModel::versionChanged);
+        connect(this, &DeviceConnection::idfVersionChanged, model, &DevicesModel::idfVersionChanged);
+        connect(this, &DeviceConnection::updateChanged, model, &DevicesModel::updateChanged);
+        connect(this, &DeviceConnection::uptimeChanged, model, &DevicesModel::uptimeChanged);
+        connect(this, &DeviceConnection::currentPartitionChanged, model, &DevicesModel::currentPartitionChanged);
+        connect(this, &DeviceConnection::rebootsChanged, model, &DevicesModel::rebootsChanged);
+        connect(this, &DeviceConnection::carStateChanged, model, &DevicesModel::carStateChanged);
+        connect(this, &DeviceConnection::energyChanged, model, &DevicesModel::energyChanged);
+        connect(this, &DeviceConnection::livedataChanged, model, &DevicesModel::livedataChanged);
+        connect(this, &DeviceConnection::apiKeyChanged, model, &DevicesModel::apiKeyChanged);
     }
     else
         qWarning() << "unexpected parent";
 
-    {
-        auto sslConfig = m_websocket.sslConfiguration();
-        sslConfig.setPeerVerifyMode(QSslSocket::VerifyNone);
-        //sslConfig.setPeerVerifyMode(QSslSocket::VerifyPeer);
-        {
-            auto caCerts = QSslCertificate::fromPath(":/goe-root-ca.pem");
-            if (caCerts.empty())
-                qFatal("could not parse root ca");
-            for (const auto &caCert : std::as_const(caCerts))
-                qDebug() << caCert.issuerDisplayName();
-            sslConfig.setCaCertificates(std::move(caCerts));
-        }
-        sslConfig.setPrivateKey(m_key);
-        sslConfig.setLocalCertificate(m_cert);
-        m_websocket.setSslConfiguration(sslConfig);
-        m_websocket.ignoreSslErrors();
-    }
+    //{
+    //    auto sslConfig = m_websocket.sslConfiguration();
+    //    sslConfig.setPeerVerifyMode(QSslSocket::VerifyNone);
+    //    //sslConfig.setPeerVerifyMode(QSslSocket::VerifyPeer);
+    //    {
+    //        auto caCerts = QSslCertificate::fromPath(":/goe-root-ca.pem");
+    //        if (caCerts.empty())
+    //            qFatal("could not parse root ca");
+    //        for (const auto &caCert : std::as_const(caCerts))
+    //            qDebug() << caCert.issuerDisplayName();
+    //        sslConfig.setCaCertificates(std::move(caCerts));
+    //    }
+    //    sslConfig.setPrivateKey(m_key);
+    //    sslConfig.setLocalCertificate(m_cert);
+    //    m_websocket.setSslConfiguration(sslConfig);
+    //    m_websocket.ignoreSslErrors();
+    //}
 
-    connect(&m_websocket, &QWebSocket::connected, this, &DevicesConnection::connected);
-    connect(&m_websocket, &QWebSocket::disconnected, this, &DevicesConnection::disconnected);
-    connect(&m_websocket, &QWebSocket::stateChanged, this, &DevicesConnection::stateChanged);
-    connect(&m_websocket, &QWebSocket::textMessageReceived, this, &DevicesConnection::textMessageReceived);
-    connect(&m_websocket, &QWebSocket::binaryMessageReceived, this, &DevicesConnection::binaryMessageReceived);
-    connect(&m_websocket, &QWebSocket::errorOccurred, this, &DevicesConnection::errorOccurred);
-    connect(&m_websocket, &QWebSocket::peerVerifyError, this, &DevicesConnection::peerVerifyError);
-    connect(&m_websocket, &QWebSocket::sslErrors, this, &DevicesConnection::sslErrors);
-    connect(&m_websocket, &QWebSocket::alertReceived, this, &DevicesConnection::alertReceived);
-    connect(&m_websocket, &QWebSocket::handshakeInterruptedOnError, this, &DevicesConnection::handshakeInterruptedOnError);
+    connect(&m_websocket, &QWebSocket::connected, this, &DeviceConnection::connectedSignal);
+    connect(&m_websocket, &QWebSocket::disconnected, this, &DeviceConnection::disconnectedSignal);
+    connect(&m_websocket, &QWebSocket::errorOccurred, this, &DeviceConnection::errorOccurredSignal);
+
+    connect(&m_websocket, &QWebSocket::connected, this, &DeviceConnection::connected);
+    connect(&m_websocket, &QWebSocket::disconnected, this, &DeviceConnection::disconnected);
+    connect(&m_websocket, &QWebSocket::stateChanged, this, &DeviceConnection::stateChanged);
+    connect(&m_websocket, &QWebSocket::textMessageReceived, this, &DeviceConnection::textMessageReceived);
+    connect(&m_websocket, &QWebSocket::binaryMessageReceived, this, &DeviceConnection::binaryMessageReceived);
+    connect(&m_websocket, &QWebSocket::errorOccurred, this, &DeviceConnection::errorOccurred);
+    connect(&m_websocket, &QWebSocket::peerVerifyError, this, &DeviceConnection::peerVerifyError);
+    connect(&m_websocket, &QWebSocket::sslErrors, this, &DeviceConnection::sslErrors);
+    connect(&m_websocket, &QWebSocket::alertReceived, this, &DeviceConnection::alertReceived);
+    connect(&m_websocket, &QWebSocket::handshakeInterruptedOnError, this, &DeviceConnection::handshakeInterruptedOnError);
 }
 
-void DevicesConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
+void DeviceConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
 {
     bool variantChanged{forceChange};
     bool isGoChanged{forceChange};
@@ -507,17 +518,17 @@ void DevicesConnection::maintainStatus(const QJsonObject &msg, bool forceChange)
         emit this->livedataChanged();
 }
 
-void DevicesConnection::connected()
+void DeviceConnection::connected()
 {
     qDebug() << "called";
 }
 
-void DevicesConnection::disconnected()
+void DeviceConnection::disconnected()
 {
     qDebug() << "called";
 }
 
-void DevicesConnection::stateChanged(QAbstractSocket::SocketState state)
+void DeviceConnection::stateChanged(QAbstractSocket::SocketState state)
 {
 //    qDebug() << "called" << state;
 
@@ -533,7 +544,7 @@ void DevicesConnection::stateChanged(QAbstractSocket::SocketState state)
     emit wsStatusChanged();
 }
 
-void DevicesConnection::textMessageReceived(const QString &message)
+void DeviceConnection::textMessageReceived(const QString &message)
 {
 //    qDebug() << "called" << message;
 
@@ -614,32 +625,32 @@ void DevicesConnection::textMessageReceived(const QString &message)
         qWarning() << "unknown message type" << msgObj;
 }
 
-void DevicesConnection::binaryMessageReceived(const QByteArray &message)
+void DeviceConnection::binaryMessageReceived(const QByteArray &message)
 {
     qDebug() << "called" << message;
 }
 
-void DevicesConnection::errorOccurred(QAbstractSocket::SocketError error)
+void DeviceConnection::errorOccurred(QAbstractSocket::SocketError error)
 {
     qDebug() << "called" << QMetaEnum::fromType<QAbstractSocket::SocketError>().valueToKey(error) << m_websocket.errorString();
 }
 
-void DevicesConnection::peerVerifyError(const QSslError &error)
+void DeviceConnection::peerVerifyError(const QSslError &error)
 {
     qDebug() << "called" << error;
 }
 
-void DevicesConnection::sslErrors(const QList<QSslError> &errors)
+void DeviceConnection::sslErrors(const QList<QSslError> &errors)
 {
     qDebug() << "called" << errors;
 }
 
-void DevicesConnection::alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
+void DeviceConnection::alertReceived(QSsl::AlertLevel level, QSsl::AlertType type, const QString &description)
 {
     qDebug() << "called" << std::to_underlying(level) << std::to_underlying(type) << description;
 }
 
-void DevicesConnection::handshakeInterruptedOnError(const QSslError &error)
+void DeviceConnection::handshakeInterruptedOnError(const QSslError &error)
 {
     qDebug() << "called" << error;
 }

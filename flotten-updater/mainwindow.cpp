@@ -18,12 +18,12 @@
 #include "setarbitraryapikeydialog.h"
 #include "addserialsrangedialog.h"
 
-MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QSslKey &key,
-                       const QSslCertificate &cert, QWidget *parent) :
+MainWindow::MainWindow(FlottenUpdaterSettings &settings, const QByteArray &username,
+                       const QByteArray &password, QWidget *parent) :
     QMainWindow{parent},
     m_ui{std::make_unique<Ui::MainWindow>()},
     m_settings{settings},
-    m_model{std::make_unique<DevicesModel>(settings, key, cert, this)},
+    m_model{std::make_unique<DevicesModel>(settings, username, password, this)},
     m_proxyModel{std::make_unique<QSortFilterProxyModel>(this)}
 {
     m_ui->setupUi(this);
@@ -146,7 +146,7 @@ void MainWindow::contextMenuRequested(const QPoint &pos)
                    [&](const QModelIndex &index){ return m_proxyModel->mapToSource(index); });
 
     // get all the devices for selected indices
-    std::vector<std::shared_ptr<DevicesConnection>> devices;
+    std::vector<std::shared_ptr<DeviceConnection>> devices;
     devices.reserve(selectedRows.size());
     std::transform(std::begin(selectedRows), std::end(selectedRows), std::back_inserter(devices),
                    [&](const QModelIndex &index){ auto device = m_model->getDevice(index); Q_ASSERT(device); return device; });

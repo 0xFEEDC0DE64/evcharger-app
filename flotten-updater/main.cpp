@@ -1,14 +1,9 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QDebug>
-#include <QSslKey>
-#include <QSslCertificate>
-#ifdef Q_OS_WIN
-#include <QSslSocket>
-#endif
 
 #include "flottenupdatersettings.h"
-#include "importcertificatedialog.h"
+#include "importcredentialsdialog.h"
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
@@ -36,50 +31,32 @@ int main(int argc, char *argv[])
 #endif
 
     FlottenUpdaterSettings settings;
-    QByteArray keyBuf = settings.privateKey();
-    QByteArray certBuf = settings.privateCert();
-    QSslKey key{keyBuf, QSsl::KeyAlgorithm::Rsa, QSsl::Pem};
-    QSslCertificate cert{certBuf};
+    QByteArray username = settings.username();
+    QByteArray password = settings.password();
 
-    if (keyBuf.isEmpty())
-        goto loadCert;
+    if (username.isEmpty())
+        goto loadCredentials;
 
-    if (certBuf.isEmpty())
-        goto loadCert;
-
-    if (key.isNull())
-    {
-        QMessageBox::warning(nullptr,
-                             QCoreApplication::translate("main", "Could not parse private key!"),
-                             QCoreApplication::translate("main", "Could not parse private key!"));
-        goto loadCert;
-    }
-
-    if (cert.isNull())
-    {
-        QMessageBox::warning(nullptr,
-                             QCoreApplication::translate("main", "Could not parse private cert!"),
-                             QCoreApplication::translate("main", "Could not parse private cert!"));
-        goto loadCert;
-    }
+    if (password.isEmpty())
+        goto loadCredentials;
 
     goto showMainWindow;
 
     {
-        loadCert:
-        ImportCertificateDialog dialog;
+        loadCredentials:
+        ImportCredentialsDialog dialog;
         if (dialog.exec() != QDialog::Accepted)
             return 0;
 
-        key = dialog.privateKey();
-        cert = dialog.privateCert();
-        settings.setPrivateKey(key.toPem());
-        settings.setPrivateCert(cert.toPem());
+        username = dialog.username();
+        password = dialog.password();
+        settings.setUsername(username);
+        settings.setPassword(password);
     }
 
     showMainWindow:
 
-    MainWindow mainWindow{settings, key, cert};
+    MainWindow mainWindow{settings, username, password};
     mainWindow.show();
 
     return app.exec();

@@ -12,9 +12,9 @@ qt_add_executable(flotten-updater WIN32 MACOSX_BUNDLE
     devicesmodel.h
     flottenupdatersettings.cpp
     flottenupdatersettings.h
-    importcertificatedialog.cpp
-    importcertificatedialog.h
-    importcertificatedialog.ui
+    importcredentialsdialog.cpp
+    importcredentialsdialog.h
+    importcredentialsdialog.ui
     main.cpp
     mainwindow.cpp
     mainwindow.h

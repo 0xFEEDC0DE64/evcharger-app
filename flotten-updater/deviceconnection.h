@@ -9,13 +9,13 @@ class QSslKey;
 class QSslCertificate;
 class QJsonObject;
 
-class DevicesConnection : public QObject
+class DeviceConnection : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit DevicesConnection(const QSslKey &key, const QSslCertificate &cert, QString &&serial, QObject *parent = nullptr);
-    explicit DevicesConnection(const QSslKey &key, const QSslCertificate &cert, const QString &serial, QObject *parent = nullptr);
+    explicit DeviceConnection(const QByteArray &username, const QByteArray &password, QString &&serial, QObject *parent = nullptr);
+    explicit DeviceConnection(const QByteArray &username, const QByteArray &password, const QString &serial, QObject *parent = nullptr);
 
     void start();
     void stop();
@@ -72,7 +72,13 @@ public:
     void sendMessage(const QJsonObject &obj);
     void sendMessage(const QString &msg);
 
+    QString errorString() const;
+
 signals:
+    void connectedSignal();
+    void disconnectedSignal();
+    void errorOccurredSignal(QAbstractSocket::SocketError error);
+
     void responseReceived(const QString &requestId, const QJsonObject &msg);
 
     void wsStatusChanged();
@@ -112,8 +118,8 @@ private slots:
 
 private:
     const QString m_serial;
-    const QSslKey &m_key;
-    const QSslCertificate &m_cert;
+    const QByteArray m_username;
+    const QByteArray m_password;
 
     enum Status {
         Unknown,

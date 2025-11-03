@@ -6,14 +6,14 @@
 #include <memory>
 
 class QJsonObject;
-class DevicesConnection;
+class DeviceConnection;
 
 class RequestModel : public QAbstractTableModel
 {
     Q_OBJECT
 
 public:
-    explicit RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<DevicesConnection>> &&devices, QObject *parent = nullptr);
+    explicit RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<DeviceConnection>> &&devices, QObject *parent = nullptr);
     ~RequestModel() override;
 
     // QAbstractItemModel interface
@@ -27,7 +27,7 @@ private slots:
 
 private:
     struct Request {
-        std::shared_ptr<DevicesConnection> device;
+        std::shared_ptr<DeviceConnection> device;
         QString requestId;
         enum class Status { Pending, Failed, Succeeded };
         Status status{Status::Pending};

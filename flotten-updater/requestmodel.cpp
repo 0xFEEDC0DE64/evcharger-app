@@ -21,7 +21,7 @@ enum {
 QString getRandomString();
 }
 
-RequestModel::RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<DevicesConnection>> &&devices, QObject *parent) :
+RequestModel::RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<DeviceConnection>> &&devices, QObject *parent) :
     QAbstractTableModel{parent}
 {
     m_requests.reserve(devices.size());
@@ -33,7 +33,7 @@ RequestModel::RequestModel(QJsonObject &&msg, std::vector<std::shared_ptr<Device
             .requestId = getRandomString()
         };
 
-        connect(request.device.get(), &DevicesConnection::responseReceived, this, &RequestModel::responseReceived);
+        connect(request.device.get(), &DeviceConnection::responseReceived, this, &RequestModel::responseReceived);
 
         {
             QJsonObject msg2 = msg;
